@@ -8,6 +8,7 @@ body{
     background-repeat: no-repeat;
     background-size: 100vw;
     background-color: black;
+    /* cursor: url("img/mouse.svg"),auto; */
 }
 
 @font-face {
@@ -125,6 +126,7 @@ marquee{
 
 #notion{
     position: absolute;
+    opacity: 1;
     top: -1.5vw;
     display: inline-block;
     width: 2.5vw;
@@ -283,6 +285,14 @@ li{
     /* background-color: white;
     border: 5px solid rgb(0, 0, 0); */
   }
+
+  /* a:visited #notion{
+    background-color: white;
+  } */
+
+  /* a:active{
+    background-color: white;
+  } */
 
 
   @media only screen and (max-width: 600px){
@@ -464,7 +474,7 @@ li{
     body{
         background-image: url("img/pixel1.gif"),url("img/city.png");
         background-repeat: no-repeat;
-        background-size: 210vw;
+        background-size: 200vw;
         background-color: black;
     }
 
@@ -787,12 +797,21 @@ li{
 
   } */
 
+@media only screen and (min-width: 768px){
+    body{
+        background-image: url("img/pixel1.gif"),url("img/city.png");
+        background-repeat: no-repeat;
+        background-size: 160vw;
+        background-color: black;
+    }
+}
+
   @media only screen and (min-width: 992px){
 
     body{
         background-image: url("img/pixel1.gif"),url("img/city.png");
         background-repeat: no-repeat;
-        background-size: 130vw;
+        background-size: 120vw;
         background-color: black;
     }
 
@@ -905,7 +924,7 @@ li{
     
     
     #popup {
-        left: 70vw;
+        left: 65vw;
         width: 25vw;
         height: 15vw;
         font-size: 1.5vw;

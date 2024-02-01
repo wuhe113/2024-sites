@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-b4e1e05f-45d6-4f21-b515-75607d52164e" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.93 24.61">
+  <defs>
+    <style>
+      .uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45 {
+        fill: #cdcfd0;
+      }
+
+      .uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45, .uuid-9e688aed-b77d-43ba-8502-a56858b3b7a3 {
+        stroke-width: 0px;
+      }
+
+      .uuid-9e688aed-b77d-43ba-8502-a56858b3b7a3 {
+        fill: #001121;
+      }
+    </style>
+  </defs>
+  <g id="uuid-e5bbe70a-b9cd-4f60-97e3-0a2113ba5947" data-name="Layer 1">
+    <g>
+      <rect class="uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45" x="2.9" width="1.45" height="1.45"/>
+      <rect class="uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45" x="4.35" y="1.45" width="1.44" height="1.45"/>
+      <rect class="uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45" x="5.79" y="2.9" width="1.45" height="1.45"/>
+      <rect class="uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45" x="7.24" y="4.34" width="1.45" height="1.45"/>
+      <rect class="uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45" x="8.69" y="5.79" width="1.45" height="1.45"/>
+      <rect class="uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45" x="10.14" y="7.24" width="1.45" height="1.45"/>
+      <rect class="uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45" x="11.58" y="8.69" width="1.45" height="1.45"/>
+      <rect class="uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45" x="13.03" y="10.13" width="1.45" height="1.45"/>
+      <rect class="uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45" x="5.79" y="20.27" width="1.45" height="1.45"/>
+      <polygon class="uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45" points="5.79 17.37 4.35 17.37 4.35 18.82 0 18.82 0 20.27 5.79 20.27 5.79 20.27 5.79 20.27 5.79 17.37"/>
+      <rect class="uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45" x="7.24" y="23.17" width="5.79" height="1.45"/>
+      <rect class="uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45" x="13.03" y="17.37" width="1.45" height="5.79"/>
+      <polygon class="uuid-4cc059d0-5f75-4ba8-bdaa-167fd3bebc45" points="14.48 11.58 14.48 14.48 11.58 14.48 11.58 14.48 11.58 14.48 11.58 17.37 13.03 17.37 13.03 15.93 15.93 15.93 15.93 11.58 14.48 11.58"/>
+      <g>
+        <rect class="uuid-9e688aed-b77d-43ba-8502-a56858b3b7a3" x="2.9" y="1.45" width="1.45" height="1.45"/>
+        <rect class="uuid-9e688aed-b77d-43ba-8502-a56858b3b7a3" x="4.35" y="2.9" width="1.44" height="1.45"/>
+        <rect class="uuid-9e688aed-b77d-43ba-8502-a56858b3b7a3" x="5.79" y="4.34" width="1.45" height="1.45"/>
+        <rect class="uuid-9e688aed-b77d-43ba-8502-a56858b3b7a3" x="7.24" y="5.79" width="1.45" height="1.45"/>
+        <rect class="uuid-9e688aed-b77d-43ba-8502-a56858b3b7a3" x="8.69" y="7.24" width="1.45" height="1.45"/>
+        <rect class="uuid-9e688aed-b77d-43ba-8502-a56858b3b7a3" x="10.14" y="8.69" width="1.45" height="1.45"/>
+        <rect class="uuid-9e688aed-b77d-43ba-8502-a56858b3b7a3" x="11.58" y="10.13" width="1.45" height="1.45"/>
+        <polygon class="uuid-9e688aed-b77d-43ba-8502-a56858b3b7a3" points="14.48 14.48 14.48 11.58 13.03 11.58 13.03 13.03 8.69 13.03 8.69 15.93 10.14 15.93 10.14 18.82 11.58 18.82 11.58 21.72 8.69 21.72 8.69 18.82 7.24 18.82 7.24 15.93 5.79 15.93 5.79 15.93 5.79 14.48 4.35 14.48 4.35 15.93 2.9 15.93 2.9 17.37 1.45 17.37 1.45 1.45 2.9 1.45 2.9 0 1.45 0 1.45 0 0 0 0 0 0 0 0 1.45 0 1.45 0 18.82 4.35 18.82 4.35 17.37 5.79 17.37 5.79 17.37 5.79 17.37 5.79 20.27 7.24 20.27 7.24 23.17 13.03 23.17 13.03 17.37 11.58 17.37 11.58 14.48 14.48 14.48"/>
+      </g>
+    </g>
+  </g>
+</svg>
