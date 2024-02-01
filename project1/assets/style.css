@@ -992,6 +992,8 @@ li{
         width: 33vw;
         height: 20vw;
         font-size: 2vw;
+        box-shadow: inset 3px 4px 4px rgb(0, 0, 0);
+        border: 7px solid rgb(154, 154, 154);
       }
 
       #ddl{
