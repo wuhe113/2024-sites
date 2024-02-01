@@ -408,8 +408,8 @@ li{
 
 
 #popup {
-    left: 40vw;
-    width: 45vw;
+    left: 37vw;
+    width: 50vw;
     height: 30vw;
     font-size: 3vw;
   }
@@ -924,10 +924,10 @@ li{
     
     
     #popup {
-        left: 65vw;
-        width: 25vw;
-        height: 15vw;
-        font-size: 1.5vw;
+        left: 55vw;
+        width: 33vw;
+        height: 20vw;
+        font-size: 2vw;
       }
     
     li{
@@ -935,7 +935,7 @@ li{
     }
     
     #ddl{
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
     
     
@@ -985,5 +985,16 @@ li{
         background-repeat: no-repeat;
         background-size: 100vw;
         background-color: black;
+    }
+
+    #popup {
+        left: 55vw;
+        width: 33vw;
+        height: 20vw;
+        font-size: 2vw;
+      }
+
+      #ddl{
+        font-size: 3vw;
     }
   }
