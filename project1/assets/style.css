@@ -296,7 +296,7 @@ li{
     body{
         background-image: url("img/pixel1.gif"),url("img/city.png");
         background-repeat: no-repeat;
-        background-size: 230vw;
+        background-size: 250vw;
         background-color: black;
     }
     
@@ -455,15 +455,169 @@ li{
 
   @media only screen and (min-width: 600px){
 
+    /* @keyframes move{
+        0%{ top:10vw;}
+        50%{ top:9vw;}
+        100%{top:10vw;}
+    } */
+
     body{
         background-image: url("img/pixel1.gif"),url("img/city.png");
         background-repeat: no-repeat;
-        background-size: 200vw;
+        background-size: 210vw;
         background-color: black;
     }
+
+
+    /* #school{
+        font-size: 2.5vw;
+                                                    
+    }
+    
+    #title1{
+        padding: 5px;
+        font-size: 3.5vw;
+    }
+    
+    #title2{
+        display: inline-block;
+        width: 3vw;
+        height: 3.5vw;
+        border:2px solid rgb(255, 254, 254);
+        top:37.5px;
+        text-align: center;
+    }
+    
+    #cloud{
+        display: inline-block;
+        top: 37.5px;
+        width: 4vw;
+        height: 3.5vw;
+    }
+    
+    #umbrella{
+        display: inline-block;
+        top: 37.5px;
+        width: 4vw;
+        height: 3.5vw;
+    }
+    
+    marquee{
+        display: inline-block;
+        position: absolute;
+        left: 40vw;
+        width: 55vw;
+        white-space: nowrap;
+        font-size: 3vw;
+    }
+
+    .project{
+        font-size: 5.3vw;
+    }
+    
+    #notion{
+        position: absolute;
+        top: -2vw;
+        display: inline-block;
+        width: 5vw;
+        height: 5vw;
+        font-size: 4vw;
+        border: 3px solid black;
+    }
+
+    #p1{
+        top:2vw;
+        left: 2vw;
+        width: 32vw;
+        border: 4px solid rgb(255, 254, 254);
+    }
+    
+    #p2{
+        top:12vw;
+        left: 2vw;
+        width: 32vw;
+        border: 4px solid rgb(255, 254, 254);
+    }
+    
+    #p3{
+        top:22vw;
+        left: 2vw;
+        width: 32vw;
+        border: 4px solid rgb(255, 254, 254);
+    }
+      
+    #p4{
+        top:32vw;
+        left: 2vw;
+        width: 32vw;
+        border: 4px solid rgb(255, 254, 254);
+    }
+
+    #clock{
+        position:absolute;
+        top:2vw;
+        left: 88vw;
+        width: 9vw;
+    }
+    
+    #arrow{
+        top:12vw;
+        left: 89.5vw;
+        width: 6vw;
+    } */
+    
+    
+    #popup {
+        left: 50vw;
+        width: 35vw;
+        height: 20vw;
+        font-size: 2vw;
+      }
+    
+    li{
+        border-bottom: 1px solid black;
+    }
+    
+    #ddl{
+        font-size: 3vw;
+    }
+    
+    
+    /* .typewriter {
+        overflow: hidden;
+        white-space:nowrap;
+        width: 30vw;
+        position: relative;
+        left: 60vw;
+        top: 80vh;
+        opacity: 0.8;
+        filter: blur(1px);
+        background-color: white;
+        border: 5px solid rgb(150, 150, 150);
+        box-shadow: inset 2px 3px 3px rgb(0, 0, 0);
+        
+      }
+    
+      .text {
+        margin: auto;
+        white-space: nowrap;
+        border-right: 1.5px solid rgb(0, 0, 0);
+        overflow: hidden;
+        animation: typing 2s steps(15) forwards, blink-caret 0.5s step-end infinite;
+        color: rgb(0, 0, 0);
+        font-size: 5vw;
+        font-family: 'OffBit Trial', sans-serif; 
+        font-weight: 700; 
+        filter: blur(0.3px);
+        text-align: center;
+      }
+    
+
+     */
+    
   }
 
-  @media only screen and (min-width: 768px){
+  /* @media only screen and (min-width: 768px){
 
     body{
         background-image: url("img/pixel1.gif"),url("img/city.png");
@@ -471,7 +625,167 @@ li{
         background-size: 160vw;
         background-color: black;
     }
-  }
+
+    @keyframes move{
+        0%{ top:10vw;}
+        50%{ top:9vw;}
+        100%{top:10vw;}
+    }
+
+    body{
+        background-image: url("img/pixel1.gif"),url("img/city.png");
+        background-repeat: no-repeat;
+        background-size: 210vw;
+        background-color: black;
+    }
+
+
+    #school{
+        font-size: 2.5vw;
+                                                    
+    }
+    
+    #title1{
+        padding: 5px;
+        font-size: 3.5vw;
+    }
+    
+    #title2{
+        display: inline-block;
+        width: 3vw;
+        height: 3.5vw;
+        border:2px solid rgb(255, 254, 254);
+        top:6vw;
+        text-align: center;
+    }
+    
+    #cloud{
+        display: inline-block;
+        top:6vw;
+        width: 4vw;
+        height: 3.5vw;
+    }
+    
+    #umbrella{
+        display: inline-block;
+        top:6vw;
+        width: 4vw;
+        height: 3.5vw;
+    }
+    
+    marquee{
+        display: inline-block;
+        position: absolute;
+        left: 40vw;
+        width: 55vw;
+        white-space: nowrap;
+        font-size: 3vw;
+    }
+
+    .project{
+        font-size: 5.3vw;
+    }
+    
+    #notion{
+        position: absolute;
+        top: -2vw;
+        display: inline-block;
+        width: 5vw;
+        height: 5vw;
+        font-size: 4vw;
+        border: 3px solid black;
+    }
+
+    #p1{
+        top:2vw;
+        left: 2vw;
+        width: 32vw;
+        border: 4px solid rgb(255, 254, 254);
+    }
+    
+    #p2{
+        top:12vw;
+        left: 2vw;
+        width: 32vw;
+        border: 4px solid rgb(255, 254, 254);
+    }
+    
+    #p3{
+        top:22vw;
+        left: 2vw;
+        width: 32vw;
+        border: 4px solid rgb(255, 254, 254);
+    }
+      
+    #p4{
+        top:32vw;
+        left: 2vw;
+        width: 32vw;
+        border: 4px solid rgb(255, 254, 254);
+    }
+
+    #clock{
+        position:absolute;
+        top:2vw;
+        left: 88vw;
+        width: 9vw;
+    }
+    
+    #arrow{
+        top:12vw;
+        left: 89.5vw;
+        width: 6vw;
+    }
+    
+    
+    #popup {
+        left: 40vw;
+        width: 45vw;
+        height: 30vw;
+        font-size: 3vw;
+      }
+    
+    li{
+        border-bottom: 1px solid black;
+    }
+    
+    #ddl{
+        font-size: 4vw;
+    }
+    
+    
+    .typewriter {
+        overflow: hidden;
+        white-space:nowrap;
+        width: 30vw;
+        position: relative;
+        left: 60vw;
+        top: 75vh;
+        opacity: 0.8;
+        filter: blur(1px);
+        background-color: white;
+        border: 5px solid rgb(150, 150, 150);
+        box-shadow: inset 2px 3px 3px rgb(0, 0, 0);
+        
+      }
+    
+      .text {
+        margin: auto;
+        white-space: nowrap;
+        border-right: 1.5px solid rgb(0, 0, 0);
+        overflow: hidden;
+        animation: typing 2s steps(15) forwards, blink-caret 0.5s step-end infinite;
+        color: rgb(0, 0, 0);
+        font-size: 5vw;
+        font-family: 'OffBit Trial', sans-serif; 
+        font-weight: 700; 
+        filter: blur(0.3px);
+        text-align: center;
+      }
+    
+    
+
+  } */
 
   @media only screen and (min-width: 992px){
 
@@ -481,6 +795,168 @@ li{
         background-size: 130vw;
         background-color: black;
     }
+
+    @keyframes move{
+        0%{ top:8vw;}
+        50%{ top:6vw;}
+        100%{top:8vw;}
+    }
+
+
+    #school{
+        font-size: 1.3vw;
+                                                    
+    }
+    
+    #title1{
+        padding: 5px;
+        font-size: 2vw;
+    }
+    
+    #title2{
+        display: inline;
+        position: absolute;
+        top:0.5vw;
+        width: 2vw;
+        height: 2.5vw;
+        border:3px solid rgb(255, 254, 254);
+        text-align: center;
+    }
+    
+    #cloud{
+        display: inline;
+        position: absolute;
+        top:0.5vw;
+        width: 3vw;
+        height: 2.5vw;
+    }
+    
+    #umbrella{
+        display: inline;
+        position: absolute;
+        top:0.5vw;
+        width: 3vw;
+        height: 2.5vw;
+    }
+    
+    marquee{
+        display: inline-block;
+        position: absolute;
+        left: 75vw;
+        width: 25vw;
+        white-space: nowrap;
+        font-size: 2vw;
+    }
+
+    .project{
+        font-size: 3vw;
+    }
+    
+    #notion{
+        position: absolute;
+        top: -1.5vw;
+        display: inline-block;
+        width: 2.5vw;
+        height: 2.5vw;
+        font-size: 2vw;
+        border: 2.5px solid black;
+    }
+
+    #p1{
+        top:2vw;
+        left: 1vw;
+        width: 20vw;
+        border: 5px solid rgb(255, 254, 254);
+    }
+    
+    #p2{
+        top:8vw;
+        left: 1vw;
+        width: 20vw;
+        border: 5px solid rgb(255, 254, 254);
+    }
+    
+    #p3{
+        top:14vw;
+        left: 1vw;
+        width: 20vw;
+        border: 5px solid rgb(255, 254, 254);
+    }
+      
+    #p4{
+        top:20vw;
+        left: 1vw;
+        width: 20vw;
+        border: 5px solid rgb(255, 254, 254);
+    }
+
+    #clock{
+        position:absolute;
+        top:2vw;
+        left: 93vw;
+        width: 5vw;
+    }
+    
+    #arrow{
+        top:8vw;
+        left: 94vw;
+        width: 3vw;
+    }
+    
+    
+    #popup {
+        left: 70vw;
+        width: 25vw;
+        height: 15vw;
+        font-size: 1.5vw;
+      }
+    
+    li{
+        border-bottom: 1px solid black;
+    }
+    
+    #ddl{
+        font-size: 2.5vw;
+    }
+    
+    
+    .typewriter {
+        overflow: hidden;
+        white-space:nowrap;
+        width: 18vw;
+        position: relative;
+        left: 80vw;
+        top: 80vh;
+        /* margin-left: 80vw;
+        margin-top: 80vh; */
+        /* height: var(--height); */
+        /* background: inherit; */
+        opacity: 0.8;
+        filter: blur(1px);
+        background-color: white;
+        border: 5px solid rgb(150, 150, 150);
+        box-shadow: inset 2px 3px 3px rgb(0, 0, 0);
+        
+      }
+    
+      .text {
+        margin: auto;
+        /* display: inline-block; */
+        white-space: nowrap;
+        border-right: 1.5px solid rgb(0, 0, 0);
+        overflow: hidden;
+        animation: typing 2s steps(15) forwards, blink-caret 0.5s step-end infinite;
+        color: rgb(0, 0, 0);
+        font-size: 3vw;
+        font-family: 'OffBit Trial', sans-serif; 
+        font-weight: 700; 
+        filter: blur(0.3px);
+        text-align: center;
+        /* background-color: white;
+        border: 5px solid rgb(0, 0, 0); */
+      }
+    
+
   }
 
   @media only screen and (min-width: 1280px){
