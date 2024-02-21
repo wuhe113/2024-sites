@@ -20,6 +20,7 @@ $("document").ready(function(){
     });
   });
 
+
   $("#pause1").click(function(){
     $("audio#music1")[0].pause();
     $("#play1").css({
@@ -33,6 +34,34 @@ $("document").ready(function(){
     });
 
   });
+
+  $("#play2").click(function(){
+    $("audio#music2")[0].play();
+    $("#play2").css({
+      "visibility":"hidden",
+    });
+    $("#pause2").css({
+      "visibility":"visible",
+    });
+    $("#st2").css({
+      "visibility":"visible",
+    });
+  });
+
+  $("#pause2").click(function(){
+    $("audio#music2")[0].pause();
+    $("#play2").css({
+      "visibility":"visible",
+    });
+    $("#pause2").css({
+      "visibility":"hidden",
+    })
+    $("#st2").css({
+      "visibility":"hidden",
+    });
+
+  });
+
 
   var audioPlayers = document.getElementsByClassName("audioPlayer");
   var volume = 50;
