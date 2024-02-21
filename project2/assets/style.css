@@ -1,0 +1,529 @@
+body{
+    background-color: black;
+}
+
+.bg{
+    background-color: white;
+    position: relative;
+    width: 80vw;
+    height: 90vh;
+    resize: both;
+    overflow: auto;
+    z-index: 99;
+}
+
+::-webkit-resizer {
+    opacity: 0;
+}
+
+
+.rightBar{
+    background-color: rgb(118, 118, 118);
+    position: fixed;
+    display: inline-block;
+    right: 0;
+    top: 0;
+    width: 20vw;
+    height: 90vh;
+    border-left: 8px solid black;
+    filter: blur(1px);
+    z-index: 1;
+}
+
+.intro{
+    background-color: white;
+    width: 20vw;
+    height: 7vw;
+
+
+
+}
+
+#welcome{
+    background-color: black;
+    width: 18vw;
+    overflow: hidden;
+    font-family: 'Fipps', sans-serif;
+    font-size: 1vw;
+    position: absolute;
+    left: 0.7vw;
+    top: 0.5vw;
+    border-radius: 10px;
+    border: 3px solid white;
+    outline: 3px solid black;
+
+}
+
+#welcome marquee{
+    color: white;
+    width: 50vw;
+
+}
+
+.lines{
+    position: absolute;
+    top: 0.5vw;
+    width: 20vw;
+    border: 0.5px solid black;
+}
+
+#l1{
+    position: absolute;
+    top: 0.5vw;
+    width: 20vw;
+    border: 0.5px solid black;
+}
+
+#l2{
+    position: absolute;
+    top: 1vw;
+    width: 20vw;
+    border: 0.5px solid black;
+}
+
+#l3{
+    position: absolute;
+    top: 1.5vw;
+    width: 20vw;
+    border: 0.5px solid black;
+}
+
+#l4{
+    position: absolute;
+    top: 2vw;
+    width: 20vw;
+    border: 0.5px solid black;
+}
+
+#l5{
+    position: absolute;
+    top: 2.5vw;
+    width: 20vw;
+    border: 0.5px solid black;
+}
+
+#l6{
+    position: absolute;
+    top: 3vw;
+    width: 20vw;
+    border: 0.5px solid black;
+}
+
+#l7{
+    position: absolute;
+    top: 3.5vw;
+    width: 20vw;
+    border: 0.5px solid black;
+}
+
+#l8{
+    position: absolute;
+    top: 3.5vw;
+    width: 20vw;
+    border: 0.5px solid black;
+}
+
+#l9{
+    position: absolute;
+    top: 4vw;
+    width: 20vw;
+    border: 0.5px solid black;
+}
+
+#l10{
+    position: absolute;
+    top: 4.5vw;
+    width: 20vw;
+    border: 0.5px solid black;
+}
+
+#l11{
+    position: absolute;
+    top: 5vw;
+    width: 20vw;
+    border: 0.5px solid black;
+}
+
+#l12{
+    position: absolute;
+    top: 5.5vw;
+    width: 20vw;
+    border: 0.5px solid black;
+}
+
+#l13{
+    position: absolute;
+    top: 6vw;
+    width: 20vw;
+    border: 0.5px solid black;
+}
+
+#l14{
+    position: absolute;
+    top: 6.5vw;
+    width: 20vw;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+@keyframes move1{
+    0%{transform: scaleY(0);}
+    50%{transform: scaleY(1);}
+    100%{transform: scaleY(0);}
+}
+
+@keyframes move2{
+    0%{transform: scaleY(1);}
+    50%{transform: scaleY(0.5);}
+    /* 75%{transform: scaleY(0.3);} */
+    100%{transform: scaleY(1);}
+}
+
+@keyframes move3{
+    0%{transform: scaleY(1);}
+    50%{transform: scaleY(0.4);}
+    100%{transform: scaleY(1);}
+}
+
+@keyframes move4{
+    0%{transform: scaleY(1);}
+    50%{transform: scaleY(0.2);}
+    100%{transform: scaleY(1);}
+}
+
+
+.blocks{
+    overflow: hidden;
+    width:20vw;
+    height: 7vw;
+}
+
+#b1{
+    position: absolute;
+    width:1vw;
+    height: 2vw;
+    background-color: black;
+    top: 5vw;
+    left: 0.5vw;
+    transform-origin: bottom;
+    animation: move1 0.5s ease-in-out .3s infinite;
+}
+
+#b2{
+    position: absolute;
+    width:1vw;
+    height: 4vw;
+    background-color: black;
+    top: 3vw;
+    left: 2vw;
+    transform-origin: bottom;
+    animation: move2 0.5s ease-in-out .2s infinite;
+}
+
+#b3{
+    position: absolute;
+    width:1vw;
+    height: 2vw;
+    background-color: black;
+    top: 5vw;
+    left: 3.5vw;
+    transform-origin: bottom;
+    animation: move1 0.5s ease-in-out .2s infinite;
+}
+
+
+#b4{
+    position: absolute;
+    width:1vw;
+    height: 5vw;
+    background-color: black;
+    top: 2vw;
+    left: 5vw;
+    transform-origin: bottom;
+    animation: move3 0.5s ease-in-out .3s infinite;
+}
+
+#b5{
+    position: absolute;
+    width:1vw;
+    height: 3.5vw;
+    background-color: black;
+    top: 3.6vw;
+    left: 6.5vw;
+    transform-origin: bottom;
+    animation: move4 0.5s ease-in-out .2s infinite;
+}
+
+#b6{
+    position: absolute;
+    width:1vw;
+    height: 3vw;
+    background-color: black;
+    top: 4vw;
+    left: 8vw;
+    transform-origin: bottom;
+    animation: move4 0.5s ease-in-out .3s infinite;
+}
+
+#b7{
+    position: absolute;
+    width:1vw;
+    height: 2vw;
+    background-color: black;
+    top: 5vw;
+    left: 9.5vw;
+    transform-origin: bottom;
+    animation: move1 0.5s ease-in-out .3s infinite;
+}
+
+#b8{
+    position: absolute;
+    width:1vw;
+    height: 1vw;
+    background-color: black;
+    top: 6vw;
+    left: 11vw;
+    transform-origin: bottom;
+    animation: move2 0.5s ease-in-out .4s infinite;
+}
+
+
+#b9{
+    position: absolute;
+    width:1vw;
+    height: 3vw;
+    background-color: black;
+    top: 4vw;
+    left: 12.5vw;
+    transform-origin: bottom;
+    animation: move3 0.5s ease-in-out .2s infinite;
+}
+
+#b10{
+    position: absolute;
+    width:1vw;
+    height: 3vw;
+    background-color: black;
+    top: 4vw;
+    left: 14vw;
+    transform-origin: bottom;
+    animation: move4 0.5s ease-in-out .3s infinite;
+}
+
+#b11{
+    position: absolute;
+    width:1vw;
+    height: 5vw;
+    background-color: black;
+    top: 2vw;
+    left: 15.5vw;
+    transform-origin: bottom;
+    animation: move4 0.5s ease-in-out .2s infinite;
+}
+
+#b12{
+    position: absolute;
+    width:1vw;
+    height: 3.5vw;
+    background-color: black;
+    top: 3.5vw;
+    left: 17vw;
+    transform-origin: bottom;
+    animation: move2 0.5s ease-in-out .3s infinite;
+}
+
+#b13{
+    position: absolute;
+    width:1vw;
+    height: 2.5vw;
+    background-color: black;
+    top: 4.5vw;
+    left: 18.5vw;
+    transform-origin: bottom;
+    animation: move3 0.5s ease-in-out .4s infinite;
+}
+
+.hours{
+    background-color: rgb(56, 56, 56);
+    width: 10vw;
+    overflow: hidden;
+    font-family: 'Edit Undo Line BRK', sans-serif;
+    font-size: 1.5vw;
+    position: relative;
+    display: inline-block;
+    left: 90vw;
+    top: -30vw;
+    border-radius: 2px;
+    box-shadow: inset 2px 2px rgb(146, 146, 146);
+    /* border: 3px solid white; */
+    outline: 4px solid rgb(96, 96, 96);
+    filter: blur(1px);
+    z-index: 100;
+}
+
+.hours marquee{
+    color:rgb(222, 222, 222);
+    width: 40vw;
+}
+
+.music{
+    overflow: scroll;
+    display: inline-block;
+    width: 20vw;
+    height: 60vh;
+    /* background-color: aqua; */
+
+}
+
+#song1{
+    display: inline-block;
+    position: absolute;
+    top: 7.8vw;
+    left: 3vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song1:hover{
+    /* background-color: rgb(0, 0, 0);
+    color: rgb(235, 235, 235);
+    transition: background-color 1s linear, color 1s linear; */
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#play1{
+    display: inline-block;
+    position: absolute;
+    top: 8vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause1{
+    display: inline-block;
+    position: absolute;
+    top: 8vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    visibility: hidden;
+}
+
+#line1{
+    display: inline-block;
+    position: absolute;
+    top: 10vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+.songTitle{
+    display: block;
+    position: absolute;
+    width: 20vw;
+    height: 7vw;
+    bottom: 4vw;
+    background-color:#e8e8e8;
+    border-top: 8px solid black;
+}
+
+#nowLive{
+    position: absolute;
+    left: 0.5vw;
+    font-size: 1.2vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+}
+@keyframes fadeIn{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+#nowLive::before{
+    content: "● ";
+    animation: .25s fadeIn infinite;
+}
+
+#st1{
+    position: absolute;
+    left: 3.5vw;
+    top: 2.5vw;
+    font-size: 2.8vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+.volume{
+    display: block;
+    position: absolute;
+    width: 20vw;
+    height: 4.2vw;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,1)0%, rgba(135,135,135,1) 100%);
+}
+
+#volumeSlider{
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    top: 1.8vw;
+    left: 5vw;
+    width:13vw;
+    height: 1vw;
+    border-radius: 20px;
+    box-shadow: inset 3px 3px rgb(176, 176, 176);
+    background-color: white;
+    
+}
+
+#volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5vw;
+    height: 1.8vw;
+    border-radius: 8px;
+    background: #000000;
+    border: 5px solid white;
+    cursor: pointer;
+  }
+
+#volumeIcon{
+    position: absolute;
+    top: 0.8vw;
+    left: 1vw;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 8px;
+    box-shadow: inset 3px 3px rgb(176, 176, 176);
+    background-color: white;
+
+}
+
+#vi{
+    position: absolute;
+    top: 0.6vw;
+    left: 0.5vw;
+    width:2vw;
+
+}
+
