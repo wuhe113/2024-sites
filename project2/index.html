@@ -20,7 +20,60 @@
 </head>
 
 <body>
-    <div class="bg"></div>
+    <div class="resizable-container">
+
+      <div class="bg-container">
+        <img src="assets/gif/dancing1.gif">
+        <img src="assets/gif/dj2.gif">
+        <img src="assets/gif/dancing2.gif">
+        <img src="assets/gif/dancing3.gif">
+      </div>
+      <div class="light-container1">
+        <img src="" class="light" id="light-gif2">
+      </div>
+      <div class="ball-container">
+        <img src="" class="discoBall" id="ball-gif">
+      </div>
+      <div class="light-container2">
+        <img src="" class="lightSmall" id="light-gif1">
+      </div>
+      <div class="image-container">
+        <!-- <img src="" id="displayed-image" alt="Displayed Image"> -->
+        <img src="assets/gif/light1.gif" id="hidden-image">
+      </div>
+      <div class="resize-button">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg id="resize" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 457.06 457.06">
+  <defs>
+    <style>
+      .uuid-351380ac-5186-4774-b4c1-c94540f4740f {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="uuid-e42e65af-c1ad-4809-98a2-714e419cafc7" data-name="Layer 1">
+    <polygon class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" points="415.51 332.41 415.51 373.96 373.96 373.96 373.96 415.51 332.41 415.51 290.86 415.51 290.86 457.06 332.41 457.06 373.96 457.06 415.51 457.06 457.06 457.06 457.06 415.51 457.06 373.96 457.06 332.41 457.06 290.86 415.51 290.86 415.51 332.41"/>
+    <rect class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" x="332.41" y="332.41" width="41.55" height="41.55"/>
+    <rect class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" x="290.86" y="290.86" width="41.55" height="41.55"/>
+    <rect class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" x="249.31" y="249.31" width="41.55" height="41.55"/>
+    <polygon class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" points="124.65 41.55 166.2 41.55 166.2 0 124.65 0 83.1 0 41.55 0 0 0 0 41.55 0 83.1 0 124.65 0 166.2 41.55 166.2 41.55 124.65 41.55 83.1 83.1 83.1 83.1 41.55 124.65 41.55"/>
+    <rect class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" x="83.1" y="83.1" width="41.55" height="41.55"/>
+    <rect class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" x="124.65" y="124.65" width="41.55" height="41.55"/>
+    <rect class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" x="166.2" y="166.2" width="41.55" height="41.55"/>
+    <polygon class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" points="41.55 373.96 41.55 332.41 41.55 290.86 0 290.86 0 332.41 0 373.96 0 415.51 0 457.06 41.55 457.06 83.1 457.06 124.65 457.06 166.2 457.06 166.2 415.51 124.65 415.51 83.1 415.51 83.1 373.96 41.55 373.96"/>
+    <rect class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" x="83.1" y="332.41" width="41.55" height="41.55"/>
+    <rect class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" x="124.65" y="290.86" width="41.55" height="41.55"/>
+    <rect class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" x="166.2" y="249.31" width="41.55" height="41.55"/>
+    <polygon class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" points="373.96 0 332.41 0 290.86 0 290.86 41.55 332.41 41.55 373.96 41.55 373.96 83.1 415.51 83.1 415.51 124.65 415.51 166.2 457.06 166.2 457.06 124.65 457.06 83.1 457.06 41.55 457.06 0 415.51 0 373.96 0"/>
+    <rect class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" x="332.41" y="83.1" width="41.55" height="41.55"/>
+    <rect class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" x="290.86" y="124.65" width="41.55" height="41.55"/>
+    <rect class="uuid-351380ac-5186-4774-b4c1-c94540f4740f" x="249.31" y="166.2" width="41.55" height="41.55"/>
+  </g>
+</svg>
+      </div>
+      </div>
+
     <div class="hours">
       <marquee>today's opening hours : 20:00 p.m. - 8:00 a.m.</marquee>
   </div>
@@ -64,58 +117,58 @@
         </div>
         <div class="music">
 
-            <audio class="audioPlayer" id="music1">
+            <audio class="audioPlayer" id="music1" loop>
                 <source src="assets/music/KIRARA-Earthquake.mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music2">
+            <audio class="audioPlayer" id="music2" loop>
                 <source src="assets/music/yune pinku-DC Rot.mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music3">
+            <audio class="audioPlayer" id="music3" loop>
               <source src="assets/music/Dom dolla-Saving Up.mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music4">
+            <audio class="audioPlayer" id="music4" loop>
               <source src="assets/music/Hamdi-Counting (Sammy Virji Remix).mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music5">
+            <audio class="audioPlayer" id="music5" loop>
               <source src="assets/music/AYYBO-RIZZ.mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music6">
+            <audio class="audioPlayer" id="music6" loop>
               <source src="assets/music/Mochakk-Jealous.mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music7">
+            <audio class="audioPlayer" id="music7" loop>
               <source src="assets/music/Kungs, David Guetta, Izzy Bizu-All Night Long.mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music8">
+            <audio class="audioPlayer" id="music8" loop>
               <source src="assets/music/salute-system.mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music9">
+            <audio class="audioPlayer" id="music9" loop>
               <source src="assets/music/Cry Punk-Plastic Love (Future funk remix).mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music10">
+            <audio class="audioPlayer" id="music10" loop>
               <source src="assets/music/Tim Legend-soda city funk.mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music11">
+            <audio class="audioPlayer" id="music11" loop>
               <source src="assets/music/Daft Punk-Get Lucky ft. Pharrell Williams, Nile Rodgers.mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music12">
+            <audio class="audioPlayer" id="music12" loop>
               <source src="assets/music/Tom Misch-Disco Yes (feat. Poppy Ajudha).mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music13">
+            <audio class="audioPlayer" id="music13" loop>
               <source src="assets/music/yeule-Pixel Affection.mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music14">
+            <audio class="audioPlayer" id="music14" loop>
               <source src="assets/music/Charli XCX-forever.mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music15">
+            <audio class="audioPlayer" id="music15" loop>
               <source src="assets/music/PinkPantheress-Break It Off.mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music16">
+            <audio class="audioPlayer" id="music16" loop>
               <source src="assets/music/Duckwrth-Sneaky.mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music17">
+            <audio class="audioPlayer" id="music17" loop>
               <source src="assets/music/Mau P-Dress Code.mp3" type="audio/mpeg">
             </audio>
-            <audio class="audioPlayer" id="music18">
+            <audio class="audioPlayer" id="music18" loop>
               <source src="assets/music/Jamiroquai-Canned Heat.mp3" type="audio/mpeg">
             </audio>
             
@@ -903,7 +956,7 @@ stroke-width: 0px;
   </g>
 </svg>
     </div>
-    <input type="range" min="0" max="100" value="50" class="slider" id="volumeSlider">
+    <input class="slider" id="volumeSlider" type="range" min="0" max="100" value="50">
 </div>
 
 
@@ -916,7 +969,9 @@ stroke-width: 0px;
 
 <div class="bottomBar">
     <div class="coloring">
-        <div id="colorText">☆coloring the vibe.:｡+ﾟ♪</div>
+        <div id="colorText">
+          <p> and...☆coloring the vibe.:｡+ﾟ♪</p>
+        </div>
         <div class="colorBlocks">
           <div id="black"></div>
           <div id="red"></div>
@@ -927,8 +982,46 @@ stroke-width: 0px;
           <div id="pink"></div>
           <div id="cyan"></div>
           <div id="orange"></div>
+          <!-- <img id="wave" src="assets/gif/wave.gif"> -->
         </div>
     </div>
+
+    <div class="ballSize">
+      <div id="bsicon1">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg id="bsi1" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 351.3 52.76">
+  <defs>
+    <style>
+      .uuid-d4b36697-0bac-4a05-b85d-bf1284901b00 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="uuid-9ca48bdf-4410-466f-852f-46d2b9ac572a" data-name="Layer 1">
+    <rect class="uuid-d4b36697-0bac-4a05-b85d-bf1284901b00" x="0" width="351.3" height="52.76"/>
+  </g>
+</svg>
+      </div>
+      <div id="bsicon2">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg id="bsi2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 351.3 351.3">
+  <defs>
+    <style>
+      .uuid-dea7667e-3fc8-420d-88e0-2bf460ab7dd0 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="uuid-8f0ed951-e309-48b6-8a36-a1752feed8ce" data-name="Layer 1">
+    <rect class="uuid-dea7667e-3fc8-420d-88e0-2bf460ab7dd0" x="0" y="149.27" width="351.3" height="52.76"/>
+    <rect class="uuid-dea7667e-3fc8-420d-88e0-2bf460ab7dd0" x="0" y="149.27" width="351.3" height="52.76" transform="translate(0 351.3) rotate(-90)"/>
+  </g>
+</svg>
+      </div>
+      <input class="slider-container" type="range" id="image-size-slider" min="50" max="200" value="100">
+  </div>
+
+    <!-- <img id="wave" src="assets/wave.gif"> -->
 
 </div>
 
