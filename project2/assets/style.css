@@ -353,10 +353,10 @@ body{
     overflow: hidden;
     font-family: 'Edit Undo Line BRK', sans-serif;
     font-size: 1.5vw;
-    position: relative;
+    position: absolute;
     display: inline-block;
     left: 90vw;
-    top: -30vw;
+    top: 30vw;
     border-radius: 2px;
     box-shadow: inset 2px 2px rgb(146, 146, 146);
     /* border: 3px solid white; */
@@ -371,18 +371,18 @@ body{
 }
 
 .music{
-    overflow: scroll;
+    overflow-y: scroll;
+    position: absolute;
     display: inline-block;
     width: 20vw;
     height: 60vh;
-    /* background-color: aqua; */
 
 }
 
 #song1{
     display: inline-block;
     position: absolute;
-    top: 7.8vw;
+    top: 1vw;
     left: 3vw;
     font-size: 1.4vw;
     font-family: 'OffBit Trial', sans-serif; 
@@ -404,10 +404,11 @@ body{
                     transition: all .25s ease-in;
 }
 
+
 #song2{
     display: inline-block;
     position: absolute;
-    top: 12vw;
+    top: 4.7vw;
     left: 3vw;
     font-size: 1.4vw;
     font-family: 'OffBit Trial', sans-serif; 
@@ -429,48 +430,754 @@ body{
                     transition: all .25s ease-in;
 }
 
+#song3{
+    display: inline-block;
+    position: absolute;
+    top: 8.8vw;
+    left: 3vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song3:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song4{
+    display: inline-block;
+    position: absolute;
+    top: 12.8vw;
+    left: 3vw;
+    width: 12.5vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song4:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song5{
+    display: inline-block;
+    position: absolute;
+    top: 18.8vw;
+    left: 3vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song5:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song6{
+    display: inline-block;
+    position: absolute;
+    top: 22.8vw;
+    left: 3vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song6:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song7{
+    display: inline-block;
+    position: absolute;
+    top: 26.8vw;
+    left: 3vw;
+    width: 15vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song7:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song8{
+    display: inline-block;
+    position: absolute;
+    top: 32.7vw;
+    left: 3vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song8:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song9{
+    display: inline-block;
+    position: absolute;
+    top: 36.8vw;
+    left: 3vw;
+    width: 15vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song9:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song10{
+    display: inline-block;
+    position: absolute;
+    top: 42.8vw;
+    left: 3vw;
+    width: 15vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song10:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song11{
+    display: inline-block;
+    position: absolute;
+    top: 48.2vw;
+    left: 3vw;
+    width: 15vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song11:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song12{
+    display: inline-block;
+    position: absolute;
+    top: 55.7vw;
+    left: 3vw;
+    width: 15vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song12:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song13{
+    display: inline-block;
+    position: absolute;
+    top: 61.8vw;
+    left: 3vw;
+    width: 15vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song13:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song14{
+    display: inline-block;
+    position: absolute;
+    top: 65.8vw;
+    left: 3vw;
+    width: 15vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song14:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song15{
+    display: inline-block;
+    position: absolute;
+    top: 69.8vw;
+    left: 3vw;
+    width: 15vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song15:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song16{
+    display: inline-block;
+    position: absolute;
+    top: 75.3vw;
+    left: 3vw;
+    width: 15vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song16:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song17{
+    display: inline-block;
+    position: absolute;
+    top: 79.6vw;
+    left: 3vw;
+    width: 15vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song17:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#song18{
+    display: inline-block;
+    position: absolute;
+    top: 83.9vw;
+    left: 3vw;
+    width: 15vw;
+    font-size: 1.4vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    background-image: linear-gradient(to left,
+                                      transparent,
+                                      transparent 50%,
+                                      #000000 50%,
+                                      #000000);
+                   background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+}
+
+#song18:hover{
+    background-position: 0 0;
+                    color:#e8e8e8;
+                    transition: all .25s ease-in;
+}
+
+#space{
+    display: inline-block;
+    position: absolute;
+    top: 90vw;
+    visibility: hidden;
+}
+
 #play1{
     display: inline-block;
     position: absolute;
-    top: 8vw;
+    top: 1.2vw;
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
 }
 
 #pause1{
-    display: inline-block;
+    display: none;
     position: absolute;
-    top: 8vw;
+    top: 1.2vw;
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
-    visibility: hidden;
 }
 
 #play2{
     display: inline-block;
     position: absolute;
-    top: 12.3vw;
+    top: 5vw;
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
 }
 
 #pause2{
-    display: inline-block;
+    display: none;
     position: absolute;
-    top: 12.3vw;
+    top: 5vw;
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
-    visibility: hidden;
+}
+
+#play3{
+    display: inline-block;
+    position: absolute;
+    top: 9vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause3{
+    display: none;
+    position: absolute;
+    top: 9vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#play4{
+    display: inline-block;
+    position: absolute;
+    top: 13vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause4{
+    display: none;
+    position: absolute;
+    top: 13vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#play5{
+    display: inline-block;
+    position: absolute;
+    top: 19vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause5{
+    display: none;
+    position: absolute;
+    top: 19vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#play6{
+    display: inline-block;
+    position: absolute;
+    top: 23vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause6{
+    display: none;
+    position: absolute;
+    top: 23vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#play7{
+    display: inline-block;
+    position: absolute;
+    top: 27vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause7{
+    display: none;
+    position: absolute;
+    top: 27vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#play8{
+    display: inline-block;
+    position: absolute;
+    top: 33vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause8{
+    display: none;
+    position: absolute;
+    top: 33vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#play9{
+    display: inline-block;
+    position: absolute;
+    top: 37vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause9{
+    display: none;
+    position: absolute;
+    top: 37svw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#play10{
+    display: inline-block;
+    position: absolute;
+    top: 43vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause10{
+    display: none;
+    position: absolute;
+    top: 43svw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#play11{
+    display: inline-block;
+    position: absolute;
+    top: 48.4vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause11{
+    display: none;
+    position: absolute;
+    top: 48.4vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#play12{
+    display: inline-block;
+    position: absolute;
+    top: 55.8vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause12{
+    display: none;
+    position: absolute;
+    top: 55.8vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#play13{
+    display: inline-block;
+    position: absolute;
+    top: 62vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause13{
+    display: none;
+    position: absolute;
+    top: 62vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#play14{
+    display: inline-block;
+    position: absolute;
+    top: 66vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause14{
+    display: none;
+    position: absolute;
+    top: 66vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#play15{
+    display: inline-block;
+    position: absolute;
+    top: 70vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause15{
+    display: none;
+    position: absolute;
+    top: 70vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#play16{
+    display: inline-block;
+    position: absolute;
+    top: 75.5vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause16{
+    display: none;
+    position: absolute;
+    top: 75.5vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+
+#play17{
+    display: inline-block;
+    position: absolute;
+    top: 79.8vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause17{
+    display: none;
+    position: absolute;
+    top: 79.8vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#play18{
+    display: inline-block;
+    position: absolute;
+    top: 84vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#pause18{
+    display: none;
+    position: absolute;
+    top: 84vw;
+    left: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
 }
 
 #line1{
     display: inline-block;
     position: absolute;
-    top: 10vw;
+    top: 3.2vw;
     left: 3vw;
     width: 15vw;
     border: 1px solid black;
@@ -479,7 +1186,151 @@ body{
 #line2{
     display: inline-block;
     position: absolute;
-    top: 14.5vw;
+    top: 6.9vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line3{
+    display: inline-block;
+    position: absolute;
+    top: 11vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line4{
+    display: inline-block;
+    position: absolute;
+    top: 17vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line5{
+    display: inline-block;
+    position: absolute;
+    top: 21vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line6{
+    display: inline-block;
+    position: absolute;
+    top: 25vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line7{
+    display: inline-block;
+    position: absolute;
+    top: 31vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line8{
+    display: inline-block;
+    position: absolute;
+    top: 34.9vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line9{
+    display: inline-block;
+    position: absolute;
+    top: 41vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line10{
+    display: inline-block;
+    position: absolute;
+    top: 46.6vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line11{
+    display: inline-block;
+    position: absolute;
+    top: 54vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line12{
+    display: inline-block;
+    position: absolute;
+    top: 59.9vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line13{
+    display: inline-block;
+    position: absolute;
+    top: 64vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line14{
+    display: inline-block;
+    position: absolute;
+    top: 68vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line15{
+    display: inline-block;
+    position: absolute;
+    top: 73.5vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line16{
+    display: inline-block;
+    position: absolute;
+    top: 77.5vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line17{
+    display: inline-block;
+    position: absolute;
+    top: 81.8vw;
+    left: 3vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+#line18{
+    display: inline-block;
+    position: absolute;
+    top: 87.7vw;
     left: 3vw;
     width: 15vw;
     border: 1px solid black;
@@ -528,6 +1379,197 @@ body{
     left: 5.5vw;
     top: 2.5vw;
     font-size: 2.8vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st3{
+    position: absolute;
+    left: 4vw;
+    top: 2.5vw;
+    font-size: 2.8vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st4{
+    position: absolute;
+    left: 0.8vw;
+    top: 2.5vw;
+    font-size: 1.5vw;
+    width: 20vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st5{
+    position: absolute;
+    left: 7vw;
+    top: 2.5vw;
+    font-size: 2.8vw;
+    width: 20vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st6{
+    position: absolute;
+    left: 5.5vw;
+    top: 2.5vw;
+    font-size: 2.8vw;
+    width: 20vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st7{
+    position: absolute;
+    left: 2vw;
+    top: 2.5vw;
+    font-size: 2.8vw;
+    width: 20vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st8{
+    position: absolute;
+    left: 5.5vw;
+    top: 2.5vw;
+    font-size: 2.8vw;
+    width: 20vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st9{
+    position: absolute;
+    left: 0.8vw;
+    top: 2.5vw;
+    font-size: 1.35vw;
+    width: 22vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st10{
+    position: absolute;
+    left: 1.3vw;
+    top: 2.5vw;
+    font-size: 2.8vw;
+    width: 22vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st11{
+    position: absolute;
+    left: 0.8vw;
+    top: 2.5vw;
+    font-size: 1.2vw;
+    width: 22vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st12{
+    position: absolute;
+    left: 0.7vw;
+    top: 2.5vw;
+    font-size: 1.4vw;
+    width: 22vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st13{
+    position: absolute;
+    left: 1.3vw;
+    top: 2.5vw;
+    font-size: 2.8vw;
+    width: 22vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st14{
+    position: absolute;
+    left: 5.5vw;
+    top: 2.5vw;
+    font-size: 2.8vw;
+    width: 22vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st15{
+    position: absolute;
+    left: 3.5vw;
+    top: 2.5vw;
+    font-size: 2.8vw;
+    width: 22vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st16{
+    position: absolute;
+    left: 5.5vw;
+    top: 2.5vw;
+    font-size: 2.8vw;
+    width: 22vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st17{
+    position: absolute;
+    left: 3.5vw;
+    top: 2.5vw;
+    font-size: 2.8vw;
+    width: 22vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    color: black;
+    visibility: hidden;
+}
+
+#st18{
+    position: absolute;
+    left: 2.8vw;
+    top: 2.5vw;
+    font-size: 2.8vw;
+    width: 22vw;
     font-family: 'OffBit Trial', sans-serif; 
     font-weight: 700;
     color: black;
@@ -614,3 +1656,56 @@ body{
     letter-spacing: 3px;
     background: linear-gradient(180deg, rgba(58,58,58,1) 0%, rgba(255,255,255,1) 100%);
 }
+
+.colorBlocks{
+    display: flex;
+    position: absolute;
+    /* top: 2.5vw; */
+    width: 40vw;
+    height: 2.7vw;
+    bottom: 0;
+    /* background-color: aqua; */
+}
+
+#black{
+    position: absolute;
+    left: 1vw;
+    top: 0.5vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: black;
+    border: 3px solid rgb(163, 163, 163);
+}
+
+#red{
+    position: absolute;
+    left: 4vw;
+    top: 0.5vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: rgb(255, 0, 0);
+    border: 3px solid rgb(163, 163, 163);
+}
+
+#blue{
+    position: absolute;
+    left: 7vw;
+    top: 0.5vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: rgb(0, 0, 255);
+    border: 3px solid rgb(163, 163, 163);
+}
+
+#yellow{
+    position: absolute;
+    left: 10vw;
+    top: 0.5vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: yellow;
+    border: 3px solid rgb(163, 163, 163);
+}
+
+
+
