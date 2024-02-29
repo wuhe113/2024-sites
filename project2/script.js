@@ -7,6 +7,10 @@ $("document").ready(function(){
 
   $(".hours").draggable();
 
+  $("#clock").clock({
+    "calendar":false
+  });
+
   // var soundClick = document.getElementById("music1");
 
   // $("#play1").click(function(){
@@ -430,6 +434,42 @@ $("#blue").click(function() {
   $("#light-gif2").attr('src', 'assets/gif/disco light(blue).gif');
 });
 
+$("#yellow").click(function() {
+  $("#ball-gif").attr('src', 'assets/gif/yellow.gif');
+  $("#light-gif1").attr('src', 'assets/gif/light small.gif');
+  $("#light-gif2").attr('src', 'assets/gif/disco light(yellow).gif');
+});
+
+$("#green").click(function() {
+  $("#ball-gif").attr('src', 'assets/gif/green.gif');
+  $("#light-gif1").attr('src', 'assets/gif/light small.gif');
+  $("#light-gif2").attr('src', 'assets/gif/disco light(green).gif');
+});
+
+$("#purple").click(function() {
+  $("#ball-gif").attr('src', 'assets/gif/purple.gif');
+  $("#light-gif1").attr('src', 'assets/gif/light small.gif');
+  $("#light-gif2").attr('src', 'assets/gif/disco light(purple).gif');
+});
+
+$("#pink").click(function() {
+  $("#ball-gif").attr('src', 'assets/gif/pink.gif');
+  $("#light-gif1").attr('src', 'assets/gif/light small.gif');
+  $("#light-gif2").attr('src', 'assets/gif/disco light(pink).gif');
+});
+
+$("#cyan").click(function() {
+  $("#ball-gif").attr('src', 'assets/gif/cyan.gif');
+  $("#light-gif1").attr('src', 'assets/gif/light small.gif');
+  $("#light-gif2").attr('src', 'assets/gif/disco light(cyan).gif');
+});
+
+$("#orange").click(function() {
+  $("#ball-gif").attr('src', 'assets/gif/orange.gif');
+  $("#light-gif1").attr('src', 'assets/gif/light small.gif');
+  $("#light-gif2").attr('src', 'assets/gif/disco light(orange).gif');
+});
+
 $('#image-size-slider').on('input', function() {
   var newSize = $(this).val();
   var scaleFactor = newSize / 100;
@@ -446,7 +486,54 @@ $('#light-gif2').css('transform', 'scale(' + largestSize + ')');
 $('#image-size-slider').attr('min', 100);
 $('#image-size-slider').val(100); 
 
-  
+
+var currentAudio = null;
+
+$('.audioPlayer').on('play', function() {
+  currentAudio = this;
+});
+
+$('#normalSpeedBtn').click(function() {
+  if (currentAudio) {
+    changeSpeed(currentAudio, 1);
+  }
+});
+
+$('#speedUpBtn1').click(function() {
+  if (currentAudio) {
+    changeSpeed(currentAudio, 1.5);
+  }
+});
+
+$('#speedUpBtn2').click(function() {
+  if (currentAudio) {
+    changeSpeed(currentAudio, 1.5);
+  }
+});
+
+
+function changeSpeed(audio, speed) {
+  audio.playbackRate = speed;
+}
+
+
+// $("#normalSpeedBtn").click(function(){
+//   $(".audioPlayer").setPlaybackRate(1);
+//   // changeSpeed($(this).prev('.audioPlayer')[0],1);
+// })
+
+// $("#speedUpBtn1").click(function(){
+//   $(".audioPlayer").setPlaybackRate(1.5);
+//   // changeSpeed($(this).prev('.audioPlayer')[0],1.5);
+// })
+
+// function changeSpeed(audio, speed){
+//   audio.playbackRate = speed;
+//   audio.play();
+// }
+
+
+
     // $(".volume").slider();
 
     

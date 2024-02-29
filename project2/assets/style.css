@@ -40,6 +40,51 @@ body{
 
 }
 
+.jqclock{
+    position: fixed;
+    left: 1vw;
+    top: 1vw;
+    background-color: rgb(56, 56, 56);
+    width: 15vw;
+    height: 3vw;
+    font-family: 'Edit Undo Line BRK', sans-serif;
+    font-size: 1.5vw;
+    border-radius: 2px;
+    box-shadow: inset 2px 2px rgb(146, 146, 146);
+    outline: 4px solid rgb(96, 96, 96);
+    filter: blur(1px);
+    z-index: 100;
+}
+
+.clocktime{
+    position: absolute;
+    top: 0.5vw;
+    left: 1.2vw;
+    font-size: 2vw;
+    letter-spacing: 2px;
+    color:rgb(222, 222, 222);
+}
+
+.exit-button{
+    position: fixed;
+    width: 3.1vw;
+    height: 3.1vw;
+    top: 1vw;
+    right: 20.5vw;
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 8px;
+    z-index: 101;
+    filter: blur(1px);
+}
+
+#exit{
+    position: absolute;
+    top: 0.3vw;
+    left: 0.5vw;
+    width: 2vw;
+}
+
 .bg-container{
     display: flex;
     width: auto;
@@ -1951,13 +1996,77 @@ p::before{
 } */
 
 
-/* #wave{
+#speedUp{
     display: inline-block;
     position: absolute;
-    left: 40vw;
-    width: 25vw;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    font-size: 1。2vw;
+    right: 19vw;
+    top: 0.3vw;
+    width: 15vw;
+    height: 4vw;
+    text-align: center;
+    background-color:#e8e8e8;
+    border-radius: 8px;
+    box-shadow: inset 3px 3px rgb(176, 176, 176);
+    /* border: 3px solid black;
+    outline: 3px solid white; */
+}
+
+#normalSpeedBtn{
+    display: inline-block;
+    position: absolute;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    font-size: 1.1vw;
+    right: 30.5vw;
+    top: 2.2vw;
+    width: 3vw;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border: 2px white solid;
+    border-radius: 5px;
+}
+
+#speedUpBtn1{
+    display: inline-block;
+    position: absolute;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    font-size: 1.1vw;
+    right: 25vw;
+    top: 2.2vw;
+    width: 3vw;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border: 2px white solid;
+    border-radius: 5px;
+}
+
+#speedUpBtn2{
+    display: inline-block;
+    position: absolute;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    font-size: 1.1vw;
+    right: 19.5vw;
+    top: 2.2vw;
+    width: 3vw;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border: 2px white solid;
+    border-radius: 5px;
+}
+
+#wave2{
+    display: inline-block;
+    position: absolute;
+    right: 0vw;
+    width: 18vw;
     height: 5vw;
-} */
-
-
+}
 
