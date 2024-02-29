@@ -2082,6 +2082,8 @@ strong{
     font-size: 2vw;
     text-align: center;
     visibility: hidden;
+    animation: .25s fadeIn infinite;
+    
 }
 
 
