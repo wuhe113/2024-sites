@@ -2026,7 +2026,7 @@ p::before{
     text-align: center;
     color: white;
     background-color: black;
-    border: 2px white solid;
+    border: 2px rgb(92, 92, 92) solid;
     border-radius: 5px;
 }
 
@@ -2042,7 +2042,7 @@ p::before{
     text-align: center;
     color: white;
     background-color: black;
-    border: 2px white solid;
+    border: 2px rgb(92, 92, 92) solid;
     border-radius: 5px;
 }
 
@@ -2058,7 +2058,7 @@ p::before{
     text-align: center;
     color: white;
     background-color: black;
-    border: 2px white solid;
+    border: 2px rgb(92, 92, 92) solid;
     border-radius: 5px;
 }
 
