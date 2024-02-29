@@ -69,8 +69,8 @@ body{
     position: fixed;
     width: 3.1vw;
     height: 3.1vw;
-    top: 1vw;
-    right: 20.5vw;
+    top: 5vw;
+    left: 1vw;
     background-color: black;
     border: 3px solid white;
     border-radius: 8px;
@@ -2070,3 +2070,27 @@ p::before{
     height: 5vw;
 }
 
+strong{
+    position: fixed;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'OffBit Trial', sans-serif; 
+    font-weight: 700;
+    font-size: 2vw;
+    text-align: center;
+    visibility: hidden;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    div{
+        visibility: hidden;
+    }
+
+    strong{
+        visibility: visible;
+    }
+}
