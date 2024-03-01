@@ -959,6 +959,8 @@ body{
     visibility: hidden;
 }
 
+
+
 #play1{
     display: inline-block;
     position: absolute;
@@ -966,6 +968,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause1{
@@ -975,6 +978,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play2{
@@ -984,6 +988,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause2{
@@ -993,6 +998,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play3{
@@ -1002,6 +1008,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause3{
@@ -1011,6 +1018,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play4{
@@ -1020,6 +1028,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause4{
@@ -1029,6 +1038,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play5{
@@ -1038,6 +1048,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause5{
@@ -1047,6 +1058,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play6{
@@ -1056,6 +1068,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause6{
@@ -1065,6 +1078,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play7{
@@ -1074,6 +1088,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause7{
@@ -1083,6 +1098,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play8{
@@ -1092,6 +1108,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause8{
@@ -1101,6 +1118,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play9{
@@ -1110,6 +1128,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause9{
@@ -1119,6 +1138,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play10{
@@ -1128,6 +1148,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause10{
@@ -1137,6 +1158,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play11{
@@ -1146,6 +1168,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause11{
@@ -1155,6 +1178,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play12{
@@ -1164,6 +1188,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause12{
@@ -1173,6 +1198,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play13{
@@ -1182,6 +1208,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause13{
@@ -1191,6 +1218,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play14{
@@ -1200,6 +1228,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause14{
@@ -1209,6 +1238,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play15{
@@ -1218,6 +1248,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause15{
@@ -1227,6 +1258,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play16{
@@ -1236,6 +1268,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause16{
@@ -1245,6 +1278,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 
@@ -1255,6 +1289,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause17{
@@ -1264,6 +1299,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #play18{
@@ -1273,6 +1309,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #pause18{
@@ -1282,6 +1319,7 @@ body{
     left: 1vw;
     width: 1.5vw;
     height: 1.5vw;
+    cursor: pointer;
 }
 
 #line1{
@@ -2028,6 +2066,7 @@ p::before{
     background-color: black;
     border: 2px rgb(92, 92, 92) solid;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #speedUpBtn1{
@@ -2044,6 +2083,7 @@ p::before{
     background-color: black;
     border: 2px rgb(92, 92, 92) solid;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #speedUpBtn2{
@@ -2060,6 +2100,7 @@ p::before{
     background-color: black;
     border: 2px rgb(92, 92, 92) solid;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #wave2{

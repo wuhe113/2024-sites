@@ -9,6 +9,7 @@ $("document").ready(function(){
 
   $("#clock").clock({
     "calendar":false
+    
   });
 
   // var soundClick = document.getElementById("music1");
