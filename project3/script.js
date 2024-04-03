@@ -105,11 +105,36 @@ $(document).ready(function(){
 
             $('#on').click(function(){
                 $('.image-preview').css('background-repeat', 'repeat');
+                $('#on').css({
+                    "color":"rgb(235, 235, 235)",
+                    "background-color":"rgb(17, 17, 17)",
+                  });
+                  $('#off').css({
+                    "color":"rgb(17, 17, 17)",
+                    "background-color":"transparent",
+                  });
             })
 
             $('#off').click(function(){
                 $('.image-preview').css('background-repeat', 'no-repeat');
+                $('#off').css({
+                    "color":"rgb(235, 235, 235)",
+                    "background-color":"rgb(17, 17, 17)",
+                  });
+                  $('#on').css({
+                    "color":"rgb(17, 17, 17)",
+                    "background-color":"transparent",
+                  });
             })
+
+            $('.close1').click(function(){
+                $('.headline1').css('visibility', 'hidden');
+            })
+
+            $('.close2').click(function(){
+                $('.headline2').css('visibility', 'hidden');
+            })
+
 
             // $('#upButton').click(function() {
             //     up -=10

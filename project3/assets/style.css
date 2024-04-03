@@ -1,6 +1,17 @@
 body{
     background-color: rgb(235, 235, 235);
+    /* animation: flippingLoad 2s linear forwards; */
 }
+
+/* @keyframes flippingLoad{
+    0%{
+        transform: rotateY(180deg);
+    }
+
+    50%{
+        transform: rotateY(0deg);
+    }
+} */
 
 /* .interface{
     position: fixed;
@@ -15,20 +26,22 @@ body{
 
     width: 80vw;
     height: 1vw;
-    background-color: rgb(17, 17, 17);
+    /* background-color: rgb(17, 17, 17); */
+    box-shadow: 2px 2px 5px rgb(17, 17, 17);
     z-index: 10;
+    filter: invert(10%);
 }
 
-.block2{
+/* .block2{
     position: fixed;
     left:0;
     width: 2vw;
     height: 1vw;
     background: linear-gradient(90deg, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%);
     z-index: 10;
-}
+} */
 
-.block3{
+/* .block3{
     position: fixed;
     right:0;
     width: 2vw;
@@ -36,15 +49,17 @@ body{
     background: linear-gradient(90deg, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%);
     transform: rotateY(180deg); 
     z-index: 10;
-}
+} */
 
 .block4{
     position: fixed;
     left: 0.5vw;
     width: 0.1vw;
     height: 100vh;
-    background-color: rgb(17, 17, 17);
+    /* background-color: rgb(17, 17, 17); */
+    box-shadow: -5px -5px 5px rgb(17, 17, 17);
     z-index: 10;
+    filter: invert(10%);
 }
 
 .block5{
@@ -52,8 +67,10 @@ body{
     right: 0.5vw;
     width: 0.1vw;
     height: 100vh;
-    background-color: rgb(17, 17, 17);
+    /* background-color: rgb(17, 17, 17); */
+    box-shadow: 5px 5px 5px rgb(17, 17, 17);
     z-index: 10;
+    filter: invert(10%);
 }
 
 /* .block6{
@@ -101,36 +118,77 @@ body{
     font-family: owners, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.5vw;
+    font-size: 12vw;
     color: rgb(17, 17, 17);
     z-index: 10;
     transform: rotateY(0deg);
     transition: ease-in-out;
     animation: flipping 2s linear infinite;
+    box-shadow: 2px 2px 5px rgb(17, 17, 17);
+    filter: invert(10%);
+    
 }
 
 .headline1:hover{
         animation-play-state: paused;
 }
 
+.close1{
+    position: fixed;
+    display: inline-flex;
+    font-size: 3vw;
+    line-height: 0.5;
+    text-align: center;
+    width: 2vw;
+    height: 2vw;
+    top: 0.5vw;
+    left: 0.5vw;
+    color: rgb(17, 17, 17);
+    border: 0.12vw solid rgb(17, 17, 17);
+    z-index: 10;
+    cursor: pointer;
+    filter: invert(10%);
+
+}
+
 .headline2{
     position: fixed;
     display: inline-flex;
-    top: 1vw;
+    bottom: 1vw;
     right: 1vw;
     font-family: owners, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.5vw;
+    font-size: 12vw;
     color: rgb(17, 17, 17);
     transform: rotateY(180deg); 
     z-index: 10;
     transition: ease-in-out;
     animation: flipping2 2s linear infinite;
+    box-shadow: 2px 2px 5px rgb(17, 17, 17);
+    filter: invert(10%);
 }
 
 .headline2:hover{
     animation-play-state: paused;
+}
+
+.close2{
+    position: fixed;
+    display: inline-flex;
+    font-size: 3vw;
+    line-height: 0.5;
+    text-align: center;
+    width: 2vw;
+    height: 2vw;
+    top: 0.5vw;
+    left: 0.5vw;
+    color: rgb(17, 17, 17);
+    border: 0.12vw solid rgb(17, 17, 17);
+    z-index: 10;
+    cursor: pointer;
+    filter: invert(10%);
+
 }
 
 /* span .hl1{
@@ -149,7 +207,7 @@ body{
 #colorPicker {
     position: fixed;
     top: 2.7vw;
-    left: 0.8vw;
+    left: 1vw;
     width: 1.5vw;
     height: 5vw;
     /* border: 1.5px solid black; */
@@ -167,6 +225,18 @@ body{
     color: rgb(17, 17, 17);
     transform: rotate(-90deg);
     z-index: 10;
+    filter: invert(10%);
+}
+
+.colorBox{
+    position: fixed;
+    display: inline-flex;
+    top: 2vw;
+    left: 0.8vw;
+    width: 2vw;
+    height: 26vw;
+    box-shadow: 2px 2px 5px rgb(17, 17, 17);
+    filter: invert(10%);
 }
 
 #colorPicker2 {
@@ -191,6 +261,7 @@ body{
     color: rgb(17, 17, 17);
     transform: rotateY(-180deg) rotate(-90deg);
     z-index: 10;
+    filter: invert(10%);
 }
 
 
@@ -207,6 +278,19 @@ input[type='button']{
     color: rgb(17, 17, 17);
     z-index: 10;
     cursor: pointer;
+    filter: invert(10%);
+}
+
+.imageBorder{
+    position: fixed;
+    width: 90vw;
+    height: 90vh;
+    top: 3vw;
+    left: 50%;
+    transform: translate(-50%);
+    /* background-color: black; */
+    box-shadow: 2px 2px 5px rgb(17, 17, 17);
+    filter: invert(10%);
 }
 
 .image-preview {
@@ -221,10 +305,12 @@ input[type='button']{
     overflow: hidden; */
     overflow: hidden;
     z-index: 1;
-    border-left: 0.12vw solid black;
-    border-top: 0.12vw solid black;
-    border-bottom: 0.12vw solid black;
+    /* border-left: 0.12vw solid rgb(17, 17, 17);
+    border-top: 0.12vw solid rgb(17, 17, 17);
+    border-bottom: 0.12vw solid rgb(17, 17, 17); */
 }
+
+
 
 #imagePreview1 {
     position: fixed;
@@ -259,7 +345,7 @@ input[type='button']{
     z-index: 10;
 } */
 
-#enlargeButton{
+/* #enlargeButton{
     position: fixed;
     display: inline-block;
     top: 29vw;
@@ -271,11 +357,30 @@ input[type='button']{
     text-align: center;
     width: 4vw;
     height: 2vw;
-    /* transform: rotate(-90deg); */
     color: rgb(235, 235, 235);
-    background-color: black;
+    background-color: rgb(17, 17, 17);
     z-index: 10;
     cursor: pointer;
+} */
+
+#enlargeButton{
+    position: fixed;
+    display: inline-block;
+    top: 29vw;
+    left:0.8vw;
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    text-align: center;
+    width: 3.5vw;
+    height: 2vw;
+    color: rgb(17, 17, 17);
+    /* background-color: rgb(235, 235, 235); */
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgb(17, 17, 17);
+    filter: invert(10%);
 }
 
 #shrinkButton{
@@ -286,16 +391,18 @@ input[type='button']{
     font-family: owners, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 0.8vw;
+    font-size: 1vw;
     text-align: center;
     line-height: 1;
     /* transform: rotate(-90deg); */
-    width: 4vw;
+    width: 3.5vw;
     height: 2vw;
-    color: rgb(235, 235, 235);
-    background-color: black;
+    color: rgb(17, 17, 17);
+    /* background-color: rgb(235, 235, 235); */
+    box-shadow: 2px 2px 5px rgb(17, 17, 17);
     z-index: 10;
     cursor: pointer;
+    filter: invert(10%);
 }
 
 #deleteButton{
@@ -303,7 +410,7 @@ input[type='button']{
     display: inline-block;
     top: 45.5vw;
     left:0.8vw;
-    width: 4vw;
+    width: 3.5vw;
     height: 3vw;
     font-family: owners, sans-serif;
     font-weight: 400;
@@ -311,11 +418,13 @@ input[type='button']{
     font-size: 1.1vw;
     text-align: center;
     line-height: 1;
-    color: rgb(235, 235, 235);
     z-index: 10;
     cursor: pointer;
-    background-color: black;
+    color: rgb(17, 17, 17);
+    /* background-color: rgb(235, 235, 235); */
+    box-shadow: 2px 2px 5px rgb(17, 17, 17);
     /* border: 0.12vw solid black; */
+    filter: invert(10%);
 }
 
 #upButton{
@@ -331,10 +440,11 @@ input[type='button']{
     font-size: 1.5vw;
     text-align: center;
     line-height: 1;
-    color: rgb(0, 0, 0);
+    color: rgb(17, 17, 17);
     z-index: 10;
     cursor: pointer;
-    border: 0.12vw solid black;
+    border: 0.12vw solid rgb(17, 17, 17);
+    filter: invert(10%);
 }
 
 #leftButton{
@@ -350,10 +460,11 @@ input[type='button']{
     font-size: 1.5vw;
     text-align: center;
     line-height: 1;
-    color: rgb(0, 0, 0);
+    color: rgb(17, 17, 17);
     z-index: 10;
     cursor: pointer;
-    border: 0.12vw solid black;
+    border: 0.12vw solid rgb(17, 17, 17);
+    filter: invert(10%);
 }
 
 #rightButton{
@@ -369,10 +480,11 @@ input[type='button']{
     font-size: 1.5vw;
     text-align: center;
     line-height: 1;
-    color: rgb(0, 0, 0);
+    color: rgb(17, 17, 17);
     z-index: 10;
     cursor: pointer;
-    border: 0.12vw solid black;
+    border: 0.12vw solid rgb(17, 17, 17);
+    filter: invert(10%);
 }
 
 
@@ -389,16 +501,17 @@ input[type='button']{
     font-size: 1.5vw;
     text-align: center;
     line-height: 1;
-    color: rgb(0, 0, 0);
+    color: rgb(17, 17, 17);
     z-index: 10;
     cursor: pointer;
-    border: 0.12vw solid black;
+    border: 0.12vw solid rgb(17, 17, 17);
+    filter: invert(10%);
 }
 
-#repeatButton{
+#repeat{
     position: fixed;
     display: inline-block;
-    top: 49vw;
+    top: 49.5vw;
     left:1vw;
     width: 2vw;
     height: 2vw;
@@ -409,9 +522,10 @@ input[type='button']{
     font-size: 1.2vw;
     text-align: center;
     line-height: 1;
-    color: rgb(0, 0, 0);
+    color: rgb(17, 17, 17);
     z-index: 10;
     cursor: pointer;
+    filter: invert(10%);
 }
 
 #on{
@@ -427,10 +541,11 @@ input[type='button']{
     font-size: 1.5vw;
     text-align: center;
     line-height: 1;
-    color: rgb(0, 0, 0);
-    border: 0.12vw solid black;
+    color: rgb(17, 17, 17);
+    border: 0.12vw solid rgb(17, 17, 17);
     z-index: 10;
     cursor: pointer;
+    filter: invert(10%);
 }
 
 #off{
@@ -446,10 +561,25 @@ input[type='button']{
     font-size: 1.9vw;
     text-align: center;
     line-height: 0;
-    color: rgb(0, 0, 0);
-    border: 0.12vw solid black;
+    color: rgb(17, 17, 17);
+    border: 0.12vw solid rgb(17, 17, 17);
     z-index: 10;
     cursor: pointer;
+    filter: invert(10%);
+}
+
+#about{
+    position: fixed;
+    bottom: 0vw;
+    left: 1vw;
+    font-family: owners, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5vw;
+    color: rgb(17, 17, 17);
+    z-index: 10;
+    cursor: pointer;
+    filter: invert(10%);
 }
 
 .block8{
@@ -459,6 +589,17 @@ input[type='button']{
     bottom: 0vw;
     width: 80vw;
     height: 1vw;
-    background-color: rgb(17, 17, 17);
+    box-shadow: -2px -2px 5px rgb(17, 17, 17);
     z-index: 10;
+    filter: invert(10%);
 }
+
+/* .block9{
+    position: fixed;
+    bottom: 0vw;
+    left: 0.5vw;
+    width: 4.5vw;
+    height: 1vw;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 34%, rgba(0,0,0,0) 74%, rgba(0,0,0,1) 100%);
+    z-index: 10;
+} */
