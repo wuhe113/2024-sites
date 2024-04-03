@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
     <head>
         <title>Flip</title>
         <link rel="stylesheet" href="assets/reset.css">
@@ -8,10 +8,14 @@
         <link rel="stylesheet" href="https://use.typekit.net/iox1ytp.css">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
     </head>
 
 
 <body>
+
     <div class="block1"></div>
     <div class="block2"></div>
     <div class="block3"></div>
@@ -20,14 +24,63 @@
     <div class="block6"></div>
     <div class="headline">
         <div class="headline1">
-            Flipping right now.
+            Flipping right now
     </div>
     <div class="headline2">
-        Flipping right now.
+        Flipping right now
     </div>
+
+    <input type="color" id="colorPicker">
+    <div class="color1">
+        Change background color here ⭢
+    </div>
+
+    <input type="color" id="colorPicker2">
+    <div class="color2">
+        Change background color here ⭢
+    </div>
+
+    <!-- <label for="file">select image here</label> -->
+    <!-- <input type="file" id="imageInput" accept="image/*" accept-language="en" placeholder="select image"> -->
+    <div class="image-preview" id="imagePreview1"></div>
+    <div class="image-preview" id="imagePreview2"></div>
+
+    <input type="file" id="imageInput" name="imageInput" accept="image/*" style="display:none" />
+    <input type="text" value="" disabled id="inputImageAgent" />
+    <input type="button" id="imageSelector" onclick="document.getElementById('imageInput').click()" value=" ⮕ Select image here  ⬅" />
+
+
+    <!-- <div class="block7"></div> -->
+    <button id="enlargeButton">
+        + Enlarge +
+    </button>
+
+
+    <button id="shrinkButton">
+        - Shrink -
+    </button>
+
+    <button id="deleteButton">
+        Delete
+        <br>image
+    </button>
+
+    <button id="upButton">⬆</button>
+    <button id="leftButton">⬅</button>
+    <button id="rightButton">⮕</button>
+    <button id="downButton">⬇</button>
+
+    <button id="repeatButton">Repeat</button>
+    <button id="on">✓</button>
+    <button id="off">྾</button>
+
+
+    <div class="block8"></div>
+
 
 </div>
 </body>
 
+<script src="script.js"></script>
 
 </html>
