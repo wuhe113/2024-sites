@@ -335,6 +335,14 @@ input[type='button']{
     border-bottom: 0.12vw solid black; */
 }
 
+#imagePreview1.rotated{
+    transform: rotateY(-180deg);
+}
+
+#imagePreview2.rotated{
+    transform: rotateY(0deg);
+}
+
 /* .block7{
     position: fixed;
     top: 30vw;
@@ -568,9 +576,49 @@ input[type='button']{
     filter: invert(10%);
 }
 
+#flip{
+    position: fixed;
+    display: inline-block;
+    top: 53.5vw;
+    left:0.8vw;
+    width: 2vw;
+    height: 2vw;
+    /* transform: rotate(90deg); */
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2vw;
+    text-align: center;
+    line-height: 1;
+    color: rgb(17, 17, 17);
+    z-index: 10;
+    cursor: pointer;
+    filter: invert(10%);
+}
+
+#flipOn{
+    position: fixed;
+    display: inline-block;
+    top: 53.4vw;
+    left:3.2vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3vw;
+    text-align: center;
+    line-height: 1.3;
+    color: rgb(17, 17, 17);
+    border: 0.12vw solid rgb(17, 17, 17);
+    z-index: 10;
+    cursor: pointer;
+    filter: invert(10%);
+}
+
 #about{
     position: fixed;
-    bottom: 0vw;
+    top: 0vw;
     left: 1vw;
     font-family: owners, sans-serif;
     font-weight: 700;

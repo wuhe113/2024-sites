@@ -135,6 +135,11 @@ $(document).ready(function(){
                 $('.headline2').css('visibility', 'hidden');
             })
 
+            $('#flipOn').click(function(){
+                $('#imagePreview1').toggleClass('rotated');
+                $('#imagePreview2').toggleClass('rotated');
+            })
+
 
             // $('#upButton').click(function() {
             //     up -=10
