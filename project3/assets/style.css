@@ -228,7 +228,7 @@ body{
     filter: invert(10%);
 }
 
-.colorBox{
+.colorBox1{
     position: fixed;
     display: inline-flex;
     top: 2vw;
@@ -261,6 +261,17 @@ body{
     color: rgb(17, 17, 17);
     transform: rotateY(-180deg) rotate(-90deg);
     z-index: 10;
+    filter: invert(10%);
+}
+
+.colorBox2{
+    position: fixed;
+    display: inline-flex;
+    top: 2vw;
+    right: 0.8vw;
+    width: 2vw;
+    height: 26vw;
+    box-shadow: 2px 2px 5px rgb(17, 17, 17);
     filter: invert(10%);
 }
 
@@ -391,6 +402,27 @@ input[type='button']{
     filter: invert(10%);
 }
 
+#enlargeButton2{
+    position: fixed;
+    display: inline-block;
+    top: 29vw;
+    right:0.8vw;
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    text-align: center;
+    width: 3.5vw;
+    height: 2vw;
+    color: rgb(17, 17, 17);
+    /* background-color: rgb(235, 235, 235); */
+    z-index: 10;
+    transform: rotateY(-180deg);
+    cursor: pointer;
+    box-shadow: -2px 2px 5px rgb(17, 17, 17);
+    filter: invert(10%);
+}
+
 #shrinkButton{
     position: fixed;
     display: inline-block;
@@ -408,6 +440,28 @@ input[type='button']{
     color: rgb(17, 17, 17);
     /* background-color: rgb(235, 235, 235); */
     box-shadow: 2px 2px 5px rgb(17, 17, 17);
+    z-index: 10;
+    cursor: pointer;
+    filter: invert(10%);
+}
+
+#shrinkButton2{
+    position: fixed;
+    display: inline-block;
+    top: 32vw;
+    right:0.8vw;
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    text-align: center;
+    line-height: 1;
+    transform: rotateY(-180deg);
+    width: 3.5vw;
+    height: 2vw;
+    color: rgb(17, 17, 17);
+    /* background-color: rgb(235, 235, 235); */
+    box-shadow: -2px 2px 5px rgb(17, 17, 17);
     z-index: 10;
     cursor: pointer;
     filter: invert(10%);
@@ -435,11 +489,54 @@ input[type='button']{
     filter: invert(10%);
 }
 
+#deleteButton2{
+    position: fixed;
+    display: inline-block;
+    top: 45.5vw;
+    right:0.8vw;
+    width: 3.5vw;
+    height: 3vw;
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1vw;
+    text-align: center;
+    line-height: 1;
+    z-index: 10;
+    cursor: pointer;
+    transform: rotateY(-180deg);
+    color: rgb(17, 17, 17);
+    /* background-color: rgb(235, 235, 235); */
+    box-shadow: -2px 2px 5px rgb(17, 17, 17);
+    /* border: 0.12vw solid black; */
+    filter: invert(10%);
+}
+
 #upButton{
     position: fixed;
     display: inline-block;
     top: 35vw;
     left:1.7vw;
+    width: 2vw;
+    height: 2vw;
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 1;
+    color: rgb(17, 17, 17);
+    z-index: 10;
+    cursor: pointer;
+    border: 0.12vw solid rgb(17, 17, 17);
+    filter: invert(10%);
+}
+
+#upButton2{
+    position: fixed;
+    display: inline-block;
+    top: 35vw;
+    right:1.7vw;
     width: 2vw;
     height: 2vw;
     font-family: owners, sans-serif;
@@ -475,6 +572,27 @@ input[type='button']{
     filter: invert(10%);
 }
 
+#leftButton2{
+    position: fixed;
+    display: inline-block;
+    top: 37.5vw;
+    right:1.7vw;
+    width: 2vw;
+    height: 2vw;
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 1;
+    color: rgb(17, 17, 17);
+    z-index: 10;
+    cursor: pointer;
+    transform: rotateY(-180deg);
+    border: 0.12vw solid rgb(17, 17, 17);
+    filter: invert(10%);
+}
+
 #rightButton{
     position: fixed;
     display: inline-block;
@@ -495,12 +613,53 @@ input[type='button']{
     filter: invert(10%);
 }
 
+#rightButton2{
+    position: fixed;
+    display: inline-block;
+    top: 40vw;
+    right:1.7vw;
+    width: 2vw;
+    height: 2vw;
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 1;
+    color: rgb(17, 17, 17);
+    z-index: 10;
+    transform: rotateY(-180degs);
+    cursor: pointer;
+    border: 0.12vw solid rgb(17, 17, 17);
+    filter: invert(10%);
+}
+
 
 #downButton{
     position: fixed;
     display: inline-block;
     top: 42.5vw;
     left:1.7vw;
+    width: 2vw;
+    height: 2vw;
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 1;
+    color: rgb(17, 17, 17);
+    z-index: 10;
+    cursor: pointer;
+    border: 0.12vw solid rgb(17, 17, 17);
+    filter: invert(10%);
+}
+
+#downButton2{
+    position: fixed;
+    display: inline-block;
+    top: 42.5vw;
+    right:1.7vw;
     width: 2vw;
     height: 2vw;
     font-family: owners, sans-serif;
@@ -536,6 +695,27 @@ input[type='button']{
     filter: invert(10%);
 }
 
+#repeat2{
+    position: fixed;
+    display: inline-block;
+    top: 49.5vw;
+    right:0.8vw;
+    width: 2vw;
+    height: 2vw;
+    /* transform: rotate(90deg); */
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2vw;
+    text-align: center;
+    line-height: 1;
+    color: rgb(17, 17, 17);
+    z-index: 10;
+    transform: rotateY(-180deg);
+    cursor: pointer;
+    filter: invert(10%);
+}
+
 #on{
     position: fixed;
     display: inline-block;
@@ -556,6 +736,28 @@ input[type='button']{
     filter: invert(10%);
 }
 
+#on2{
+    position: fixed;
+    display: inline-block;
+    top: 51vw;
+    right:0.8vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 1;
+    color: rgb(17, 17, 17);
+    border: 0.12vw solid rgb(17, 17, 17);
+    z-index: 10;
+    transform: rotateY(-180deg);
+    cursor: pointer;
+    filter: invert(10%);
+}
+
+
 #off{
     position: fixed;
     display: inline-block;
@@ -572,6 +774,27 @@ input[type='button']{
     color: rgb(17, 17, 17);
     border: 0.12vw solid rgb(17, 17, 17);
     z-index: 10;
+    cursor: pointer;
+    filter: invert(10%);
+}
+
+#off2{
+    position: fixed;
+    display: inline-block;
+    top: 51vw;
+    right:3vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.9vw;
+    text-align: center;
+    line-height: 0;
+    color: rgb(17, 17, 17);
+    border: 0.12vw solid rgb(17, 17, 17);
+    z-index: 10;
+    transform: rotateY(-180deg);
     cursor: pointer;
     filter: invert(10%);
 }
@@ -596,11 +819,53 @@ input[type='button']{
     filter: invert(10%);
 }
 
+
+#flip2{
+    position: fixed;
+    display: inline-block;
+    top: 53.5vw;
+    right:0.6vw;
+    width: 2vw;
+    height: 2vw;
+    /* transform: rotate(90deg); */
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2vw;
+    text-align: center;
+    line-height: 1;
+    color: rgb(17, 17, 17);
+    z-index: 10;
+    transform: rotateY(-180deg);
+    cursor: pointer;
+    filter: invert(10%);
+}
+
 #flipOn{
     position: fixed;
     display: inline-block;
     top: 53.4vw;
     left:3.2vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3vw;
+    text-align: center;
+    line-height: 1.3;
+    color: rgb(17, 17, 17);
+    border: 0.12vw solid rgb(17, 17, 17);
+    z-index: 10;
+    cursor: pointer;
+    filter: invert(10%);
+}
+
+#flipOn2{
+    position: fixed;
+    display: inline-block;
+    top: 53.4vw;
+    right:3vw;
     width: 1.5vw;
     height: 1.5vw;
     font-family: owners, sans-serif;
@@ -630,6 +895,21 @@ input[type='button']{
     filter: invert(10%);
 }
 
+#about2{
+    position: fixed;
+    top: 0vw;
+    right: 1vw;
+    font-family: owners, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5vw;
+    color: rgb(17, 17, 17);
+    z-index: 10;
+    transform: rotateY(-180deg);
+    cursor: pointer;
+    filter: invert(10%);
+}
+
 .block8{
     position: fixed;
     left: 50%;
@@ -652,26 +932,73 @@ input[type='button']{
     z-index: 10;
 } */
 
-/* .aboutContent{
+
+.toggleAbout{
+    display: none;
+}
+
+.aboutContent{
     position: fixed;
     display: inline-flex;
     width: 25vw;
-    height: 30vw;
+    height: 15vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: transparent;
-    box-shadow: 2px 2px 5px rgb(17, 17, 17);
+    border: 0.12vw solid black;
+    /* box-shadow: 2px 2px 5px rgb(17, 17, 17); */
     z-index: 10;
+    filter: invert(10%);
+}
+
+.title{
+    font-size: 2vw;
+    display: inline-block;
+    position: fixed;
+    left: 1vw;
+    top: 0.2vw;
+}
+
+.content{
+    font-size: 1.3vw;
+    display: inline-block;
+    position: fixed;
+    left: 1vw;
+    top: 4vw;
 }
 
 .line1{
     position: fixed;
     display: inline-block;
     width: 25vw;
-    height: 0.12vw;
+    height: 0.1vw;
     top: 3vw;
     left: 50%;
     transform: translate(-50%);
     background-color: rgb(17, 17, 17);
-} */
+
+}
+
+.block10{
+    position: fixed;
+    left: 1vw;
+    bottom: 0vw;
+    width:7vw;
+    height: 1vw;
+    box-shadow: -2px -2px 5px rgb(17, 17, 17);
+    filter: invert(10%);
+}
+
+.block11{
+    position: fixed;
+    right: 1vw;
+    bottom: 0vw;
+    width:7vw;
+    height: 1vw;
+    box-shadow: 2px -2px 5px rgb(17, 17, 17);
+    filter: invert(10%);
+}

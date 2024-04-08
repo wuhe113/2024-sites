@@ -62,6 +62,22 @@ $(document).ready(function(){
                 $('.image-preview').css('background-image', 'none');
             });
 
+
+            $('#enlargeButton2').click(function() {
+                currentSize += 5;
+                $('.image-preview').css('background-size', currentSize + 'vw');
+            });
+        
+            $('#shrinkButton2').click(function() {
+                currentSize -= 5;
+                $('.image-preview').css('background-size', currentSize + 'vw');
+            });
+
+
+            $('#deleteButton2').click(function() {
+                $('.image-preview').css('background-image', 'none');
+            });
+
             // $('#upButton').click(function() {
             //     up -=10;
             //     $('.image-preview').css('background-position', up + '%', up + '%');
@@ -127,6 +143,66 @@ $(document).ready(function(){
                   });
             })
 
+            $('#upButton2').click(function() {
+                $('.image-preview').each(function() {
+                    var currentPosition = $(this).css('background-position');
+                    var currentX = parseInt(currentPosition.split(' ')[0]);
+                    var currentY = parseInt(currentPosition.split(' ')[1]);
+                    $(this).css('background-position', currentX + '% ' + (currentY - 5) + '%');
+                });
+            });
+
+            $('#leftButton2').click(function() {
+                $('.image-preview').each(function() {
+                    var currentPosition = $(this).css('background-position');
+                    var currentX = parseFloat(currentPosition.split(' ')[0]);
+                    var currentY = parseFloat(currentPosition.split(' ')[1].replace('%', ''));
+                    $(this).css('background-position', (currentX + 5) + '% ' + currentY + '%');
+                });
+            });
+            
+            $('#rightButton2').click(function() {
+                $('.image-preview').each(function() {
+                    var currentPosition = $(this).css('background-position');
+                    var currentX = parseFloat(currentPosition.split(' ')[0]);
+                    var currentY = parseFloat(currentPosition.split(' ')[1].replace('%', ''));
+                    $(this).css('background-position', (currentX - 5) + '% ' + currentY + '%');
+                });
+            });
+
+            $('#downButton2').click(function() {
+                $('.image-preview').each(function() {
+                    var currentPosition = $(this).css('background-position');
+                    var currentX = parseInt(currentPosition.split(' ')[0]);
+                    var currentY = parseInt(currentPosition.split(' ')[1]);
+                    $(this).css('background-position', currentX + '% ' + (currentY + 5) + '%');
+                });
+            });
+
+            $('#on2').click(function(){
+                $('.image-preview').css('background-repeat', 'repeat');
+                $('#on').css({
+                    "color":"rgb(235, 235, 235)",
+                    "background-color":"rgb(17, 17, 17)",
+                  });
+                  $('#off').css({
+                    "color":"rgb(17, 17, 17)",
+                    "background-color":"transparent",
+                  });
+            })
+
+            $('#off2').click(function(){
+                $('.image-preview').css('background-repeat', 'no-repeat');
+                $('#off').css({
+                    "color":"rgb(235, 235, 235)",
+                    "background-color":"rgb(17, 17, 17)",
+                  });
+                  $('#on').css({
+                    "color":"rgb(17, 17, 17)",
+                    "background-color":"transparent",
+                  });
+            })
+
             $('.close1').click(function(){
                 $('.headline1').css('visibility', 'hidden');
             })
@@ -138,6 +214,19 @@ $(document).ready(function(){
             $('#flipOn').click(function(){
                 $('#imagePreview1').toggleClass('rotated');
                 $('#imagePreview2').toggleClass('rotated');
+            })
+
+            $('#flipOn2').click(function(){
+                $('#imagePreview1').toggleClass('rotated');
+                $('#imagePreview2').toggleClass('rotated');
+            })
+
+            $('#About').click(function(){
+                $('.toggleAbout').toggle();
+            })
+
+            $('#About2').click(function(){
+                $('.toggleAbout').toggle();
             })
 
 
