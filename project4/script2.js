@@ -1,17 +1,18 @@
 $(document).ready(function(){
 
 
-
-    $.getJSON("data.json", function(pup){
-        var newhtml = ""
-
-        for (let i = 0; i < data.length; i++){
-            newhtml = newhtml + `<div class="date">"${data[i].date}">` 
+    $.getJSON("data.json", function(data){
+        console.log(data); // Log the retrieved data to the console
+        var newhtml = "";
+        for (let i = 0; i < data.results.length; i++){
+            newhtml += `<div class="date">${data.results[i].date}</div>`; 
         }
-
-        console.log(newhtml)
-        $(".data-date").html( newhtml )
+        $(".content").html(newhtml);
     });
+
+    // $.getJSON("data.json", function(data){
+    //     console.log(data); // Log the retrieved data to the console
+    // });
 
 
 
