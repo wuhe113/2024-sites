@@ -60,6 +60,15 @@ $(document).ready(function(){
         // 'z-index': '11',
         'background': 'white',
     });
+
+    $(".text1").css('animation', 'none');
+    $(".text1").css({
+        'bottom': '1vw',
+        'left': '50%',
+        'transform': 'translate(-50%)',
+        'opacity': '1'
+    });
+
         $(this).animate({
             left: '-30vw',
             bottom: '80vw',
@@ -68,7 +77,14 @@ $(document).ready(function(){
         }, 3000, function() {
             // Animation complete, change page
             window.location.href = "page2.html"; // Replace "your_page_url_here" with the URL you want to redirect to
+
         });
+
+        $(".text1").animate({
+            'bottom': '-10vw',
+            'opacity': '0'
+        },3000);
+
 
     });
 

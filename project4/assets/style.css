@@ -31,7 +31,15 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(0deg, rgba(255,255,255,1) 5%, rgba(255,61,40,1) 21%, rgba(255,61,40,0.6993391106442577) 40%, rgba(255,61,40,0) 100%);
+    /* animation: appear 4s forwards ease; */
 }
+
+/* @keyframes appear{
+    0%{opacity: 0;
+    bottom: -50vw;}
+    100%{opacity: 1;
+        bottom: 0vw;}
+} */
 
 /* .bg2{
     margin: 0;
@@ -110,3 +118,56 @@ animation-delay: light 4s;
     0%{box-shadow: inset -20px 5px 30px rgb(255, 255, 255), 0px 0px 105px 45px rgba(255,255,255,0.9);}
     50%{box-shadow: inset -20px 5px 30px rgb(255, 55, 0), 0px 0px 90px 20px rgba(255,255,255,0.9);}
 }
+
+.text1{
+    position: fixed;
+    bottom: 1vw;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: 'Michroma', sans-serif;
+                                                
+    /* font-family: 'LT Bump', sans-serif; */
+    /* font-family: 'LT Bump Condensed', sans-serif; */
+    font-size: 1vw;
+    color: rgb(255, 55, 0);
+    filter: blur(0.3px);
+    text-shadow: 0px 0px 5px rgb(255, 55, 0);
+    animation: up3 4s forwards ease;
+}
+
+a {
+    color:rgb(255, 55, 0);
+}
+
+@keyframes up3{
+    0%{bottom: 0vw;
+    opacity: 0;}
+    50%{opacity: 0;}
+    100%{bottom: 1vw;
+    opacity: 1;}
+}
+
+
+/* .text2{
+    position: fixed;
+    bottom: 1vw;
+    left: 1vw;
+    font-family: 'Michroma', sans-serif;
+    font-size: 1vw;
+    color: rgb(255, 55, 0);
+    filter: blur(0.3px);
+    text-shadow: 0px 0px 5px rgb(255, 55, 0);
+    animation: up3 4s forwards ease;
+}
+
+.text3{
+    position: fixed;
+    bottom: 0.5vw;
+    right: 1vw;
+    font-family: 'Michroma', sans-serif;
+    font-size: 1vw;
+    color: rgb(255, 55, 0);
+    filter: blur(0.3px);
+    text-shadow: 0px 0px 5px rgb(255, 55, 0);
+    animation: up3 4s forwards ease;
+} */
