@@ -1,4 +1,22 @@
 $(document).ready(function(){
+
+
+
+    $.getJSON("data.json", function(pup){
+        var newhtml = ""
+
+        for (let i = 0; i < data.length; i++){
+            newhtml = newhtml + `<div class="date">"${data[i].date}">` 
+        }
+
+        console.log(newhtml)
+        $(".data-date").html( newhtml )
+    });
+
+
+
+
+
     $(window).scroll(function(){
         var scrollPosition = window.scrollY;
         var centerX = $(window).width() / 2;
