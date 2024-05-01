@@ -1,34 +1,23 @@
 $(document).ready(function(){
 
-
     $.getJSON("data.json", function(data){
-        console.log(data); // Log the retrieved data to the console
+        console.log(data);
         var newhtml = "";
-        for (let i = 0; i < data.results.length; i++){
-            newhtml += `<div class="date">${data.results[i].date}</div>`; 
+        var numCircles = data.results.length;
+        var radius = 290; // 调整半径以适应元素的布局
+        var container = $('#circle-container');
+        var centerX = container.width() / 2;
+        var centerY = container.height() / 2;
+        var angleIncrement = (2 * Math.PI) / numCircles;
+
+        for (let i = 0; i < numCircles; i++) {
+            var angle = i * angleIncrement;
+            var x = centerX + radius * Math.cos(angle);
+            var y = centerY + radius * Math.sin(angle);
+            newhtml += `<div class="circle" style="left: ${x}px; top: ${y}px;"></div>`;
+            newhtml += `<div class="date" style="left: ${x}px; top: ${y}px;">${data.results[i].date}</div>`; 
         }
         $(".content").html(newhtml);
     });
 
-    // $.getJSON("data.json", function(data){
-    //     console.log(data); // Log the retrieved data to the console
-    // });
-
-
-
-
-
-    $(window).scroll(function(){
-        var scrollPosition = window.scrollY;
-        var centerX = $(window).width() / 2;
-        var centerY = $(window).height() / 2;
-        var angle = -scrollPosition / 180; // negative sign for anticlockwise rotation
-
-        // Use translate to move the origin to the center of the div
-        var transformValue = 'translate(' + centerX + 'px, ' + centerY + 'px) rotate(' + angle + 'deg) translate(-' + centerX + 'px, -' + centerY + 'px)';
-
-        $(".content").css({
-            transform: transformValue
-        });
-    });
 });
