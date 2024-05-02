@@ -5,6 +5,7 @@ body {
     height: 100%;
     overflow: hidden;
     cursor: none;
+    background: rgb(255, 55, 0);
     /* cursor:url('circle.svg'),auto; */
     /* cursor: pointer; */
     /* background: linear-gradient(0deg, rgba(255,61,40,1) 0%, rgba(221,167,74,1) 16%, rgba(45,154,253,1) 100%); */
