@@ -1,3 +1,19 @@
+document.body.onmousemove = function(e) {
+    document.documentElement.style.setProperty (
+      '--x', (
+        e.clientX+window.scrollX
+      )
+      + 'px'
+    );
+    document.documentElement.style.setProperty (
+      '--y', (
+        e.clientY+window.scrollY
+      ) 
+      + 'px'
+    );
+  }
+
+
 const colors = [
     "rgb(221, 167, 74)",
     "rgb(45, 154, 253)",
@@ -49,6 +65,19 @@ $(document).ready(function(){
         }
         $(".content").html(newhtml);
 
+        $('.date').mousemove(function(e) {
+            const xOffset = e.clientX - $(this).offset().left;
+            const yOffset = e.clientY - $(this).offset().top;
+
+            const xOffsetPercentage = xOffset / $(this).width() * 100;
+            const yOffsetPercentage = yOffset / $(this).height() * 100;
+
+            const shadowX = (xOffsetPercentage - 50) * 0.15;
+            const shadowY = (yOffsetPercentage - 50) * 0.15;
+
+            $(this).css("text-shadow", `${shadowX}px ${shadowY}px 10px rgba(255, 55, 0)`);
+        });
+
         $('.date').click(function(){
 
             var clickedDate = $(this).text();
@@ -56,6 +85,21 @@ $(document).ready(function(){
             window.location.href = 'page3.html?date=' + encodeURIComponent(clickedDate);
         });
     });
+      
+
+    $(".content").mouseenter(function(){
+        $("#invertedcursor").animate({
+            width: '40px',
+            height: '40px'
+        });
+    })
+
+    $(".content").mouseleave(function(){
+        $("#invertedcursor").animate({
+            width: '25px',
+            height: '25px'
+        });
+    })
 
 
 });

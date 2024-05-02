@@ -1,31 +1,47 @@
 $(document).ready(function() {
-    // Retrieve query parameter (selected date)
+
     var urlParams = new URLSearchParams(window.location.search);
     var selectedDate = urlParams.get('date');
     
-    // Load JSON data
+
     $.getJSON('data.json', function(data) {
         var results = data.results;
 
-        // Find the data for the selected date
+
         var selectedData = results.find(function(result) {
             return result.date === selectedDate;
         });
 
-        // Check if data for selected date is found
+
         if (selectedData) {
-            // Display the data
+
             $('.data-container').html('');
-            $('.data-container').append('<h2>Data for ' + selectedData.date + '</h2>');
-            $('.data-container').append('<p>Sunrise: ' + selectedData.sunrise + '</p>');
-            $('.data-container').append('<p>Sunset: ' + selectedData.sunset + '</p>');
-            // Add other data fields as needed
+            $('.data-container').append('<div class="date">' + selectedData.date + '</div>');
+            $('.data-container').append('<div class="fl">' + selectedData.first_light + '</div>');
+            $('.data-container').append('<div class="sunrise">' + selectedData.sunrise + '</div>');
+            $('.data-container').append('<div class="sunset">' + selectedData.sunset + '</div>');
+
         } else {
-            // Display an error message if data for selected date is not found
             $('.data-container').html('<p>Error: Data not found for selected date.</p>');
         }
     }).fail(function() {
-        // Display an error message if JSON data couldn't be loaded
         $('.data-container').html('<p>Error: Unable to load JSON data.</p>');
     });
+
+    // $(document).scroll(function() {
+    //     var alpha = Math.min(0.5 + 0.4 * $(this).scrollTop() / 210, 0.9);
+    //     var channel = Math.round(alpha * 255);
+    //     $("body").css('background-color', 'rgb(' + channel + ',' + channel + ',' + channel + ')');
+    //     $("body").css('background-color', 'rgb(255,255,255)');
+    // });
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 500) { // Adjust this value according to when you want the background color to change
+          $('body').removeClass('bg-color-1').addClass('bg-color-2');
+        } else {
+          $('body').removeClass('bg-color-2').addClass('bg-color-1');
+        }
+      });
 });

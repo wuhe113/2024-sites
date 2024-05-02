@@ -4,7 +4,7 @@ body{
     margin: 0;
     justify-content: center;
     align-items: center;
-    animation: appear 3s forwards ease;
+    cursor: none;
 }
 
 @keyframes appear{
@@ -17,6 +17,20 @@ body{
     }
 }
 
+#invertedcursor {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: rgb(255, 55, 0);
+    border-radius: 50%;
+    top: var(--y, 0);
+    left: var(--x, 0);
+    transform: translate(-50%, -50%);
+    mix-blend-mode: overlay;
+    filter: blur(1px);
+    transition: transform .2s;
+  }
+
 #circle-container {
     position:fixed;
     width: 50vw;
@@ -28,6 +42,7 @@ body{
     transform: translate(-50%,-50%); */
     z-index:10;
     mix-blend-mode: screen;
+    animation: appear 3s forwards ease;
 }
 
 .circle {
@@ -46,7 +61,7 @@ body{
     height: 20vw;
     color: rgb(255, 55, 0);
     filter: blur(0.2px);
-    text-shadow: 0px 0px 10px rgb(255, 55, 0);
+    text-shadow: 0px 0px 5px rgb(255, 55, 0);
     line-height: 2vw;
     animation: rotate 30s linear infinite;
     
@@ -85,7 +100,7 @@ body{
     transform: rotate(45deg);
     background: rgb(255, 55, 0);
     transform-origin: 0 0;
-    animation: rotate 5s linear infinite;
+    animation: rotate 5s linear infinite, appear 3s forwards ease;;
 }
 
 #l2{
@@ -98,7 +113,7 @@ body{
     transform: rotate(-10deg);
     background: rgb(255, 55, 0);
     transform-origin: 0 0;
-    animation: rotate2 30s linear infinite;
+    animation: rotate2 30s linear infinite, appear 3s forwards ease;;
 }
 
 #l3{
@@ -111,7 +126,7 @@ body{
     transform: rotate(-10deg);
     background: rgb(255, 55, 0);
     transform-origin: 0 0;
-    animation: rotate2 20s linear infinite;
+    animation: rotate2 20s linear infinite, appear 3s forwards ease;;
 }
 
 .clock{
@@ -122,6 +137,7 @@ body{
     height: 40vw;
     border-radius: 50%;
     border: 1px solid rgb(255, 55, 0);
+    animation: appear 3s forwards ease;
 }
 
 @keyframes rotate2 {
@@ -163,7 +179,7 @@ body{
     color: transparent;
     background: linear-gradient(180deg, rgba(255,255,255,1) 31%, rgba(255,61,40,1) 59%, rgba(255,61,40,0.6993391106442577) 86%, rgba(255,61,40,0) 100%);
     background-clip: text;
-    animation: up 4s forwards ease, textShadow 10s infinite ease;
+    animation: up 4s forwards ease, textShadow 10s infinite ease, appear 3s forwards ease;;
 }
 
 @keyframes up{
@@ -223,7 +239,7 @@ mix-blend-mode: overlay;
     top: 5vw;
     mix-blend-mode: screen;
     box-shadow: inset -20px 5px 30px rgb(255, 255, 255), 0px 0px 105px 45px rgba(255,255,255,0.9);
-    animation: amplify 10s infinite ease;
+    animation: amplify 10s infinite ease, appear 3s forwards ease;;
 }
 
 @keyframes amplify{
@@ -243,6 +259,10 @@ mix-blend-mode: overlay;
 }
 
 
+.setContainer{
+    animation: appear 3s forwards ease;
+}
+
 #set1{
     position: fixed;
     width: 35vw;
@@ -258,10 +278,10 @@ mix-blend-mode: overlay;
     position: fixed;
     width: 35vw;
     height: 5vw;
-    right: 8.7vw;
-    bottom: 14.9vw;
+    right: 0vw;
+    bottom: 0vw;
     background: linear-gradient(0deg, rgba(255,61,40,1) 5%, rgba(255,61,40,1) 21%, rgba(255,61,40,0.6993391106442577) 40%, rgba(255,61,40,0) 100%);
-    transform: skew(10deg, 10deg);
+    /* transform: skew(0deg, 0deg); */
     /* box-shadow: inset -5px -15px 15px rgb(182, 21, 0); */
 }
 
@@ -269,12 +289,44 @@ mix-blend-mode: overlay;
     position: fixed;
     width: 35vw;
     height: 10vw;
-    right: 9.1vw;
-    bottom: 5vw;
+    right: 2.9vw;
+    bottom: -10vw;
     /* border-bottom: 1px solid rgb(255, 55, 0);
     border-left: 1px solid rgb(255, 55, 0);
     border-right: 1px solid rgb(255, 55, 0); */
     background:linear-gradient(180deg, rgb(193, 19, 0) 0%, rgba(255,61,40,0.6993391106442577) 40%, rgba(255,61,40,0) 73%, rgba(255,255,255,1) 100%);
-    transform: skew(-10deg, 10deg);
+    transform: skew(-30deg, 0deg);
 
+}
+
+.circle2{
+    width: 1.5vw;
+    height: 1.5vw;
+    filter: blur(1px);
+    border-radius: 50%;
+    animation: none;
+}
+
+#c1{
+    position: fixed;
+    display: inline-flex;
+    top: 3vw;
+    left: 3vw;
+    background: white;
+}
+
+#c2{
+    position: fixed;
+    display: inline-flex;
+    bottom: 3vw;
+    left: 3vw;
+    background: rgb(255, 55, 0);
+}
+
+#c3{
+    position: fixed;
+    display: inline-flex;
+    top: 3vw;
+    right: 3vw;
+    background: rgb(255, 55, 0);
 }

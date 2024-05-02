@@ -35,7 +35,7 @@ function changeBackgroundColor() {
     index = (index + 1) % colors.length;
 }
 
-setInterval(changeBackgroundColor, 5000); // Change color every 5 seconds
+setInterval(changeBackgroundColor, 5000);
 
 
 
@@ -75,8 +75,7 @@ $(document).ready(function(){
             width: '150vw',
             height: '150vw',
         }, 3000, function() {
-            // Animation complete, change page
-            window.location.href = "page2.html"; // Replace "your_page_url_here" with the URL you want to redirect to
+            window.location.href = "page2.html";
 
         });
 

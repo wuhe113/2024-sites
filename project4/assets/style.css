@@ -172,3 +172,140 @@ a {
     text-shadow: 0px 0px 5px rgb(255, 55, 0);
     animation: up3 4s forwards ease;
 } */
+
+
+.circle{
+    width: 1.5vw;
+    height: 1.5vw;
+    filter: blur(1px);
+    border-radius: 50%;
+}
+
+#c1{
+    position: fixed;
+    display: inline-flex;
+    top: 3vw;
+    left: 3vw;
+    background: white;
+    /* animation: blink1 5s infinite ease; */
+}
+
+#c2{
+    position: fixed;
+    display: inline-flex;
+    bottom: 3vw;
+    left: 3vw;
+    background: rgb(255, 55, 0);
+    /* animation: blink2 5s infinite ease; */
+}
+
+/* #c3{
+    position: fixed;
+    display: inline-flex;
+    bottom: 3vw;
+    right: 3vw;
+    background: white;
+    animation: blink1 5s infinite ease;
+} */
+
+#c4{
+    position: fixed;
+    display: inline-flex;
+    top: 3vw;
+    right: 3vw;
+    background: rgb(255, 55, 0);
+    /* animation: blink2 5s infinite ease; */
+}
+
+
+@keyframes blink1 {
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes blink2 {
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.line{
+    height: 1px;
+    background: rgb(255, 55, 0);
+}
+
+#l1{
+    position: fixed;
+    display: inline-flex;
+    top: 1vw;
+    right: 3vw;
+    width: 100vw;
+    transform: rotate(-30deg);
+    mix-blend-mode: screen;
+    animation-delay: 5s;
+    animation: lightout1 3s forwards ease;
+
+}
+
+#l2{
+    position: fixed;
+    display: inline-flex;
+    top: 1vw;
+    right: -2vw;
+    width: 90vw;
+    transform: rotate(-60deg);
+    mix-blend-mode: screen;
+    /* animation-delay: 5s; */
+    animation: lightout2 4s forwards ease;
+
+}
+
+#l3{
+    position: fixed;
+    display: inline-flex;
+    top: 1vw;
+    right: -6vw;
+    width: 80vw;
+    transform: rotate(-80deg);
+    mix-blend-mode: screen;
+    animation: lightout3 5s forwards ease;
+
+}
+
+
+@keyframes lightout1{
+    from{
+        width: 0vw;
+        top: -30vw;
+    right: 0vw;}
+    to{
+        width: 100vw;
+        top: 1vw;
+        right: 3vw;}
+}
+
+@keyframes lightout2{
+    from{
+        width: 0vw;
+        top: -80vw;
+    right: 0vw;}
+    to{
+        width: 90vw;
+        top: 1vw;
+        right: -2vw;}
+}
+
+
+@keyframes lightout3{
+    from{
+        width: 0vw;
+        top: -180vw;
+    right: 0vw;}
+    to{
+        width: 80vw;
+        top: 1vw;
+        right: -6vw;}
+}
+
+
