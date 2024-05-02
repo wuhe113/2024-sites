@@ -30,11 +30,11 @@ setInterval(changeBackgroundColor, 5000);
 
 $(document).ready(function(){
 
-    $.getJSON("data.json", function(data){
+    $.getJSON('data.json', function(data){
         console.log(data);
         var newhtml = "";
         var numCircles = data.results.length;
-        var radius = 290; // 调整半径以适应元素的布局
+        var radius = 290;
         var container = $('#circle-container');
         var centerX = container.width() / 2;
         var centerY = container.height() / 2;
@@ -48,6 +48,13 @@ $(document).ready(function(){
             newhtml += `<div class="date" style="left: ${x}px; top: ${y}px;">${data.results[i].date}</div>`; 
         }
         $(".content").html(newhtml);
+
+        $('.date').click(function(){
+
+            var clickedDate = $(this).text();
+
+            window.location.href = 'page3.html?date=' + encodeURIComponent(clickedDate);
+        });
     });
 
 
