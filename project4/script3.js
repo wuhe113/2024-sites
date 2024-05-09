@@ -1,3 +1,22 @@
+document.body.onmousemove = function(e) {
+    document.documentElement.style.setProperty (
+      '--x', (
+        e.clientX+window.scrollX
+      )
+      + 'px'
+    );
+    document.documentElement.style.setProperty (
+      '--y', (
+        e.clientY+window.scrollY
+      ) 
+      + 'px'
+    );
+  }
+
+
+
+
+
 $(document).ready(function() {
     var urlParams = new URLSearchParams(window.location.search);
     var selectedDate = urlParams.get('date');
@@ -23,8 +42,8 @@ $(document).ready(function() {
             var leftPosition = (dateIndex / (numDates - 1)) * 65;
             $('.date').css({ 'left': leftPosition + 'vw' });
 
-            var lightLeft = $('.date').position().left; // Get left position of date element
-            $('.light1').css('left', (lightLeft * 1.3) + 'px'); // Set left position of light element
+            // var lightLeft = $('.date').position().left;
+            // $('.light1').css('left', (lightLeft * 1.3) + 'px');
 
 
             $(window).scroll(function() {

@@ -7,6 +7,7 @@ body{
     /* background-color: rgb(24, 24, 33); */
     transition: background-color 0.5s ease;
     background-color: black;
+    cursor: none;
     /* background: rgb(226,248,255); */
     /* background: linear-gradient(180deg, rgba(226,248,255,1) 0%, rgba(255,199,0,1) 58%, rgba(255,128,40,1) 72%, rgb(255, 104, 62) 100%); */
 }
@@ -20,6 +21,20 @@ body{
         opacity: 1;
     }
 }
+
+#invertedcursor {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+    top: var(--y, 0);
+    left: var(--x, 0);
+    transform: translate(-50%, -50%);
+    mix-blend-mode: overlay;
+    filter: blur(1px);
+    transition: transform .2s;
+  }
 
 .data-container{
     width: 1000px;
@@ -144,7 +159,7 @@ body::-webkit-scrollbar {
     height: 60vw;
     background-color: rgb(255, 255, 255);
     top:-10vw;
-    left: 0;
+    left: 60vw;
     transform: rotate(30deg);
     filter: blur(20px);
     transform-origin: top;
