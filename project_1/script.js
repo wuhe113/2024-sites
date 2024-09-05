@@ -41,18 +41,21 @@ function addElement(){
 
     }
 
-
-    // document.addEventListener('mousemove', function(event) {
-    //     const stars = document.querySelectorAll('.star');
-    //     stars.forEach(starDiv => {
-    //         const screenHeight = window.innerHeight;
-    //         const mouseY = event.clientY;
-    //         const rotationDegree = ((mouseY / screenHeight) * 90) - 45; 
-    //         starDiv.style.transform = `rotate(${rotationDegree}deg)`;
-    //     });
-    // });
-
 }
+
+
+document.addEventListener('mousemove', function(event) {
+    let starRotate = document.getElementById("starTitle");
+    if (starRotate) { 
+        const screenHeight = window.innerHeight;
+        const mouseY = event.clientY;
+        const rotationDegree = ((mouseY / screenHeight) * 90) - 45;
+        starRotate.style.transform = `rotate(${rotationDegree}deg)`;
+    }
+});
+
+
+
 
 
 
@@ -70,23 +73,23 @@ function addElement(){
 
 
 // const colors = [
-//     "rgb(221, 167, 74)",
+//     "rgb(37, 37, 37)",
 //     "rgb(45, 154, 253)",
-//     "rgb(255, 127, 95)",
+//     "rgb(255, 251, 0)",
 // ];
 
 // let index = 0;
 
-// function changeBackgroundColor() {
-//     let stickerChange = document.getElementById("sticker1");
+// function changeColor() {
+//     let textChange = document.getElementById("title2");
 
-//     stickerChange.style.transition = "background 2s ease";
-//     stickerChange.style.backgroundColor = colors[index];
+//     textChange.style.transition = "background 2s ease";
+//     textChange.style.color = colors[index];
     
 //     index = (index + 1) % colors.length;
 // }
 
-// setInterval(changeBackgroundColor, 5000);
+// setInterval(changeColor, 5000);
 
 
 
