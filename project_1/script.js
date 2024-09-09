@@ -1,5 +1,6 @@
 // Acknowledgment: ChatGPT provided insights and helped debug this code
 
+
 function getRandomLetter(){
     const lettersArray = "QWERTYUIOPASDFGHJKLZXCVBNM";
 
@@ -79,7 +80,8 @@ document.addEventListener('mousemove', function(event) {
         const rotationDegree = ((mouseY / screenHeight) * 90) - 45;
         starRotate.style.transform = `rotate(${rotationDegree}deg)`;
     }
-});
+}); // The codes using here is modified through the help provided by Chatgpt
+
 
 $(document).ready(function () {
     addElement();
@@ -239,6 +241,36 @@ $(document).ready(function () {
             'bottom': '70px'
 
         });
+
+        $("#puppy").animate({
+            width: '145px',
+            height: '125px',
+            right: '38px',
+            top: '12px'
+        }, 2000).css({
+            transform: 'rotate(0deg)'
+        });
+
+        $("#books").animate({
+            width: '175px',
+            height: '245px',
+            right: '105px',
+            top: '332px'
+        }, 2000).css({
+            transform: 'rotate(0deg)'
+        });
+
+
+        $("#sky").animate({
+            width: '275px',
+            height: '125px',
+            right: '53px',
+            top: '173px'
+        }, 2000).css({
+            transform: 'rotate(0deg)'
+        });
+
+        
     });
 
     $('#d2').mouseleave(function(){
@@ -257,19 +289,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-// document.addEventListener('mousemove', function(event) {
-//     const stars = document.querySelectorAll('.star'); // Select all stars
-//     stars.forEach(starDiv => {
-//         const position = starDiv.getBoundingClientRect();
-//         const x = event.clientX - (position.x + position.width / 2);
-//         const y = event.clientY - (position.y + position.height / 2);
-//         const degrees = Math.atan2(y, x) * (180 / Math.PI) + 90; // Adjust rotation angle
-//         starDiv.style.transform = `rotate(${degrees}deg)`;
-//     });
-// });
 
 
 // const colors = [
