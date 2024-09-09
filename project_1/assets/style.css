@@ -35,7 +35,7 @@ body{
     position: fixed;
     display: inline-block;
     top: -25px;
-    right: 248px;
+    right: 200px;
     transform-origin: center;
 }
 
@@ -43,17 +43,206 @@ body{
     font-family: "latienne-pro", serif;
     font-weight: 400;
     font-style: italic;
-    font-size: 15px;
+    font-size: 20px;
     position: fixed;
-    left: 30px;
-    bottom: 10px;
-    width: 800px;
+    left: 430px;
+    bottom: 110px;
+    width: 400px;
     line-height: 1;
-    text-align: center;
+    text-justify: auto;
     justify-content: center;
     align-items: center;
 }
 
+#name{
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    left: 140px;
+    color: rgb(37, 37, 37);
+}
+
+strong{
+    visibility: hidden;
+}
+
+#text2{
+    font-family: balboa-plus-fill, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    letter-spacing: -10px;
+    /* transform: skew(-10deg, -10deg); */
+    transform: scale(2, 0.5);
+    position: fixed;
+    left: 140px;
+    bottom: 85px;
+    color: rgb(37, 37, 37);
+    /* background-color: rgb(37, 37, 37); */
+    border: 5px solid rgb(37, 37, 37);
+    padding-left: 5px;
+    padding-right: 5px;
+        /* -webkit-text-fill-color: rgb(37, 37, 37);
+    -webkit-text-stroke: 5px rgb(255, 251, 0); */
+}
+
+#text3{
+    font-family: balboa-plus-fill, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    position: fixed;
+    left: 480px;
+    bottom: 26px;
+    width: 300px;
+    transform: scale(1, 1.5);
+    color: rgb(255, 251, 0);
+    background-color: rgb(37, 37, 37);
+    text-decoration: underline;
+    text-align: center;
+}
+
+#text3:hover{
+    color: red;
+}
+
+#starText1{
+    position: fixed;
+    left: 385px;
+    bottom: 20px;
+    font-size: 60px;
+    transform: scale(0.5, 1.8);
+    color: rgb(37, 37, 37);
+}
+
+#starText2{
+    position: fixed;
+    left: 755px;
+    bottom: 20px;
+    font-size: 60px;
+    transform: scale(0.5, 1.8);
+    color: rgb(37, 37, 37);
+}
+
+#metor{
+    position: fixed;
+    left: 15px;
+    bottom: 10px;
+    width: 150px;
+    transform: scale(0.5, 1);
+}
+
+#da{
+    position: fixed;
+    left: 150px;
+    bottom: -10px;
+    width: 255px;
+    transform: scale(1, 0.7);
+}
+
+#text4{
+    font-family: "latienne-pro", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    position: fixed;
+    right: 390px;
+    top: 260px;
+    width: 200px;
+    line-height: 1;
+    text-justify: auto;
+    justify-content: center;
+    align-items: center;
+    transform: skew(0deg, -10deg);
+}
+
+#word1{
+    position: absolute;
+    display: inline-block;
+    color: rgb(37, 37, 37);
+    top: 0px;
+    left: 75px;
+}
+
+#word2{
+    position: absolute;
+    display: inline-block;
+    color: rgb(37, 37, 37);
+    top: 100px;
+    left: 120px;
+}
+
+#word3{
+    position: absolute;
+    display: inline-block;
+    color: rgb(37, 37, 37);
+    top: 220px;
+    left: 35px;
+}
+
+
+#d1{
+    position: fixed;
+    right: 450px;
+    bottom: 30px;
+    width: 130px;
+    height: 200px;
+    border: 10px solid rgb(37, 37, 37);
+    transform: skew(0deg, -10deg);
+}
+
+#d2{
+    cursor: pointer;
+    position: fixed;
+    display: inline-flex;
+    right: 460px;
+    bottom: 40px;
+    width: 110px;
+    height: 180px;
+    background-color: rgb(37, 37, 37);
+    /* border: 10px solid rgb(37, 37, 37); */
+    transform: skew(0deg, -10deg);
+}
+
+
+
+#doorknob{
+    position: fixed;
+    display: inline-flex;
+    right: 470px;
+    bottom: 100px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 251, 0);
+    border-radius: 50%;
+}
+
+#text5{
+    font-family: "puntino-star", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 80px;
+    line-height: 0.8;
+    position: fixed;
+    bottom: 20px;
+    right: 45px;
+    color: rgb(37, 37, 37);
+    text-align: center;
+    padding: 20px;
+    outline: 5px solid rgb(37, 37, 37);
+    outline-style: dotted;
+}
+
+.arrow{
+    position: fixed;
+    bottom: 50px;
+    right: 380px;
+    font-size: 65px;
+    line-height: 0.7;
+    color: rgb(37, 37, 37);
+    transform: skew(10deg, 40deg);
+
+}
 
 
 #sticker1{
@@ -62,7 +251,7 @@ body{
     height: 95px;
     background-color:rgb(37, 37, 37);
     top: 150px;
-    right: 390px;
+    right: 350px;
     border-radius: 50%;
     transform: rotate(-10deg);
     border: 2px solid rgb(255, 251, 0);
@@ -138,6 +327,7 @@ body{
 }
 
 #grid{
+    cursor: pointer;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     gap: 9px;
@@ -148,7 +338,7 @@ body{
     top: 150px;
     /* bottom: 50px; */
     width: 800px;
-    height: 500px;
+    height: 465px;
     overflow: hidden;
     border: 3px solid rgb(37, 37, 37);
     /* animation: wiggle2 0.1s infinite; */
@@ -169,8 +359,16 @@ body{
 
 }
 
-#starBorder{
-    margin-left: 5px;
+#starBorder1{
+    left: 5px;
+    display: grid;
+    gap: 30px;
+    overflow: hidden;
+    position: fixed;
+}
+
+#starBorder2{
+    right: 5px;
     display: grid;
     gap: 30px;
     overflow: hidden;
@@ -180,6 +378,8 @@ body{
 .star{
     color: rgb(37, 37, 37);
 }
+
+
 
 
 
