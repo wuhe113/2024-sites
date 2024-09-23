@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+
+#RNA{
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 30%, rgba(2,0,255,1) 100%);
+}
+
+@font-face {
+    font-family: "Chomsky";
+    src: url("Chomsky-399c.woff") format('woff');
+  }
+
+#headLine{
+    position: relative;
+    font-family: "Chomsky";
+    color: white;
+    font-size: 2vw;
+    left: 40%;
+
+
+
+}
