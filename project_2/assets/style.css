@@ -1,14 +1,14 @@
 body{
-    background-color: black;
+    background-color: rgb(0, 87, 194)
 }
 
-#RNA{
+/* #RNA{
     position: fixed;
     width: 50%;
     height: 100%;
     background: rgb(0,0,0);
 background: linear-gradient(180deg, rgba(0,0,0,1) 30%, rgba(2,0,255,1) 100%);
-}
+} */
 
 @font-face {
     font-family: "Chomsky";
@@ -22,6 +22,151 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 30%, rgba(2,0,255,1) 100%);
     font-size: 2vw;
     left: 40%;
 
+}
+
+#illustration{
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    background: rgb(198,237,255);
+    background: linear-gradient(0deg, rgba(198,237,255,1) 30%, rgba(0,151,255,1) 73%, rgba(0,46,143,1) 100%);
+}
+
+#vL1-1{
+    position: fixed;
+    width: 15vw;
+    height: 3vw;
+    left: 18%;
+    top: 15%;
+    background: rgb(0,46,143);
+    background: linear-gradient(90deg, rgba(0,46,143,1) 0%, rgba(0,151,255,1) 10%, rgba(115,211,255,1) 27%, rgba(0,151,255,1) 44%, rgba(0,108,255,1) 58%, rgba(115,211,255,1) 73%, rgba(115,211,255,1) 84%, rgba(0,108,255,1) 91%, rgba(0,46,143,1) 100%);
+    border-radius: 10%;
+    box-shadow: 0px 5px 10px rgb(0,46,143);
 
 
+}
+
+#vL1-2{
+    position: fixed;
+    width: 15vw;
+    height: 0.5vw;
+    left: 18%;
+    top: 15%;
+    background: rgb(0,46,143);
+    background: linear-gradient(180deg, rgba(0,46,143,1) 0%, rgba(0,46,143,0) 100%);
+    border-radius: 15%;
+}
+
+#vL2{
+}
+
+#vL2-1{
+    position: fixed;
+    width: 13vw;
+    height: 5vw;
+    left: 19%;
+    top: 18.5%;
+    background: rgb(95,118,135);
+    background: linear-gradient(90deg, rgba(95,118,135,1) 0%, rgba(206,214,221,1) 8%, rgba(255,255,255,1) 18%, rgba(152,177,191,1) 30%, rgba(89,118,133,1) 41%, rgba(89,118,133,1) 56%, rgba(152,177,191,1) 67%, rgba(255,255,255,1) 85%, rgba(206,214,221,1) 95%, rgba(95,118,135,1) 100%);
+}
+
+#vL2-2{
+    position: fixed;
+    width: 13vw;
+    height: 2vw;
+    left: 19%;
+    top: 18.5%;
+    background: rgb(48,77,98);
+    background: linear-gradient(180deg, rgba(48,77,98,1) 31%, rgba(95,118,135,0) 100%);
+    border-radius: 10%;
+}
+
+#vL2-3{
+    position: fixed;
+    width: 13vw;
+    height: 0.5vw;
+    left: 19%;
+    top: 26.3%;
+    background: rgb(255,255,255);
+background: linear-gradient(0deg, rgb(205, 210, 217) 0%, rgba(95,118,135,0) 100%);
+border-radius: 15%;
+}
+
+#vL2-4{
+    position: fixed;
+    width: 13vw;
+    height: 0.5vw;
+    left: 19%;
+    top: 26.5%;
+    background: rgb(255,255,255);
+background: linear-gradient(0deg, rgb(80, 84, 90) 0%, rgba(95,118,135,0) 100%);
+border-radius: 15%;
+}
+
+#vL3-1{
+    position: fixed;
+    width: 11vw;
+    height: 2vw;
+    left: 20vw;
+    /* left: 20vw;
+    top: 200px; */
+    top: 27vh;
+    background: rgb(95,118,135);
+    background: linear-gradient(90deg, rgba(95,118,135,1) 0%, rgba(210,219,225,0.72875087535014) 2%, rgba(105,114,120,0.6531206232492996) 5%, rgba(178,204,214,0.4598433123249299) 9%, rgba(178,204,214,0) 48%, rgba(178,204,214,0.46) 89%, rgba(105,114,120,0.65) 94%, rgba(210,219,225,0.73) 98%, rgba(95,118,135,1) 100%);
+}
+
+#vL3-2{
+    position: fixed;
+    width: 11.2vw;
+    height: 2vw;
+    left: 19.9%;
+    top: 30.46%;
+    transform: perspective(10px) rotateX(1deg);
+    background: rgb(95,118,135);
+    background: linear-gradient(90deg, rgba(95,118,135,1) 0%, rgba(210,219,225,0.72875087535014) 2%, rgba(105,114,120,0.6531206232492996) 5%, rgba(178,204,214,0.4598433123249299) 9%, rgba(178,204,214,0) 48%, rgba(178,204,214,0.46) 89%, rgba(105,114,120,0.65) 94%, rgba(210,219,225,0.73) 98%, rgba(95,118,135,1) 100%);
+}
+
+#vL3-3{
+    position: fixed;
+    width: 12vw;
+    height: 2vw;
+    left: 19.5%;
+    top: 33.9%;
+    transform: perspective(5px) rotateX(1deg);
+    background: rgb(95,118,135);
+    background: linear-gradient(90deg, rgba(95,118,135,1) 0%, rgba(210,219,225,0.72875087535014) 2%, rgba(105,114,120,0.6531206232492996) 5%, rgba(178,204,214,0.4598433123249299) 9%, rgba(178,204,214,0) 48%, rgba(178,204,214,0.46) 89%, rgba(105,114,120,0.65) 94%, rgba(210,219,225,0.73) 98%, rgba(95,118,135,1) 100%);
+}
+
+
+#vL3-4{
+    position: fixed;
+    width: 14vw;
+    height: 2vw;
+    left: 18.5%;
+    top: 37.3%;
+    transform: perspective(2px) rotateX(1deg);
+    background: rgb(95,118,135);
+    background: linear-gradient(90deg, rgba(95,118,135,1) 0%, rgba(210,219,225,0.72875087535014) 2%, rgba(105,114,120,0.6531206232492996) 5%, rgba(178,204,214,0.4598433123249299) 9%, rgba(178,204,214,0) 48%, rgba(178,204,214,0.46) 89%, rgba(105,114,120,0.65) 94%, rgba(210,219,225,0.73) 98%, rgba(95,118,135,1) 100%);
+}
+
+#vL3-5{
+    position: fixed;
+    width: 16.2vw;
+    height: 1vw;
+    left: 17.4%;
+    top: 40.95%;
+    transform: perspective(4px) rotateX(1deg);
+    background: rgb(95,118,135);
+    background: linear-gradient(90deg, rgba(95,118,135,1) 0%, rgba(210,219,225,0.72875087535014) 2%, rgba(105,114,120,0.6531206232492996) 5%, rgba(178,204,214,0.4598433123249299) 9%, rgba(178,204,214,0) 48%, rgba(178,204,214,0.46) 89%, rgba(105,114,120,0.65) 94%, rgba(210,219,225,0.73) 98%, rgba(95,118,135,1) 100%);
+}
+
+#vL3-5{
+    position: fixed;
+    width: 16.2vw;
+    height: 1vw;
+    left: 17.4%;
+    top: 40.95%;
+    transform: perspective(4px) rotateX(1deg);
+    background: rgb(95,118,135);
+    background: linear-gradient(90deg, rgba(95,118,135,1) 0%, rgba(210,219,225,0.72875087535014) 2%, rgba(105,114,120,0.6531206232492996) 5%, rgba(178,204,214,0.4598433123249299) 9%, rgba(178,204,214,0) 48%, rgba(178,204,214,0.46) 89%, rgba(105,114,120,0.65) 94%, rgba(210,219,225,0.73) 98%, rgba(95,118,135,1) 100%);
 }
