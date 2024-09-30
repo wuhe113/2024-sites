@@ -5,14 +5,14 @@ let raindropLength = [];
 
 let rnaPointsX = [];
 let rnaPointsY = [];
-let numRnaPoints = 100;
+
+let numRnaPoints;
 
 
 function setup() {
-    
-
     let myCanvas3 = createCanvas(windowWidth / 8.6, windowHeight / 2, WEBGL);
     myCanvas3.parent("rainDrops")
+
 
     for (let i = 0; i < 100; i++) {
       raindropX[i] = random(width); 
@@ -35,7 +35,13 @@ function setup() {
 
     raindrops();
 
-    wave(300, 500, 100, 300);  
+   push();
+    if (windowWidth > 2000) {
+        wave(270, 605, -200, 600);  
+    } else{
+        wave(300, 500, 100, 300);  
+    }
+    pop();
 
     rna();
   }
@@ -44,7 +50,11 @@ function setup() {
 
     push();
 
-    translate(-60, 0, 0);
+    if (windowWidth > 2000) {
+        translate(-130, 0, 0);
+    } else{
+        translate(-60, 0, 0);
+    }
     
 
 
@@ -53,7 +63,12 @@ for (let i = 0; i < raindropX.length; i++) {
 
 
   stroke(46, 119, 209, 100);
-  strokeWeight(5);
+  if (windowWidth > 2000) {
+  strokeWeight(10);
+  } else{
+    strokeWeight(5);
+  }
+
   line(raindropX[i], raindropY[i], raindropX[i], raindropY[i] + raindropLength[i]);
   
 
@@ -61,7 +76,13 @@ for (let i = 0; i < raindropX.length; i++) {
   
 
   if (raindropY[i] > height) {
-    raindropY[i] = random(-200, -100);
+
+      if (windowWidth > 2000) {
+        raindropY[i] = random(-500, -100);
+      } else {
+        raindropY[i] = random(-200, -100);
+      }
+
     raindropX[i] = random(width);
   }
 }
@@ -71,7 +92,11 @@ pop();
   function wave(startX, endX, startY, endY){
     push();
 
-    translate(-400, -90, 0);
+    if (windowWidth > 2000) {
+        translate(-450, 150, 0);
+    }else{
+        translate(-400, -90, 0);
+    }
 
     
 
@@ -96,29 +121,50 @@ pop();
 
   function rna(){
 
-    translate(-120, -30, 0);
+    push();
 
-    let rnaLevel = 250;
+    if (windowWidth > 2000) {
+        translate(-250, -100, 0);
+    } else {
+        translate(-120, -30, 0);
+    }
+
+    let rnaLevel;
     let rnaScale = 0.002;
+    let rx, ry, rz;
+
+    if (windowWidth > 2000) {
+        rnaLevel = 600;
+        numRnaPoints = 500; // Update global numRnaPoints
+    } else {
+        rnaLevel = 250;
+        numRnaPoints = 100; // Update global numRnaPoints
+    }
 
     for (let i = 0; i < numRnaPoints; i++) {
-        
         let rt = rnaScale * frameCount + i * 100;
+        rx = rnaLevel * noise(rt);
+        ry = rnaLevel * noise(rt + 10000);
+        rz = 0;
 
-    let rx = rnaLevel * noise(rt);
-    let ry = rnaLevel * noise (rt + 10000);
-    let rz = 0;
-
-   stroke(223, 234, 245);
-   strokeWeight(2);
-   point(rx, ry, rz);
-    }
+        stroke(223, 234, 245);
+        if (windowWidth > 2000) {
+            strokeWeight(3);
+        } else {
+            strokeWeight(2);
+        }
     
+        point(rx, ry, rz);
+    }
 
-  }
+    
+    pop();
+}
+
+
 
 
 
   function windowResized() {
-    resizeCanvas(windowWidth / 8.5, windowHeight / 2);
+    resizeCanvas(windowWidth / 8.6, windowHeight / 2);
   }
