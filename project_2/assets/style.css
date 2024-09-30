@@ -280,7 +280,7 @@ border-radius: 15%;
 #line{
     position: fixed;
     left: 33.2%;
-    /* top: 30%; */
+    top: 30%;
     width: 22vw;
     height: 1px;
     background-color: black;
