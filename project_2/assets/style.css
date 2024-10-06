@@ -5,7 +5,7 @@
 
 body{
     background-color: rgb(0, 87, 194);
-    overflow: scroll;
+    overflow: hidden;
 }
 
 #cover {
@@ -46,15 +46,40 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 30%, rgba(2,0,255,1) 100%);
     src: url("Chomsky-399c.woff") format('woff');
   }
 
+
 #headLine{
     position: fixed;
     font-family: "Chomsky";
     color: white;
     font-size: 1.8vw;
-    left: 42%;
+    top: 0;
+    left: 36.5%;
     width: 20vw;
     z-index: 10;
+    transition: top 0.3s ease;
 
+}
+
+#divider{
+    position: fixed;
+    top: 1%;
+    left: 54%;
+    width: 0.05vw;
+    height: 2vw;
+    background-color: white;
+    display: inline-flex;
+    z-index: 10;
+}
+
+#topic2{
+    position: fixed;
+    top: 1.5%;
+    left: 56%;
+    display: inline-flex;
+    font-family: Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1.2vw;
+    z-index: 10;
 }
 
 #illustration{
@@ -318,9 +343,9 @@ border-radius: 15%;
 
 #intro{
     position: fixed;
-    right: 14.5%;
+    right: 11%;
     top: 48%;
-    width: 30vw;
+    width: 35vw;
     height: 13vw;
     line-height: 2.5vw;
     color: white;
@@ -450,10 +475,11 @@ border-radius: 15%;
 
 
 #button2{
+    cursor: pointer;
     position: fixed;
     font-family: Helvetica, sans-serif;
     font-weight: 700;
-    right: 31%;
+    right: 32.5%;
     top: 65%;
     font-size: 1.5vw;
     color: white;
@@ -465,6 +491,10 @@ border-radius: 15%;
     background-color: rgb(0,46,143);
     border-radius: 80px;
     box-shadow: 0px 0px 10px rgb(0,46,143);
+}
+
+#button2:hover{
+    box-shadow: 0px 0px 20px rgb(0,46,143);
 }
 
 #context{
@@ -505,11 +535,26 @@ border-radius: 15%;
   #content.visible {
     animation: show 2s forwards;
   }
+
+  #date{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 13vw;
+    line-height: 2.2vw;
+    color: white;
+    font-family: "meursault-variable",serif;
+    font-variation-settings: 'wdth' 100, 'wght' 100;
+    font-size: 1vw;
+    text-align: center;
+}
   
 #author{
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 40%;
     transform: translate(-50%, -50%);
     width: 30vw;
     height: 13vw;
@@ -524,7 +569,7 @@ border-radius: 15%;
 #img1{
     position: absolute;
     left: 50%;
-    top: 66%;
+    top: 76%;
     transform: translate(-50%, -50%);
     width: 30vw;
     height: 35vw;
@@ -535,6 +580,7 @@ border-radius: 15%;
     font-variation-settings: 'wdth' 100, 'wght' 100;
     line-height: 1.5vw;
     font-size: 1.2vw;
+    box-shadow: 0px 0px 10px rgb(0,46,143);
 }
 
 #img1 p{
@@ -549,7 +595,7 @@ border-radius: 15%;
 #text{
     position: absolute;
     left: 50%;
-    top: 120%;
+    top: 130%;
     transform: translate(-50%, -50%);
     width: 50vw;
     height: 13vw;
