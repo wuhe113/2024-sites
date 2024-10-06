@@ -139,6 +139,40 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 30%, rgba(2,0,255,1) 100%);
     transform: rotate(-40deg);
 }
 
+#benefit{
+    position: fixed;
+    right: 9%;
+    top: 1%;
+    width: 9vw;
+    height: 2.3vw;
+    font-family: Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 0.85vw;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-color: rgb(86, 124, 155);
+    border: 1px solid rgb(26, 102, 184);
+
+}
+
+#account{
+    position: fixed;
+    right: 0%;
+    top: 1%;
+    width: 9vw;
+    height: 2.3vw;
+    font-family: Helvetica, sans-serif;
+
+    font-size: 1.1vw;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+
+}
+
 #illustration{
     position: fixed;
     width: 50%;
@@ -658,6 +692,7 @@ border-radius: 15%;
     height: 13vw;
     line-height: 2.2vw;
     color: white;
+    margin-bottom: 5vw;
     font-family: "Times New Roman", Times, serif;
     /* font-family: "meursault-variable",serif;
     font-variation-settings: 'wdth' 100, 'wght' 100; */
