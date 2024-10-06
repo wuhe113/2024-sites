@@ -7,6 +7,21 @@ body{
     background-color: rgb(0, 87, 194)
 }
 
+#cover {
+    opacity: 0;
+    animation: show 2s forwards; /* Animation duration 5s with a 3s delay */
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 /* #RNA{
     position: fixed;
     width: 50%;
@@ -45,6 +60,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 30%, rgba(2,0,255,1) 100%);
     position: fixed;
     width: 50%;
     height: 100%;
+    overflow: hidden;
     background: rgb(198,237,255);
     background: linear-gradient(0deg, rgba(198,237,255,1) 30%, rgba(0,151,255,1) 73%, rgba(0,46,143,1) 100%);
 }
@@ -262,15 +278,16 @@ border-radius: 15%;
 
 #title{
     position: fixed;
-    right: 5%;
-    top: 15%;
+    right: 3.5%;
+    top: 18%;
     font-family: "meursault-variable",serif;
     font-variation-settings: 'wdth' 100, 'wght' 100;
     font-size: 4vw;
-    width: 40vw;
-    height: 13vw;
+    width: 43vw;
+    height: 14vw;
     background-color: white;
-    padding: 10px;
+    padding-top: 15px;
+    padding-left: 20;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 0px 10px rgb(0,46,143);
@@ -300,11 +317,11 @@ border-radius: 15%;
 
 #intro{
     position: fixed;
-    right: 13%;
-    top: 43%;
+    right: 14.5%;
+    top: 48%;
     width: 30vw;
     height: 13vw;
-    line-height: 2.2vw;
+    line-height: 2.5vw;
     color: white;
     font-family: "meursault-variable",serif;
     font-variation-settings: 'wdth' 100, 'wght' 100;
@@ -313,9 +330,9 @@ border-radius: 15%;
 
 #line1{
     position: fixed;
-    left: 33.2%;
-    top: 30%;
-    width: 22.2vw;
+    left: 34.2%;
+    top: 35%;
+    width: 19.7vw;
     height: 1px;
     background-color: black;
     transform: rotate(-10deg);
@@ -401,7 +418,7 @@ border-radius: 15%;
 
 #button1{
     position: fixed;
-    left: 36%;
+    left: 10%;
     top: 59%;
     width: 4vw;
     height: 4vw;
@@ -413,32 +430,53 @@ border-radius: 15%;
 
 }
 
-#halo{
+#halo1{
     position: fixed;
-    left: 18%;
-    top: 40%;
+    left: 0%;
+    top: 5%;
     background-color: rgba(255, 255, 255, 0);
-    width: 15vw;
-    height: 20vw;
+    width: 50vw;
+    height: 50vw;
     border-radius: 100%;
-    filter: blur(10px);
+    filter: blur(30px);
     animation: glowing 5s infinite;
     transform-origin: center;
+    -webkit-box-shadow:0px 0px 350px 40px rgba(255, 255, 255, 0.9);
+    -moz-box-shadow: 0px 0px 350px 40px rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 350px 40px rgba(255, 255, 255, 0.9);
+    opacity: 0.3;
+}
 
 
+#button2{
+    position: fixed;
+    font-family: Helvetica, sans-serif;
+    font-weight: 700;
+    right: 31%;
+    top: 63%;
+    font-size: 1.5vw;
+    color: white;
+    width: 14vw;
+    height: 5vw;
+    padding-top: 20px;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(0,46,143);
+    border-radius: 80px;
+    box-shadow: 0px 0px 10px rgb(0,46,143);
+}
 
-
-    /* -webkit-box-shadow:0px 0px 194px 30px rgba(76,207,255,0.9);
--moz-box-shadow: 0px 0px 194px 30px rgba(76,207,255,0.9);
-box-shadow: 0px 0px 194px 30px rgba(76,207,255,0.9); */
-/* 
-    -webkit-box-shadow:0px 0px 200px 45px rgba(158, 232, 255, 0.9);
--moz-box-shadow: 0px 0px 200px 45px rgba(158, 232, 255, 0.9);
-box-shadow: 0px 0px 200px 45px rgba(158, 232, 255, 0.9); */
+#context{
+    position: fixed;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(0, 87, 194)
 }
 
 @keyframes glowing{
     0%{
+        transform: scale(0);
         -webkit-box-shadow:0px 0px 194px 35px rgba(0, 128, 255, 0);
         -moz-box-shadow: 0px 0px 194px 35px rgba(0, 128, 255, 0);
         box-shadow: 0px 0px 194px 35px rgba(0, 128, 255, 0);
@@ -457,6 +495,45 @@ box-shadow: 0px 0px 200px 45px rgba(158, 232, 255, 0.9); */
         -moz-box-shadow: 0px 0px 194px 35px rgba(0, 128, 255, 0);
         box-shadow: 0px 0px 194px 35px rgba(0, 128, 255, 0);
     }
+}
+
+#author{
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 13vw;
+    line-height: 2.5vw;
+    color: white;
+    font-family: "meursault-variable",serif;
+    font-variation-settings: 'wdth' 100, 'wght' 100;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+#img1{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20vw;
+
+}
+
+#text{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 45vw;
+    height: 13vw;
+    line-height: 2vw;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    /* font-family: "meursault-variable",serif;
+    font-variation-settings: 'wdth' 100, 'wght' 100; */
+    font-size: 1.5vw;
 }
 
 

@@ -28,7 +28,7 @@ function setup() {
 
   let button = createButton('┼');
     button.parent("button1");
-    button.position(13, 8);
+    button.position(width / 12.5, height / 42);
 
     button.mousePressed(() => {
         planktonActive = true;

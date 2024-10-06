@@ -21,20 +21,20 @@ function setup() {
     raindropLength[i] = random(10, 20); 
     
     
-    let colorChoice = int(random(3));
-    if (colorChoice === 0) {
-      r[i] = 255;
-      g[i] = 0;
-      b[i] = 0;
-    } else if (colorChoice === 1) {
-      r[i] = 0;
-      g[i] = 255;
-      b[i] = 0;
-    } else {
-      r[i] = 0;
-      g[i] = 0;
-      b[i] = 255;
-    }
+    // let colorChoice = int(random(3));
+    // if (colorChoice === 0) {
+    //   r[i] = 255;
+    //   g[i] = 0;
+    //   b[i] = 0;
+    // } else if (colorChoice === 1) {
+    //   r[i] = 0;
+    //   g[i] = 255;
+    //   b[i] = 0;
+    // } else {
+    //   r[i] = 0;
+    //   g[i] = 0;
+    //   b[i] = 255;
+    // }
   
   }
 
