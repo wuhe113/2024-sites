@@ -53,33 +53,90 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 30%, rgba(2,0,255,1) 100%);
     color: white;
     font-size: 1.8vw;
     top: 0;
-    left: 36.5%;
+    left: 34%;
     width: 20vw;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: top 0.3s ease;
 
 }
 
 #divider{
     position: fixed;
-    top: 1%;
     left: 54%;
     width: 0.05vw;
     height: 2vw;
     background-color: white;
-    display: inline-flex;
+    display: block;
     z-index: 10;
 }
 
 #topic2{
     position: fixed;
-    top: 1.5%;
     left: 56%;
-    display: inline-flex;
+    display: block;
     font-family: Helvetica, sans-serif;
     font-weight: 700;
     font-size: 1.2vw;
+    margin-top: 0.3vw;
     z-index: 10;
+}
+
+#menu{
+    position: fixed;
+    left: 1.5%;
+    top: 1.8%;
+}
+
+#m1{
+    display: flex;
+    width: 1.2vw;
+    height: 0.2vw;
+    background-color: white;
+}
+
+#m2{
+    display: flex;
+    margin-top: 0.15vw;
+    width: 1.2vw;
+    height: 0.2vw;
+    background-color: white;
+}
+
+#m3{
+    display: flex;
+    margin-top: 0.15vw;
+    width: 1.2vw;
+    height: 0.2vw;
+    background-color: white;
+}
+
+#search{
+    position: fixed;
+    left: 5%;
+    top: 1.5%;
+}
+
+#s1{
+    display: flex;
+    width: 0.9vw;
+    height: 0.9vw;
+    border-radius: 50%;
+    border: 1.8px solid white;
+}
+
+#s2{
+    position: fixed;
+    display: flex;
+    width: 0.2vw;
+    height: 0.6vw;
+    margin-top: -0.3vw;
+    margin-left: 0.8vw;
+    background-color: white;
+    border-radius: 30px;
+    transform: rotate(-40deg);
 }
 
 #illustration{
