@@ -395,16 +395,18 @@ border-radius: 15%;
 
 #title{
     position: fixed;
-    right: 3.5%;
-    top: 18%;
+    right: 5%;
+    top: 20%;
+    /* font-family: "meursault-variable",serif;
+    font-variation-settings: 'wdth' 100, 'wght' 100; */
     font-family: "meursault-variable",serif;
-    font-variation-settings: 'wdth' 100, 'wght' 100;
-    font-size: 4vw;
-    width: 43vw;
-    height: 14vw;
+    font-variation-settings: 'wdth' 1, 'wght' 200;
+    font-size: 4.8vw;
+    width: 40vw;
+    height: 16vw;
     background-color: white;
-    padding-top: 15px;
-    padding-left: 20;
+    padding-top: 1.2vw;
+    padding-left: 1.5vw;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 0px 10px rgb(0,46,143);
@@ -434,8 +436,8 @@ border-radius: 15%;
 
 #intro{
     position: fixed;
-    right: 11%;
-    top: 48%;
+    right: 9.7%;
+    top: 50%;
     width: 35vw;
     height: 13vw;
     line-height: 2.5vw;
@@ -570,7 +572,7 @@ border-radius: 15%;
     position: fixed;
     font-family: Helvetica, sans-serif;
     font-weight: 700;
-    right: 32.5%;
+    right: 31%;
     top: 65%;
     font-size: 1.5vw;
     color: white;
@@ -667,20 +669,23 @@ border-radius: 15%;
     padding: 20px;
     background-color: white;
     border: 1.5px solid black;
+    /* font-family: "meursault-variable",serif;
+    font-variation-settings: 'wdth' 100, 'wght' 100; */
     font-family: "meursault-variable",serif;
-    font-variation-settings: 'wdth' 100, 'wght' 100;
-    line-height: 1.5vw;
-    font-size: 1.2vw;
+    font-variation-settings: 'wdth' 1, 'wght' 200;
+    line-height: 1.8vw;
+    font-size: 1.5vw;
     box-shadow: 0px 0px 10px rgb(0,46,143);
 }
 
 #img1 p{
     position: absolute;
-    bottom: 4%;
+    padding-right: 1vw;
+    bottom: 2%;
 }
 
 #img1 span{
-    font-size: 1vw;
+    font-size: 1.2vw;
 }
 
 #text{
