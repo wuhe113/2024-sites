@@ -400,7 +400,7 @@ border-radius: 15%;
     /* font-family: "meursault-variable",serif;
     font-variation-settings: 'wdth' 100, 'wght' 100; */
     font-family: "meursault-variable",serif;
-    font-variation-settings: 'wdth' 1, 'wght' 200;
+    font-variation-settings: 'wdth' 1, 'wght' 100;
     font-size: 4.8vw;
     width: 40vw;
     height: 16vw;
@@ -672,7 +672,7 @@ border-radius: 15%;
     /* font-family: "meursault-variable",serif;
     font-variation-settings: 'wdth' 100, 'wght' 100; */
     font-family: "meursault-variable",serif;
-    font-variation-settings: 'wdth' 1, 'wght' 200;
+    font-variation-settings: 'wdth' 1, 'wght' 100;
     line-height: 1.8vw;
     font-size: 1.5vw;
     box-shadow: 0px 0px 10px rgb(0,46,143);
