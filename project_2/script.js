@@ -11,6 +11,8 @@ startButton.onclick = function(e) {
     hidden.style.visibility = "hidden";
     document.body.style.overflow = "scroll";
 
+    window.scrollTo(0, 0);
+
     showDiv();
 };
 

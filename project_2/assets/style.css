@@ -705,6 +705,19 @@ border-radius: 15%;
     font-size: 1.6vw;
 }
 
+/* #space{
+    margin-bottom: 100px;
+} */
+
+#footer{
+    position: absolute;
+    height: 13vw;
+    font-family: "meursault-variable",serif;
+    font-variation-settings: 'wdth' 100, 'wght' 100;
+    font-size: 1.2vw;
+
+}
+
 
 
 @media only screen and (min-width: 2000px) {
