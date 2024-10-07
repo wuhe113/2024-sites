@@ -280,9 +280,10 @@ function plankton(){
 
       if (windowWidth > 2000) {
         
-        ellipse(tx, ty, 100, 40);
+        ellipse(tx, ty, 60, 30);
           // strokeWeight(3);
-        ellipse(tx, ty, 100, 40);
+        fill(r, g, b, a)
+        ellipse(tx, ty, 30, 15);
       } else {
         ellipse(tx, ty, 20, 10);
 
@@ -300,7 +301,7 @@ function starFloat(){
   push();
 
   if (windowWidth > 2000) {
-      translate(-250, -100, 0);
+      translate(-200, -50, 0);
   } else {
       translate(-180, -60, 0);
   }
@@ -313,7 +314,7 @@ function starFloat(){
 
 
   if (windowWidth > 2000) {
-      starLevel = 600;
+      starLevel = 350;
       numStarPoints = 50;
   } else {
       starLevel = 350;
@@ -358,7 +359,7 @@ function starFloat(){
       // stroke(223, 234, 245, 50);
 
       if (windowWidth > 2000) {
-        star(sx, sy, 2, 8, 8);
+        star(sx, sy, 5, 20, 10);
 
       } else {
         star(sx, sy, 4, 10, 10);
