@@ -11,3 +11,18 @@ document.onmousemove = function(e){
 
 
 }
+
+const glitchOverlay = document.getElementById('glitch-overlay');
+
+function triggerGlitch() {
+    glitchOverlay.classList.add('glitch-active');
+    document.body.style.color = ('black');
+
+
+    setTimeout(() => {
+        glitchOverlay.classList.remove('glitch-active');
+        document.body.style.color = ('red');
+    }, 200);
+}
+
+setInterval(triggerGlitch, 5000);
