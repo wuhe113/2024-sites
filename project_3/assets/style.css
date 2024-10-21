@@ -2,6 +2,9 @@ body{
     cursor: none;
     overflow: hidden;
     color: red;
+    background-image: url(cr1.jpg);
+    background-size: cover;
+    box-shadow: inset 5px 5px 5px rgb(0, 0, 0);
 }
 
 #glitch-overlay {
@@ -36,8 +39,9 @@ body{
     position: relative;
     display: flex;
     width: 100%;
-    height: 5px;
+    height: 1vw;
     background-color: red;
+    /* mix-blend-mode: difference; */
     /* filter: blur(2px); */
 
 }
@@ -46,10 +50,12 @@ body{
     position: absolute;
     display: flex;
     height: 100%;
-    width: 5px;
-    margin-top: -5px;
+    width: 1vw;
+    margin-top: -1vw;
     background-color: red;
+    /* mix-blend-mode: difference; */
     /* filter: blur(2px); */
+    transform: skew(-20deg);
 }
 
 #logo{
@@ -72,6 +78,7 @@ body{
     font-size: 28vw;
     letter-spacing: -3vw;
     /* text-shadow: rgba(0,0,0,0.9) 0px 0px 20px; */
+    text-shadow: -5px 0px 5px rgb(0, 0, 0);
 }
 
 #logo2{
@@ -81,6 +88,7 @@ body{
     font-family: Favorit;
     font-size: 28vw;
     letter-spacing: -3vw;
+    text-shadow: -5px 0px 5px rgb(0, 0, 0);
     /* text-shadow: rgba(0,0,0,0.9) 0px 0px 20px; */
 }
 
@@ -92,19 +100,34 @@ body{
     position: fixed;
     margin-top: -5px;
     left: 25%;
-    width: 300px;
+    /* width: 300px; */
     height: 3.5vw;
     background-color: red;
+    transform-origin: left;
+    box-shadow: 0px 5px 5px rgb(0, 0, 0);
+    /* -webkit-box-shadow:0px 0px 80px 10px rgba(0,0,0,0.9);
+    -moz-box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9);
+    box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9); */
 
+}
+
+@keyframes stretch{
+    from{transform: scale(0);}
+    to{transform: scale(1);}
 }
 
 #f2{
     position: fixed;
-    width: 300px;
+    /* width: 300px; */
     height: 3.5vw;
     top: 26.1vw;
     left: 25%;
     background-color: red;
+    transform-origin: left;
+    box-shadow: 0px 5px 5px rgb(0, 0, 0);
+    /* -webkit-box-shadow:0px 0px 80px 10px rgba(0,0,0,0.9);
+    -moz-box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9);
+    box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9); */
 
 }
 
@@ -113,13 +136,92 @@ body{
     margin-top: -5px;
     left: 25%;
     width: 3.8vw;
-    height: 600px;
+    /* height: 600px; */
     background-color: red;
-    /* -webkit-box-shadow:0px 0px 100px 20px rgba(0,0,0,0.9);
--moz-box-shadow: 0px 0px 100px 20px rgba(0,0,0,0.9);
-box-shadow: 0px 0px 100px 20px rgba(0,0,0,0.9); */
+    transform-origin: top;
+    box-shadow: -7px 0px 5px rgb(0, 0, 0);
+    /* box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.3), 5px 5px 5px rgba(0, 0, 0, 0.3); */
+    /* -webkit-box-shadow:0px 0px 80px 10px rgba(0,0,0,0.9);
+-moz-box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9);
+box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9); */
 
+}
 
+#artist1{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Favorit;
+    color: rgb(255, 0, 0);
+    font-size: 15vw;
+    line-height: 12vw;
+    text-shadow: -5px 0px 5px rgb(0, 0, 0);
+    visibility: hidden;
+}
 
+#person{
+    position: fixed;
+    left: 5%;
+    font-family: Favorit;
+    font-size: 8vw;
+    transform: skew(-20deg);
 
+}
+
+#p1{
+    display: flex;
+}
+
+#p2{
+    display: flex;
+}
+
+#p3{
+    display: flex;
+}
+
+#scanner1{
+    position: fixed;
+    width: 6vw;
+    height: 110%;
+    top: -5%;
+    left: 0;
+    background-color: red;
+    mix-blend-mode: difference;
+    filter: blur(10px);
+    transform: skew(-20deg);
+    /* box-shadow: 55px 0px 10px red; */
+    animation: scan1 5s infinite linear;
+}
+
+#scanner2{
+    position: fixed;
+    width: 110%;
+    height: 6vw;
+    top: 0;
+    background-color: red;
+    mix-blend-mode: difference;
+    filter: blur(10px);
+    /* box-shadow: 55px 0px 10px red; */
+    animation: scan2 5s infinite linear;
+}
+
+@keyframes scan1{
+    0%{left: -10%;}
+    100%{left: 110%;}
+}
+
+@keyframes scan2{
+    0%{top: 0;}
+    50%{top: 100%;}
+    100%{top: 0;}
+}
+
+#followersData{
+    position: fixed;
+    right: 5%;
+    font-family: Favorit;
+    font-size: 5vw;
+    /* mix-blend-mode: difference; */
 }
