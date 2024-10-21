@@ -1,5 +1,5 @@
 body{
-    cursor: none;
+    /* cursor: none; */
     overflow: hidden;
     color: red;
     background-image: url(cr1.jpg);
@@ -220,8 +220,28 @@ box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9); */
 
 #followersData{
     position: fixed;
-    right: 5%;
+    bottom: 0;
     font-family: Favorit;
-    font-size: 5vw;
-    /* mix-blend-mode: difference; */
+    font-size: 12vw;
+    line-height: 10vw;
+    text-shadow: -5px 0px 5px rgb(0, 0, 0);
+}
+
+#listenersData{
+    position: fixed;
+    bottom: 0;
+    right:-5%;
+    font-family: Favorit;
+    font-size: 12vw;
+    line-height: 10vw;
+    text-shadow: -5px 0px 5px rgb(0, 0, 0);
+}
+
+#ranksData{
+    position: fixed;
+    bottom: 0;
+    font-family: Favorit;
+    font-size: 12vw;
+    line-height: 10vw;
+    text-shadow: -5px 0px 5px rgb(0, 0, 0);
 }

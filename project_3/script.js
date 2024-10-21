@@ -106,15 +106,35 @@ try {
     // let F3 = document.getElementById('f3');
     // F3.style.height = 600 + 'px';
 
-    // let fd = document.getElementById('followersData');
+    let fd = document.getElementById('followersData');
+    let ld = document.getElementById('listenersData');
+    let rd = document.getElementById('ranksData');
 
-    // followers.onmouseover = function(e){
-    //     fd.innerHTML = result.stats.followers + " Followers" ;
-    // }
+    followers.onmouseenter = function(e){
+        fd.innerHTML = result.stats.followers + " Followers" ;
+    }
 
-    // followers.onmouseout = function(e){
-    //     fd.innerHTML = "";
-    // }
+    followers.onmouseleave = function(e){
+        fd.innerHTML = "";
+    }
+    
+    listeners.onmouseenter = function(e){
+        ld.innerHTML = result.stats.monthlyListeners + " Monthly Listeners" ;
+    }
+
+    listeners.onmouseleave = function(e){
+        ld.innerHTML = "";
+    }
+
+    ranks.onmouseenter = function(e){
+        rd.innerHTML = result.stats.worldRank + " World Rank" ;
+    }
+
+    ranks.onmouseleave = function(e){
+        rd.innerHTML = "";
+    }
+    
+
     
 
 
