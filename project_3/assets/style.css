@@ -2,7 +2,8 @@ body{
     /* cursor: none; */
     overflow: hidden;
     color: red;
-    background-image: url(cr1.jpg);
+    /* background-image: url(cr1.jpg); */
+    /* background-image: url(ma1.jpg); */
     background-size: cover;
     box-shadow: inset 5px 5px 5px rgb(0, 0, 0);
 }
@@ -74,26 +75,38 @@ body{
     position: fixed;
     top: -4.3vw;
     right: 12%;
+    transition: right 1s ease-in;
     font-family: Favorit;
     font-size: 28vw;
     letter-spacing: -3vw;
     /* text-shadow: rgba(0,0,0,0.9) 0px 0px 20px; */
     text-shadow: -5px 0px 5px rgb(0, 0, 0);
+    animation: visible 4.81s forwards;
+}
+
+@keyframes visible{
+    0%{opacity: 0;}
+    99%{opacity: 0;}
+    100%{opacity: 1;}
 }
 
 #logo2{
     position: fixed;
     bottom: -8vw;
     left: 18%;
+    transition: left 1s ease-in;
     font-family: Favorit;
     font-size: 28vw;
     letter-spacing: -3vw;
     text-shadow: -5px 0px 5px rgb(0, 0, 0);
+    animation: visible 4.81s forwards;
     /* text-shadow: rgba(0,0,0,0.9) 0px 0px 20px; */
 }
 
 #F{
     transform: skew(-20deg);
+    transform-origin: left;
+    transition: transform 1s ease-in;
 }
 
 #f1{
@@ -102,19 +115,21 @@ body{
     left: 25%;
     /* width: 300px; */
     height: 3.5vw;
-    background-color: red;
+    background-color: rgba(0,0,0,0);
     transform-origin: left;
+    transition: width 1s ease-in;
     box-shadow: 0px 5px 5px rgb(0, 0, 0);
+    /* animation: stretch 5s forwards linear; */
     /* -webkit-box-shadow:0px 0px 80px 10px rgba(0,0,0,0.9);
     -moz-box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9);
     box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9); */
 
 }
 
-@keyframes stretch{
+/* @keyframes stretch{
     from{transform: scale(0);}
     to{transform: scale(1);}
-}
+} */
 
 #f2{
     position: fixed;
@@ -122,9 +137,11 @@ body{
     height: 3.5vw;
     top: 26.1vw;
     left: 25%;
-    background-color: red;
+    background-color: rgba(0,0,0,0);
     transform-origin: left;
+    transition: width 1.5s ease-in;
     box-shadow: 0px 5px 5px rgb(0, 0, 0);
+    /* animation: stretch 6s forwards linear; */
     /* -webkit-box-shadow:0px 0px 80px 10px rgba(0,0,0,0.9);
     -moz-box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9);
     box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9); */
@@ -137,9 +154,11 @@ body{
     left: 25%;
     width: 3.8vw;
     /* height: 600px; */
-    background-color: red;
+    background-color: rgba(0,0,0,0);
     transform-origin: top;
+    transition: height 1s ease-in;
     box-shadow: -7px 0px 5px rgb(0, 0, 0);
+    /* animation: stretch 7s forwards linear; */
     /* box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.3), 5px 5px 5px rgba(0, 0, 0, 0.3); */
     /* -webkit-box-shadow:0px 0px 80px 10px rgba(0,0,0,0.9);
 -moz-box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9);
@@ -147,24 +166,73 @@ box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9); */
 
 }
 
-#artist1{
+#celebrities{
+    cursor: pointer;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 45%;
+    left: -5%;
     font-family: Favorit;
     color: rgb(255, 0, 0);
-    font-size: 15vw;
-    line-height: 12vw;
+    font-size: 8vw;
+    line-height: 5vw;
     text-shadow: -5px 0px 5px rgb(0, 0, 0);
-    visibility: hidden;
+    transform: rotate(-40deg);
+    animation: visible 4.81s forwards;
+    white-space: nowrap;
 }
+
+#issue{
+    cursor: pointer;
+    position: fixed;
+    bottom: 18%;
+    right: 0%;
+    font-family: Favorit;
+    color: rgb(255, 0, 0);
+    font-size: 8vw;
+    line-height: 5vw;
+    text-shadow: -5px 0px 5px rgb(0, 0, 0);
+    transform: rotate(40deg);
+    animation: visible 4.81s forwards;
+    white-space: nowrap;
+}
+
+/* #names{
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    top: -100%;
+    animation: slide-in 1s forwards;
+
+} */
+
+@keyframes slide-in {
+    from {
+      top: -100%;
+    }
+    to {
+      top: 0%;
+    }
+  }
+  
+  .slide-out {
+    animation: slide-out 1s forwards;
+  }
+  
+  @keyframes slide-out {
+    from {
+      top: 0%;
+    }
+    to {
+      top: 100%;
+    }
+  }
 
 #person{
     position: fixed;
     left: 5%;
     font-family: Favorit;
     font-size: 8vw;
+    line-height: 8vw;
     transform: skew(-20deg);
 
 }
@@ -192,7 +260,7 @@ box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9); */
     filter: blur(10px);
     transform: skew(-20deg);
     /* box-shadow: 55px 0px 10px red; */
-    animation: scan1 5s infinite linear;
+    animation: scan1 5s infinite linear, visible 4.81s forwards;
 }
 
 #scanner2{
@@ -220,28 +288,61 @@ box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9); */
 
 #followersData{
     position: fixed;
-    bottom: 0;
+    /* bottom: 0; */
+    top: -1.5%;
+    left: 30%;
     font-family: Favorit;
-    font-size: 12vw;
-    line-height: 10vw;
+    /* font-size: 12vw; */
+    font-size: 5vw;
+    /* line-height: 10vw; */
     text-shadow: -5px 0px 5px rgb(0, 0, 0);
 }
 
 #listenersData{
     position: fixed;
-    bottom: 0;
-    right:-5%;
+    /* bottom: 0;
+    right:-5%; */
+    top: 47%;
+    left: 22%;
     font-family: Favorit;
-    font-size: 12vw;
-    line-height: 10vw;
+    /* font-size: 12vw; */
+    font-size: 5vw;
+    /* line-height: 10vw; */
     text-shadow: -5px 0px 5px rgb(0, 0, 0);
 }
 
 #ranksData{
     position: fixed;
-    bottom: 0;
+    bottom: 50%;
+    left: 2.5%;
     font-family: Favorit;
-    font-size: 12vw;
-    line-height: 10vw;
+    /* font-size: 12vw; */
+    font-size: 5vw;
+    /* line-height: 10vw; */
+    transform: rotate(-70deg);
     text-shadow: -5px 0px 5px rgb(0, 0, 0);
+}
+
+#next{
+    cursor: pointer;
+    position: fixed;
+    top:-5%;
+    right: 1%;
+    font-family: Favorit;
+    font-size: 8vw;
+    transform: rotate(90deg);
+    text-shadow: 5px 0px 5px rgb(0, 0, 0);
+    animation: visible 4.81s forwards;
+}
+
+#previous{
+    cursor: pointer;
+    position: fixed;
+    top:-5%;
+    left: 1%;
+    font-family: Favorit;
+    font-size: 8vw;
+    transform: rotate(-90deg);
+    text-shadow: -5px 0px 5px rgb(0, 0, 0);
+    animation: visible 4.81s forwards;
 }
