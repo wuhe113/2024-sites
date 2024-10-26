@@ -25,9 +25,19 @@ const imgArray = ["assets/cr1.jpg", "assets/cr2.jpg", "assets/cr3.jpg"];
 const imgArray2 = ["assets/ma1.jpg", "assets/ma2.jpg", "assets/ma3.jpg"]; 
 const imgArray3 = ["assets/e1.jpg", "assets/e2.jpg", "assets/e3.jpg"]; 
 const imgArray4 = ["assets/mf1.jpg", "assets/mf2.jpg", "assets/mf3.jpg"]; 
+const imgArray5 = ["assets/a1.jpg", "assets/a2.jpg", "assets/a3.jpg"]; 
+const imgArray6 = ["assets/s1.jpg", "assets/s2.jpg", "assets/s3.jpg"]; 
+const imgArray7 = ["assets/sk1.jpg", "assets/sk2.jpg", "assets/sk3.jpg"]; 
+const imgArray8 = ["assets/nj1.jpg", "assets/nj2.jpg", "assets/nj3.jpg"]; 
+const imgArray9 = ["assets/cx1.jpg", "assets/cx2.jpg", "assets/cx3.jpg"]; 
+const imgArray10 = ["assets/db1.jpg", "assets/db2.jpg", "assets/db3.jpg", "assets/db4.jpg"]; 
+const imgArray11 = ["assets/ds1.jpg", "assets/ds2.jpg", "assets/ds3.jpg", "assets/ds4.jpg", "assets/ds5.jpg"]; 
+const imgArray12 = ["assets/n1.jpg", "assets/n2.jpg", "assets/n3.jpg"]; 
+const imgArray13 = ["assets/k1.jpg", "assets/k2.jpg", "assets/k3.jpg"]; 
 
 
-const allImgArrays = [imgArray, imgArray2, imgArray3, imgArray4];
+
+const allImgArrays = [imgArray, imgArray2, imgArray3, imgArray4, imgArray5, imgArray6, imgArray7, imgArray8, imgArray9, imgArray10, imgArray11, imgArray12, imgArray13];
 
 let currentArrayIndex = 0;
 
@@ -203,17 +213,18 @@ try {
 
 getData();
 
-const widths = ['600px', '300px', '1200px', '200px', '500px'];
-const widths2 = ['600px', '600px', '600px', '300px', '500px'];
-const height = ['700px', '700px', '700px', '700px', '500px'];
+const widths = ['600px', '500px', '1200px', '250px', '350px', '700px', '350px', '900px', '800px', '350px', '600px', '400px', '200px'];
+const widths2 = ['600px', '600px', '600px', '350px', '600px', '1500px', '550px', '2000px', '2500px', '1500px', '600px', '700px', '600px'];
+const height = ['700px', '700px', '700px', '700px', '700px', '700px', '700px', '700px', '800px', '700px', '700px', '700px', '700px'];
 
-const skew = ['-10deg', '-10deg', '-10deg', '-20deg'];
+const skew = ['-10deg', '-10deg', '-10deg', '-20deg', '-10deg', '-20deg', '-20deg', '-20deg', '-20deg', '-20deg', '-10deg', '-20deg', '-10deg'];
 
-const left = ['18%', '23%', '23%', '18%'];
-const right = ['12%', '23%', '23%', '12%'];
+const left = ['18%', '23%', '23%', '18%', '23%', '18%', '18%', '18%', '18%', '18%', '23%', '18%', '23%'];
+const right = ['12%', '23%', '23%', '12%', '23%', '12%', '12%', '12%', '12%', '12%', '23%', '12%', '23%'];
 
 
-const names = ['First Text', 'MADELINE ARGY', 'EMMA CHAMBERLAIN', 'MUSTAFA'];
+const names = ['CHAPPELL ROAN', 'MADELINE ARGY', 'EMMA CHAMBERLAIN', 'MUSTAFA', 'ALEX CONSANI', 'LITTLE SIMZ', 'SKEPTA', 'NEWJEANS', 'CHARILI XCX', 'D-BLOCK EUROPE', 'DOMINIC SESSA', 'NIA ARCHIVES', 'KRISTEN MCMENAMY'];
+const issues = ['issue 20', 'issue 20', 'issue 20', 'issue 20', 'issue 19', 'issue 19', 'issue 19', 'issue 19', 'issue 18',  'issue 18', 'issue 18', 'issue 18', 'issue 18'];
 
 // const rotate = ['-70deg', '-80deg', '-80deg', '-80deg'];
 
@@ -237,6 +248,8 @@ nextButton.onclick = function(e){
 
 
     textDisplay.innerHTML = names[currentIndex];
+
+    issue.innerHTML = issues[currentIndex];
     // textDisplay.style.transform = `rotate(${rotate[currentIndex]})`;
         
     //     textDisplay.classList.remove('slide-out');
@@ -278,6 +291,10 @@ window.onload = function() {
 
 let issue = document.getElementById('issue');
 
+// let moveF = document.getElementById('F');
+// let moveLogo1 = document.getElementById('logo1');
+// let moveLogo2 = document.getElementById('logo2');
+
 
 let offsetX, offsetY, activeElement;
 
@@ -306,7 +323,9 @@ function stopDragElement() {
 
 makeElementDraggable(textDisplay);
 makeElementDraggable(issue);
-
+// makeElementDraggable(moveF);
+// makeElementDraggable(moveLogo1);
+// makeElementDraggable(moveLogo2);
 
 
 
