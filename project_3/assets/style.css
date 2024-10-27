@@ -73,12 +73,12 @@ body{
 
 #logo1{
     position: fixed;
-    top: -4.3vw;
+    top: -3.5vw;
     right: 12%;
     transition: right 1s ease-in;
     font-family: Favorit;
-    font-size: 28vw;
-    letter-spacing: -3vw;
+    font-size: 30vw;
+    letter-spacing: -3.5vw;
     /* text-shadow: rgba(0,0,0,0.9) 0px 0px 20px; */
     text-shadow: -5px 0px 5px rgb(0, 0, 0);
     animation: visible 4.81s forwards;
@@ -92,12 +92,12 @@ body{
 
 #logo2{
     position: fixed;
-    bottom: -8vw;
+    bottom: -6.5vw;
     left: 18%;
     transition: left 1s ease-in;
     font-family: Favorit;
-    font-size: 28vw;
-    letter-spacing: -3vw;
+    font-size: 30vw;
+    letter-spacing: -3.5vw;
     text-shadow: -5px 0px 5px rgb(0, 0, 0);
     animation: visible 4.81s forwards;
     /* text-shadow: rgba(0,0,0,0.9) 0px 0px 20px; */
@@ -114,7 +114,7 @@ body{
     margin-top: -5px;
     left: 25%;
     /* width: 300px; */
-    height: 3.5vw;
+    height: 4vw;
     background-color: rgba(0,0,0,0);
     transform-origin: left;
     transition: width 1s ease-in;
@@ -134,8 +134,8 @@ body{
 #f2{
     position: fixed;
     /* width: 300px; */
-    height: 3.5vw;
-    top: 26.1vw;
+    height: 4vw;
+    top: 30vw;
     left: 25%;
     background-color: rgba(0,0,0,0);
     transform-origin: left;
@@ -152,7 +152,7 @@ body{
     position: fixed;
     margin-top: -5px;
     left: 25%;
-    width: 3.8vw;
+    width: 4.3vw;
     /* height: 600px; */
     background-color: rgba(0,0,0,0);
     transform-origin: top;
@@ -175,6 +175,7 @@ box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9); */
     color: rgb(255, 0, 0);
     font-size: 8vw;
     line-height: 5vw;
+    letter-spacing: -0.8vw;
     text-shadow: -5px 0px 5px rgb(0, 0, 0);
     transform: rotate(-40deg);
     animation: visible 4.81s forwards;
@@ -190,6 +191,7 @@ box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9); */
     color: rgb(255, 0, 0);
     font-size: 8vw;
     line-height: 5vw;
+    letter-spacing: -0.8vw;
     text-shadow: -5px 0px 5px rgb(0, 0, 0);
     transform: rotate(40deg);
     animation: visible 4.81s forwards;
@@ -345,4 +347,8 @@ box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9); */
     transform: rotate(-90deg);
     text-shadow: -5px 0px 5px rgb(0, 0, 0);
     animation: visible 4.81s forwards;
+}
+
+@media only screen and (min-width: 2000px){
+
 }

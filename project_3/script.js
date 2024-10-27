@@ -136,7 +136,7 @@ try {
     let ranks = document.getElementById('f3');
     ranks.style.height= '0px';
 
-    let ranksRange = map(result.stats.worldRank, 0, 100, 900, 600);
+    let ranksRange = map(result.stats.worldRank, 0, 100, 1200, 700);
     setTimeout(() => { 
         ranks.style.height = ranksRange + 'px';    
     }, 10);
@@ -213,17 +213,17 @@ try {
 
 getData();
 
-const widths = ['600px', '500px', '1200px', '250px', '350px', '700px', '350px', '900px', '800px', '350px', '600px', '400px', '200px'];
-const widths2 = ['600px', '600px', '600px', '350px', '600px', '1500px', '550px', '2000px', '2500px', '1500px', '600px', '700px', '600px'];
-const height = ['700px', '700px', '700px', '700px', '700px', '700px', '700px', '700px', '800px', '700px', '700px', '700px', '700px'];
+const widths = ['800px', '500px', '1200px', '250px', '350px', '700px', '350px', '900px', '800px', '350px', '600px', '400px', '200px'];
+const widths2 = ['2500px', '600px', '600px', '350px', '600px', '1500px', '550px', '2000px', '2500px', '1500px', '600px', '700px', '600px'];
+const height = ['880px', '700px', '700px', '700px', '700px', '700px', '700px', '700px', '800px', '700px', '700px', '700px', '700px'];
 
-const skew = ['-10deg', '-10deg', '-10deg', '-20deg', '-10deg', '-20deg', '-20deg', '-20deg', '-20deg', '-20deg', '-10deg', '-20deg', '-10deg'];
+const skew = ['-20deg', '-10deg', '-10deg', '-20deg', '-10deg', '-20deg', '-20deg', '-20deg', '-20deg', '-20deg', '-10deg', '-20deg', '-10deg'];
 
 const left = ['18%', '23%', '23%', '18%', '23%', '18%', '18%', '18%', '18%', '18%', '23%', '18%', '23%'];
 const right = ['12%', '23%', '23%', '12%', '23%', '12%', '12%', '12%', '12%', '12%', '23%', '12%', '23%'];
 
 
-const names = ['CHAPPELL ROAN', 'MADELINE ARGY', 'EMMA CHAMBERLAIN', 'MUSTAFA', 'ALEX CONSANI', 'LITTLE SIMZ', 'SKEPTA', 'NEWJEANS', 'CHARILI XCX', 'D-BLOCK EUROPE', 'DOMINIC SESSA', 'NIA ARCHIVES', 'KRISTEN MCMENAMY'];
+const names = ['CHAPPELL  ROAN', 'MADELINE  ARGY', 'EMMA  CHAMBERLAIN', 'MUSTAFA', 'ALEX  CONSANI', 'LITTLE  SIMZ', 'SKEPTA', 'NEWJEANS', 'CHARILI  XCX', 'D-BLOCK  EUROPE', 'DOMINIC  SESSA', 'NIA  ARCHIVES', 'KRISTEN  MCMENAMY'];
 const issues = ['issue 20', 'issue 20', 'issue 20', 'issue 20', 'issue 19', 'issue 19', 'issue 19', 'issue 19', 'issue 18',  'issue 18', 'issue 18', 'issue 18', 'issue 18'];
 
 // const rotate = ['-70deg', '-80deg', '-80deg', '-80deg'];
