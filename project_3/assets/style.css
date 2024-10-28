@@ -352,3 +352,29 @@ box-shadow: 0px 0px 80px 10px rgba(0,0,0,0.9); */
 @media only screen and (min-width: 2000px){
 
 }
+
+
+/* @media only screen and (max-width: 700px){
+
+    #next{
+        top: 0%;
+    }
+
+    #previous{
+        top: 0%;
+    }
+
+    #logo1{
+        top: 50%;
+    }
+
+    #f1{
+        margin: 0;
+        top: 75vw;
+    }
+
+    #f2{
+        top: 110vw;
+    }
+
+} */
