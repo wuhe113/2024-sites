@@ -223,7 +223,7 @@ const left = ['18%', '23%', '23%', '18%', '23%', '18%', '18%', '18%', '18%', '18
 const right = ['12%', '23%', '23%', '12%', '23%', '12%', '12%', '12%', '12%', '12%', '23%', '12%', '23%'];
 
 
-const names = ['CHAPPELL  ROAN', 'MADELINE  ARGY', 'EMMA  CHAMBERLAIN', 'MUSTAFA', 'ALEX  CONSANI', 'LITTLE  SIMZ', 'SKEPTA', 'NEWJEANS', 'CHARILI  XCX', 'D-BLOCK  EUROPE', 'DOMINIC  SESSA', 'NIA  ARCHIVES', 'KRISTEN  MCMENAMY'];
+const names = ['CHAPPELL ROAN', 'MADELINE ARGY', 'EMMA CHAMBERLAIN', 'MUSTAFA', 'ALEX CONSANI', 'LITTLE SIMZ', 'SKEPTA', 'NEWJEANS', 'CHARILI XCX', 'D-BLOCK EUROPE', 'DOMINIC SESSA', 'NIA ARCHIVES', 'KRISTEN MCMENAMY'];
 const issues = ['issue 20', 'issue 20', 'issue 20', 'issue 20', 'issue 19', 'issue 19', 'issue 19', 'issue 19', 'issue 18',  'issue 18', 'issue 18', 'issue 18', 'issue 18'];
 
 // const rotate = ['-70deg', '-80deg', '-80deg', '-80deg'];
