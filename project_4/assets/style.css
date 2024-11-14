@@ -1,0 +1,153 @@
+body{
+    background-color: white;
+    overflow: hidden;
+}
+
+#box1{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 55vw;
+    background: rgb(210,210,210);
+    background: linear-gradient(180deg, rgba(210,210,210,1) 0%, rgba(255,255,255,0.5040003765060241) 8%, rgba(255,255,255,0) 22%, rgba(255,255,255,0) 77%, rgba(255,255,255,0.5) 92%, rgba(210,210,210,1) 100%);
+border-radius: 10px;
+}
+
+#box2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 55vw;
+    background: rgb(210,210,210);
+    background: linear-gradient(90deg, rgba(210,210,210,1) 0%, rgba(255,255,255,0.5040003765060241) 8%, rgba(255,255,255,0) 22%, rgba(255,255,255,0) 77%, rgba(255,255,255,0.5) 92%, rgba(210,210,210,1) 100%);
+border-radius: 10px;
+}
+
+#cd1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 53vw;
+    height: 53vw;
+    background-color: #f8f8f8;
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 4px rgb(52, 52, 52);
+}
+
+#cd2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 52vw;
+    height: 52vw;
+    background-color: #f8f8f8;
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 10px rgb(52, 52, 52);
+}
+
+#cd3{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12vw;
+    height: 12vw;
+    background-color: rgba(248, 248, 248,0);
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 5px rgb(52, 52, 52);
+}
+
+
+#cd4{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 5vw;
+    height: 5vw;
+    /* background-color: rgba(248, 248, 248,0); */
+    border-radius: 100%;
+    mask: revert-layer;
+    box-shadow: inset 5px 1px 5px rgb(52, 52, 52);
+}
+
+#box3{
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+    width: 58vw;
+    height: 48vw;
+    box-shadow: inset 0px 0px 10px rgb(137, 137, 137);
+border-radius: 20px;
+overflow: hidden;
+}
+
+
+/* .time{
+    position: relative;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -82%);
+    width: 58vw;
+    height: 48vw;
+    border-radius: 20px;
+} */
+
+#data1 {
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(2, 54vw);
+    gap: 0.5vw;
+    grid-auto-rows: minmax(10px, auto);
+}
+
+.timeLine{
+    width: 3.5vw;
+    height: 1px;
+    background: rgb(119, 119, 119);
+    align-self: center;
+    justify-self: center;
+}
+
+#timeNum{
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-rows: repeat(4, 1vw);
+    gap: 10vw;
+    grid-auto-flow: column;
+    grid-auto-columns: 35vw 35vw;
+}
+
+#num{
+    color: rgb(77, 77, 77);
+    font-size: 1.5vw;
+    align-self: center;
+    justify-self: center;
+    font-family: "roc-grotesk-variable",sans-serif;
+    font-variation-settings: 'wdth' 100, 'wght' 400;
+}
+
+.songName{
+    color: rgb(77, 77, 77);
+    font: 3vw;
+    font-family: "roc-grotesk-variable",sans-serif;
+    font-variation-settings: 'wdth' 100, 'wght' 400;
+
+}
+
+
+
+
