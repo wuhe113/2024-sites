@@ -1,7 +1,18 @@
+function detectNumber() {
+  const NumContent = document.getElementById('durations').textContent;
+  const match = NumContent.match(/\d+/);
+  const NUM = match ? parseInt(match[0], 10) : 0;
+  return NUM;
+}
+
+
 function addTimeLine(){
+
+
+  let gridDiv = document.getElementById("data1");
+
     for (let i = 0; i < 150; i++){
         
-        let gridDiv = document.getElementById("data1");
         let newDiv = document.createElement("div");
 
         newDiv.classList.add("timeLine");
@@ -10,9 +21,62 @@ function addTimeLine(){
 
 
     }
+
 }
 
 addTimeLine();
+
+
+function changeSpecificDiv() {
+  const numberDiv = detectNumber();
+  // const targetIndex = numberDiv * 10 - 1;
+  const targetIndex =
+    numberDiv >= 5 ? numberDiv * 10 - 1 : numberDiv == 4 ? numberDiv * 22 : numberDiv < 4 ? numberDiv * 28 : -1;
+
+  let gridDiv = document.getElementById("data1");
+
+
+  // if (targetIndex < gridDiv.children.length) {
+  //   Array.from(gridDiv.children).forEach((div) =>
+  //     div.classList.remove("changed-time")
+  //   );
+  if (targetIndex >= 0 && targetIndex < gridDiv.children.length) {
+    Array.from(gridDiv.children).forEach((div) =>
+      div.classList.remove("changed-time")
+    );
+
+    gridDiv.children[targetIndex].classList.add("changed-time");
+  }
+}
+
+// function addTimeLine2(){
+
+//   let durationNum = detectNumber();
+//   let targetIndex = durationNum * 10 - 1;
+
+//   let gridDiv3 = document.getElementById("data1copy");
+
+//     for (let i = 0; i < 150; i++){
+        
+//         let newDiv4 = document.createElement("div");
+
+//         newDiv4.classList.add("timeLine");
+//         newDiv4.classList.remove("changed-time");
+//         newDiv4.style.visibility = "hidden";
+
+
+
+//         if (i === targetIndex) {
+//           newDiv4.style.visibility = "visible";
+//           newDiv4.classList.add("changed-time");
+//         } 
+
+//         gridDiv3.appendChild(newDiv4);
+
+
+//     }
+
+// }
 
 
 function addBPM(){
@@ -158,6 +222,7 @@ let songDiv = document.getElementById("songs");
 let titleDiv = document.getElementById("title");
 let moodDiv = document.getElementById("mood");
 let keyDiv = document.getElementById("keys");
+let durationDiv = document.getElementById("durations");
 
 let sheetID = "1eAH9DMUyqK7w9UeGloszZTbSucD-TmKSmfhR5CD_TCc";
 let tabName = "Sheet1";
@@ -185,6 +250,7 @@ async function getData() {
       titleDiv.innerHTML = dataPoint.song;
       moodDiv.innerHTML = dataPoint.mood;
       keyDiv.innerHTML = dataPoint.key;
+      durationDiv.innerHTML = dataPoint.min;
 
       let mappedBPM = map(dataPoint.bpm, 90, 180, 3, 0.3);
       let bpmChange = document.getElementById("data2");
@@ -195,6 +261,9 @@ async function getData() {
 
 
       check();
+      // addTimeLine2();
+      changeSpecificDiv();
+
     };
 
     
@@ -207,6 +276,31 @@ async function getData() {
 }
 
 getData();
+
+let blue = document.getElementById("b1");
+let cd = document.getElementById("cd2");
+
+let isToggled = true;
+
+function changeColor(){
+
+
+  blue.onclick = function(e) {
+    if (isToggled) {
+      blue.style.backgroundColor = "rgb(77, 77, 77)";
+      cd.style.animationPlayState = 'running';
+    } else{
+      blue.style.backgroundColor = 'transparent';
+      cd.style.animationPlayState = 'paused';
+    }
+    isToggled = !isToggled;
+
+    
+
+  }
+}
+
+changeColor();
 
 
 function map(value, low1, high1, low2, high2) {
