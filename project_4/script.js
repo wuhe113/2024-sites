@@ -1,3 +1,39 @@
+let quantity = 1200;
+let max = 4;
+let min = 1;
+
+let stars = document.getElementById("stars");
+
+
+function createStars(){
+  
+  for (let i=0;i<quantity;i++){
+  let randomSize = makeRandomSize(min, max);
+  let newDiv3 = document.createElement("div");
+  
+  newDiv3.classList.add("star");
+  newDiv3.style.width = randomSize + "px";
+  newDiv3.style.height = randomSize + "px";
+  newDiv3.style.left = Math.random()*100 + "vw";
+  newDiv3.style.top = Math.random()*100 + "vh";
+
+
+  let randomDelay = Math.random() * 5; // Random delay up to 5 seconds
+  newDiv3.style.animationDelay = `${randomDelay}s`;
+
+
+  stars.appendChild(newDiv3);
+
+  stars.style.visibility = "hidden";
+
+
+}
+}
+
+createStars();
+
+
+
 function detectNumber() {
   const NumContent = document.getElementById('durations').textContent;
   const match = NumContent.match(/\d+/);
@@ -223,6 +259,9 @@ let titleDiv = document.getElementById("title");
 let moodDiv = document.getElementById("mood");
 let keyDiv = document.getElementById("keys");
 let durationDiv = document.getElementById("durations");
+let listeningDiv = document.getElementById("listening");
+
+let audioPlayer = document.getElementById("audioPlayer");
 
 let sheetID = "1eAH9DMUyqK7w9UeGloszZTbSucD-TmKSmfhR5CD_TCc";
 let tabName = "Sheet1";
@@ -251,6 +290,12 @@ async function getData() {
       moodDiv.innerHTML = dataPoint.mood;
       keyDiv.innerHTML = dataPoint.key;
       durationDiv.innerHTML = dataPoint.min;
+      listeningDiv.innerHTML = dataPoint.time;
+
+      audioPlayer.src = dataPoint.audio;
+      audioPlayer.play().catch((error) => {
+        console.error("Audio playback failed:", error);
+      });
 
       let mappedBPM = map(dataPoint.bpm, 90, 180, 3, 0.3);
       let bpmChange = document.getElementById("data2");
@@ -263,6 +308,10 @@ async function getData() {
       check();
       // addTimeLine2();
       changeSpecificDiv();
+      animateGradient();
+
+      resetGradient();
+      // setInitialGradient();
 
     };
 
@@ -301,6 +350,82 @@ function changeColor(){
 }
 
 changeColor();
+
+let percentage = 0;
+let percentage2 = 50;
+let isAnimating = false;
+
+let clouds = document.getElementById("clouds");
+
+let sun = document.getElementById("sun");
+
+
+function animateGradient() {
+  if (!isAnimating) return;
+
+  let timeText = listeningDiv.textContent;
+
+
+  if(timeText.includes("Day")){
+    clouds.style.visibility = "visible";
+  } else{
+    clouds.style.visibility = "hidden";
+  }
+
+  if(timeText.includes("Night")){
+    stars.style.visibility = "visible";
+  } else{
+    stars.style.visibility = "hidden";
+  }
+
+  if(timeText.includes("Golden")){
+    sun.style.visibility = "visible";
+  } else{
+    sun.style.visibility = "hidden";
+  }
+
+  
+
+
+  percentage += 0.001;
+  percentage2 += 0.001;
+
+  if (percentage > 100) {
+    percentage = 100;
+    percentage2 = 100;
+
+  }
+
+  let firstColor = timeText.includes("Day") ? "rgba(41,166,221,1)" : timeText.includes("Night") ? "rgba(29,35,71,1)": timeText.includes("Golden") ? "rgba(255,146,75,1)": "rgba(248,248,248,1)" ;
+  // let secondColor = timeText.includes("Day") ? "rgba(255,255,255,1)" : "rgba(41,166,221,1)";
+
+  cd.style.background = `linear-gradient(180deg, ${firstColor} ${percentage}%, rgba(255,255,255,1) ${percentage2}%)`;
+  
+
+
+    requestAnimationFrame(animateGradient);
+}
+
+function resetGradient() {
+  percentage = 0;
+  percentage2 = 50;
+
+  if (!isAnimating) {
+    isAnimating = true;
+    requestAnimationFrame(animateGradient);
+  }
+}
+
+
+
+
+function makeRandomSize(minSize, maxSize){
+  return minSize + Math.random()*(maxSize-minSize);
+}
+
+
+
+
 
 
 function map(value, low1, high1, low2, high2) {
