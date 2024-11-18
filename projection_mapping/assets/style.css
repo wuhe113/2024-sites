@@ -7,6 +7,7 @@ body {
     display: flex;
     /* justify-content: center; 
     align-items: center; */
+    overflow: hidden;
 }
 
 #text1 {
@@ -30,7 +31,7 @@ body {
     top: 0%;
     width: 10vw;
     height: 10vw;
-    background-color: white;
+    background-color: yellow;
 
 }
 
@@ -81,3 +82,23 @@ body {
     background-color: blue;
     animation: rotate360 10s linear infinite;
 }
+
+#s2{
+    position: absolute;
+    left: 70%;
+    top: 70%;
+    width: 20vw;
+    height: 20vw;
+    background-color: rgb(255, 0, 0);
+    transform-origin: top;
+    animation: rotate2 20s linear infinite;
+}
+
+@keyframes rotate2 {
+    0%{
+       transform: translate(-50%, -50%) rotate(360deg);
+      }
+   100%{
+       transform: translate(-50%, -50%) rotate(0deg);
+      }
+   }
