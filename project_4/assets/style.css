@@ -70,6 +70,21 @@ border-radius: 10px;
       }
    }
 
+#conic{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 52vw;
+    height: 52vw;
+    border-radius: 100%;
+    opacity: 0.8;
+    mix-blend-mode:multiply;
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: conic-gradient(from 0deg at 50% 50%, #FFFFFFFF 14%, #5F5F5FFF 25%, #B7B7B7FF 36%, #FFFFFFFF 50%, #CCCCCCFF 61%, #8B8B8BFF 68%, #5A5A5AFF 75%, #BBBBBBFF 82%, #FFFFFFFF 86%);
+}
+
 #radial{
     position: absolute;
     left: 50%;
@@ -138,6 +153,7 @@ border-radius: 10px;
 
 #clouds{
     display: block;
+    visibility: hidden;
 }
 
 #c1{
@@ -397,6 +413,8 @@ overflow: hidden;
     background: rgb(77, 77, 77);
     width: 0.8vw;
     height: 0.8vw;
+    transition: all 0.1s ease;
+    transform-origin: center;
 }
 
 #bpm{
@@ -624,6 +642,7 @@ overflow: hidden;
     height: 4vw;
     box-shadow: inset 0px 0px 10px rgb(181, 181, 181);
     border-radius: 10px;
+    overflow: hidden;
 
 }
 
@@ -659,6 +678,7 @@ overflow: hidden;
     height: 4vw;
     box-shadow: inset 0px 0px 10px rgb(181, 181, 181);
     border-radius: 10px;
+    overflow: hidden;
 }
 
 #box9{
@@ -743,6 +763,19 @@ overflow: hidden;
     display: none;
 }
 
+#moodChange{
+    position: absolute;
+    left: 78%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8vw;
+    height: 10vw;
+    background-size: 100% 100%;
+background-position: 0px 0px;
+background-image: conic-gradient(from 0deg at 50% 50%, #FFFFFFFF 0%, #444444FF 7%, #CCCCCCFF 17%, #9BBBB2FF 24%, #5D716BFF 32%, #4F4F4FFF 39%, #CCCCCCFF 47%, #AD9DACFF 52%, #483E48FF 57%, #938793FF 62%, #7F7F7FFF 66%, #FFFFFFFF 72%, #7E7E7EFF 81%, #484848FF 90%, #C5C5C5FF 97%);
+
+}
+
 #data4{
     position: absolute;
     left:10%;
@@ -797,4 +830,22 @@ overflow: hidden;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 3vw;
+    background-color: rgba(183, 183, 183, 0.5);
+    /* background-color: rgb(77, 77, 77); */
+    box-shadow: inset 0px 0px 10px rgb(108, 108, 108);
+    border-radius: 10px;
+}
+
+#m1{
+    position: absolute;
+    left: 8%;
+    top: 13%;
+    width: 3vw;
+    height: 3vw;
+    background-color: rgba(183, 183, 183, 0.5);
+    box-shadow: inset 0px 0px 10px rgb(108, 108, 108);
+    border-radius: 10px;
+
 }

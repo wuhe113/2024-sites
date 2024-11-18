@@ -149,7 +149,14 @@ radialLines();
 function check() {
   let textContainer = document.getElementById("keys");
   let keyContainer = document.getElementById("data3");
+  let moodContainer = document.getElementById("mood");
+
+  let moodChange = document.getElementById("m1");
+
+
+
   let text = textContainer.textContent;
+  let moodText = moodContainer.textContent;
 
   if (text.includes('C')) {
     keyContainer.classList.add('key1');
@@ -223,6 +230,25 @@ function check() {
     keyContainer.classList.remove('key12');
   }
 
+  const moodWords = [
+    "Melancholic",
+    "Nostalgic",
+    "Sentimental",
+    "Mellow",
+    "Romantic",
+    "Emotional",
+    "Gentle"
+  ];
+
+  let cdRotate = document.getElementById("cd2");
+  
+  if (moodWords.some(word => moodText.includes(word))) {
+    cdRotate.style.animation = "rotate360 8s linear infinite";
+  } else {
+    cdRotate.style.animation = "rotate360 2s linear infinite";
+  }
+  
+
 
 }
 
@@ -292,6 +318,13 @@ async function getData() {
       durationDiv.innerHTML = dataPoint.min;
       listeningDiv.innerHTML = dataPoint.time;
 
+      button.style.backgroundColor = "rgb(77, 77, 77)";
+      cd.style.animationPlayState = 'running';
+
+      isToggled = true;
+
+      toggleButton();
+
       audioPlayer.src = dataPoint.audio;
       audioPlayer.play().catch((error) => {
         console.error("Audio playback failed:", error);
@@ -326,30 +359,26 @@ async function getData() {
 
 getData();
 
-let blue = document.getElementById("b1");
+let button = document.getElementById("b1");
 let cd = document.getElementById("cd2");
 
 let isToggled = true;
 
-function changeColor(){
+function toggleButton(){
 
-
-  blue.onclick = function(e) {
     if (isToggled) {
-      blue.style.backgroundColor = "rgb(77, 77, 77)";
+      button.style.backgroundColor = "rgb(77, 77, 77)";
       cd.style.animationPlayState = 'running';
     } else{
-      blue.style.backgroundColor = 'transparent';
+      button.style.backgroundColor = 'transparent';
       cd.style.animationPlayState = 'paused';
     }
     isToggled = !isToggled;
 
-    
-
-  }
 }
 
-changeColor();
+button.onclick = toggleButton;
+
 
 let percentage = 0;
 let percentage2 = 50;
@@ -399,7 +428,7 @@ function animateGradient() {
   let firstColor = timeText.includes("Day") ? "rgba(41,166,221,1)" : timeText.includes("Night") ? "rgba(29,35,71,1)": timeText.includes("Golden") ? "rgba(255,146,75,1)": "rgba(248,248,248,1)" ;
   // let secondColor = timeText.includes("Day") ? "rgba(255,255,255,1)" : "rgba(41,166,221,1)";
 
-  cd.style.background = `linear-gradient(180deg, ${firstColor} ${percentage}%, rgba(255,255,255,1) ${percentage2}%)`;
+  cd.style.background = `linear-gradient(180deg, ${firstColor} ${percentage}%, rgba(255,255,255) ${percentage2}%)`;
   
 
 
