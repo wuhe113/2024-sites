@@ -849,3 +849,25 @@ background-image: conic-gradient(from 0deg at 50% 50%, #FFFFFFFF 0%, #444444FF 7
     border-radius: 10px;
 
 }
+
+#s2{
+    position: fixed;
+    display: flex;
+    left: 50px;
+    top: 120px;
+    color: rgb(77, 77, 77);
+    font-family: "roc-grotesk-variable",sans-serif;
+    font-variation-settings: 'wdth' 100, 'wght' 400;
+}
+
+#keySVG{
+    width: 12vw;
+}
+
+#b2{
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    margin-left: 5px;
+    border: solid rgb(77, 77, 77) 1px;
+}
