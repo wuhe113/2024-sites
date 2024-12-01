@@ -10,6 +10,10 @@ class stars{
 
         this.rotation = random(TWO_PI);
         this.rotationSpeed = random(-0.05, 0.05);
+
+        this.opacity = random(10, 255);
+        this.size1 = random(1, 5);
+        this.size2 = random(10, 15);
         // this.dir = (random(1) > 0.5) ? 1 : -1;
 
     }
@@ -25,13 +29,13 @@ class stars{
 
     render(){
         push();
-        fill(124,98,60,random(10, 100));
+        fill(124,98,60,this.opacity);
         noStroke();
         translate(this.pos.x, this.pos.y);
         rotate(this.rotation); 
         // strokeWeight(4);
         // point(this.pos.x, this.pos.y);
-        star(0, 0, 5, 10, 5);
+        star(0, 0, this.size1, this.size2, 5);
         pop();
         
     }
