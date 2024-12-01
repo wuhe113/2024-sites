@@ -1,0 +1,94 @@
+<html lang="en">
+    <head>
+        <title>THE WISHLIST</title>
+        <link rel="stylesheet" href="assets/reset.css">
+        <link rel="stylesheet" href="assets/data.css">
+        <link rel="stylesheet" href="https://use.typekit.net/adz8huw.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- <div id="lamp">
+        <div id="star">★</div>
+    </div> -->
+
+    <div id="stars"></div>
+
+    <div id="title">
+        THE WISHLIST
+    </div>
+    <!-- <div id="t1"></div> -->
+
+    <div id="add">Add Your Wish Items</div>
+
+    <div id="b1"></div>
+
+    <div id="back">
+        Back
+    </div>
+
+    <div id="about">
+        About
+    </div>
+
+
+    <div id="data">
+    <label for="name1-data">Your Name</label>
+    <input id="name1-data" type="text"><br>
+
+    <label for="name2-data">Item Name</label>
+    <input id="name2-data" type="text"><br>
+
+    <label for="price-data">Price</label>
+    <input id="price-data" type="text">
+    <div id="currecy-text">
+        *USD Only
+    </div>
+    <!-- <select name="currency" id="currency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="YEN">YEN</option>
+        <option value="YUAN">YUAN</option>
+    </select>
+    <div id="s1">⌵</div> -->
+    <br>
+
+    <label for="link-data">Link</label>
+    <input id="link-data" type="url" size="26"><br>
+
+    <label for="type-data">Category</label>
+        <select name="type" id="type-data">
+        <option value="">Please select</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Music">Music</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Food">Food</option>
+        <option value="Sport">Sport</option>
+        <option value="Technology">Technology</option>
+        <option value="Others">Others</option>
+    </select><br>
+
+    <label for="des-data">Description</label>
+    <textarea id="des-data" rows="10" cols="40" placeholder="Please describe this item or explain why it is your wish item :)"></textarea>
+    <br>
+    <!-- <input id="des-data" type="text" size="26"><br><br> -->
+
+    <button id="push-data">Save</button>
+</div>
+
+
+<div id="add2">
+    By proceeding, you agree to the Privacy Policy & Terms of Service
+</div>
+
+</body>
+
+<script src="data.js"></script>
+<script src="sketch.js"></script>
+<script src="stars.js"></script>
+</html>
