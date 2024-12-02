@@ -2,6 +2,17 @@ body{
     background-color: rgb(255, 255, 255);
     /* background-color: rgb(255, 52, 52); */
     /* background-color: white; */
+    animation: show 2s forwards;
+    overflow: hidden;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 #stars{
@@ -12,13 +23,18 @@ body{
 
 #title{
     position: relative;
-    margin: auto;
-    font-family: desire-pro, serif;
+    font-family: "rafaella", sans-serif;
 font-weight: 400;
 font-style: normal;
+    /* font-family: desire-pro, serif;
+font-weight: 400;
+font-style: normal; */
 font-size: 30px;
 text-align: center;
 color: rgb(124, 98, 60);
+left: 50%;
+top: -1%;
+transform: translate(-50%);
 /* color: rgb(244, 229, 202); */
 /* color: rgb(255, 52, 52); */
 /* color: rgb(220, 207, 207); */
@@ -29,7 +45,7 @@ text-shadow: 0px 0px 10px rgb(255, 230, 0); */
 
 #add{
     position: absolute;
-    top: 45px;
+    top: 10px;
     left: 50%;
     transform: translate(-50%);
     font-size: 12px;
@@ -49,6 +65,23 @@ text-shadow: 0px 0px 10px rgb(255, 230, 0); */
     padding-right: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
+    cursor: pointer;
+}
+
+#addItem{
+    position: absolute;
+    top: 10px;
+    right: 70px;
+    font-size: 15px;
+    color:rgb(124, 98, 60);
+    background-color: white;
+    border: 1px solid rgb(124, 98, 60);
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
 }
 
 #about{
@@ -64,6 +97,7 @@ text-shadow: 0px 0px 10px rgb(255, 230, 0); */
     padding-right: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
+    cursor: pointer;
 }
 
 #b1{
@@ -166,5 +200,6 @@ input{
     transform: translate(-50%);
     font-size: 12px;
     color:rgb(124, 98, 60);
+    text-wrap: nowrap;
 }
 

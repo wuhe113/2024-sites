@@ -1,0 +1,327 @@
+body{
+    background-color: rgb(124, 98, 60);
+    color:rgb(255, 255, 255);
+    animation: show 2s forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#stars{
+    position: fixed;
+    top: 17px;
+    /* visibility: hidden; */
+}
+
+
+#top{
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color: rgb(124, 98, 60);
+    text-align: center;
+    /* box-sizing: border-box;
+    padding-bottom: 3px; */
+    overflow: hidden;
+    z-index: 10;
+    width: 100vw;
+
+}
+
+#scrollText{
+    font-size: 12px;
+}
+
+
+#title{
+    position: fixed;
+    font-family: "rafaella", sans-serif;
+font-weight: 400;
+font-style: normal;
+    /* font-family: desire-pro, serif;
+    font-weight: 400;
+    font-style: normal; */
+    font-size: 30px;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+    top: 10px;
+    z-index: 10;
+}
+
+#cate{
+    position: fixed;
+    top: 30px;
+    left: 10px;
+    font-size: 15px;
+    background-color: rgb(124, 98, 60);
+    border: 1px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#home{
+    position: fixed;
+    top: 30px;
+    left: 93px;
+    font-size: 15px;
+    background-color: rgb(124, 98, 60);
+    border: 1px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#addItem{
+    position: fixed;
+    top: 30px;
+    right: 70px;
+    font-size: 15px;
+    background-color: rgb(124, 98, 60);
+    border: 1px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#about{
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    font-size: 15px;
+    background-color: rgb(124, 98, 60);
+    border: 1px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#itemGrid{
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    /* top: 100px; */
+    /* transform: translate(-34%); */
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5vw;
+    /* background-color: black; */
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    align-items: center;
+    justify-items: center;
+    /* justify-content: center;
+    align-content: center; */
+}
+
+
+#item{
+    position: relative;
+    display: flex;
+    width: 25vw;
+    height: 30vw;
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    font-size: 15px;
+}
+
+#name{
+    position: absolute;
+    padding: 5px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#price{
+    position: absolute;
+    padding: 5px;
+    bottom:0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#box{
+    position: fixed;
+    left: 10px;
+    top: 72px;
+    width: 120px;
+    height: 150px;
+    background-color: white;
+}
+
+#layer{
+    position: fixed;
+    left: 25px;
+    top: 85px;
+    background-color: rgb(124, 98, 60);
+    width: 85px;
+    height: 130px;
+}
+
+#tree{
+    position: fixed;
+    left: 20px;
+    top: 80px;
+    width: 85px;
+    height: 130px;
+    box-shadow: 0px 1px 5px rgb(255, 255, 255);
+}
+
+#nameGrid{
+    position: fixed;
+    top: 230px;
+    left: 10px;
+    display: grid;
+    /* box-sizing: border-box;
+    padding: 10px; */
+    /* background-color: black; */
+    width: 13vw;
+    height: 460px;
+    font-size: 15px;
+    text-wrap: nowrap;
+    z-index: 10;
+    overflow: scroll;
+    /* background-color: black; */
+    justify-content: left;
+    align-content: first baseline;
+}
+
+#ownerName{
+    margin-top: 5px;
+    line-height: 15px;
+}
+
+#owners{
+    text-decoration: underline;
+}
+
+
+#cart{
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 15px;
+    background-color: rgb(124, 98, 60);
+    border: 1px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    display: flex;
+    z-index: 10;
+}
+
+#num{
+    box-sizing: border-box;
+    padding-left: 2px;
+}
+
+
+#mode{
+    position: fixed;
+    display: flex;
+    bottom: 10px;
+    right: 10px;
+    font-size: 15px;
+    background-color: rgb(124, 98, 60);
+    border: 1px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: flex;
+    z-index: 10;
+    align-items: center;
+}
+
+#m1{
+    margin-left: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    cursor: pointer;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+}
+
+#m2{
+    margin-left: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    width: 10px;
+    height: 10px;
+}
+
+
+#m3{
+    margin-left: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    cursor: pointer;
+    background-color: rgb(124, 98, 60);
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+}
+
+#grid{
+    position: fixed;
+    display: flex;
+    bottom: 10px;
+    right: 118px;
+    font-size: 15px;
+    background-color: rgb(124, 98, 60);
+    border: 1px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: flex;
+    z-index: 10;
+    align-items: center;
+}
+
+#g1{
+    margin-left: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    cursor: pointer;
+}
+
+#g2{
+    margin-left: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    cursor: pointer;
+}

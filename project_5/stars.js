@@ -14,6 +14,7 @@ class stars{
         this.opacity = random(10, 255);
         this.size1 = random(1, 5);
         this.size2 = random(10, 15);
+        this.point = floor(random(3, 10));
         // this.dir = (random(1) > 0.5) ? 1 : -1;
 
     }
@@ -35,7 +36,7 @@ class stars{
         rotate(this.rotation); 
         // strokeWeight(4);
         // point(this.pos.x, this.pos.y);
-        star(0, 0, this.size1, this.size2, 5);
+        star(0, 0, this.size1, this.size2, this.point);
         pop();
         
     }

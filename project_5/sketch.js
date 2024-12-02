@@ -1,3 +1,5 @@
+//study from https://www.youtube.com/watch?v=cl-mHFCGzYk
+
 let starFall = [];
 let gravity;
 
