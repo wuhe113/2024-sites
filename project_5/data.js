@@ -104,14 +104,16 @@ function changeGrid() {
 
     gridSmall.onclick = function (e) {
         // Update grid structure
-        itemGrid.style.gridTemplateColumns = "repeat(5, 1fr)";
+        itemGrid.style.gridTemplateColumns = "repeat(4, 1fr)";
+        itemGrid.style.paddingLeft = "0px";
+        itemGrid.style.paddingRight = "10px";
 
         // Dynamically get the latest set of items
         const gridItems = document.querySelectorAll("#itemGrid #item");
 
         gridItems.forEach((item) => {
-            item.style.width = "18.5vw";
-            item.style.height = "23.5vw";
+            item.style.width = "18.3vw";
+            item.style.height = "23.3vw";
         });
     };
 

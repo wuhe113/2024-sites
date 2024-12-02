@@ -213,6 +213,7 @@ font-style: normal;
 }
 
 #ownerName{
+    font-size: 12px;
     margin-top: 5px;
     line-height: 15px;
 }
