@@ -156,6 +156,7 @@ font-style: normal;
     top: 0;
     left: 50%;
     transform: translate(-50%);
+    line-height: 15px;
 }
 
 #price{

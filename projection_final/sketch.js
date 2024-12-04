@@ -1,12 +1,12 @@
-const density = '                  Ñ@#W$9876543210?!abc;:+=-,._';
+const density = '                         Ñ@#W$9876543210?!abc;:+=-,._';
 
 // let puppy;
 
 let video;
 
-function preload(){
-    puppy = loadImage("assets/puppy.png");
-}
+// function preload(){
+//     puppy = loadImage("assets/puppy.png");
+// }
 
 function setup(){
     noCanvas();
@@ -38,7 +38,7 @@ function draw(){
 
 
             const len = density.length;
-            const charIndex = floor(map(avg, 0, 255, 0, len));
+            const charIndex = floor(map(avg, 0, 220, len, 0));
 
 
             // textSize(w);

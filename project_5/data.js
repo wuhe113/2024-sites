@@ -103,12 +103,11 @@ function changeGrid() {
     const gridLarge = document.getElementById("g2");
 
     gridSmall.onclick = function (e) {
-        // Update grid structure
         itemGrid.style.gridTemplateColumns = "repeat(4, 1fr)";
         itemGrid.style.paddingLeft = "0px";
         itemGrid.style.paddingRight = "10px";
 
-        // Dynamically get the latest set of items
+        
         const gridItems = document.querySelectorAll("#itemGrid #item");
 
         gridItems.forEach((item) => {
