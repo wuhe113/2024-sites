@@ -1,34 +1,57 @@
-function setup(){
-    let myCanvas = createCanvas(windowWidth, windowHeight);
+
+
+let mainCanvas = function(main){
+main.setup = function(){
+    let myCanvas = main.createCanvas(main.windowWidth, main.windowHeight);
     myCanvas.parent("stars");
 }
 
-function draw(){
-    background(124, 98, 60, 0);
+main.draw = function(){
+    main.background(124, 98, 60, 0);
 
 }
 
 
-function mousePressed(){
-    noStroke();
-    fill(255,255,255, random(10, 255));
+main.mousePressed = function(){
+    main.noStroke();
+    main.fill(255,255,255, main.random(10, 255));
 
 
-    star(mouseX, mouseY, random(1, 5), random(10, 15), floor(random(3, 10)));
+    main.star(main.mouseX, main.mouseY, main.random(1, 5), main.random(10, 15), main.floor(main.random(3, 10)));
 }
 
-function star(x, y, radius1, radius2, npoints) {
-    let angle = TWO_PI / npoints;
+main.star = function(x, y, radius1, radius2, npoints) {
+    let angle = main.TWO_PI / npoints;
     let halfAngle = angle / 2.0;
-    beginShape();
-    for (let a = 0; a < TWO_PI; a += angle) {
-      let sx = x + cos(a) * radius2;
-      let sy = y + sin(a) * radius2;
-      vertex(sx, sy);
-      sx = x + cos(a + halfAngle) * radius1;
-      sy = y + sin(a + halfAngle) * radius1;
-      vertex(sx, sy);
+    main.beginShape();
+    for (let a = 0; a < main.TWO_PI; a += angle) {
+      let sx = x + main.cos(a) * radius2;
+      let sy = y + main.sin(a) * radius2;
+      main.vertex(sx, sy);
+      sx = x + main.cos(a + halfAngle) * radius1;
+      sy = y + main.sin(a + halfAngle) * radius1;
+      main.vertex(sx, sy);
     }
-    endShape(CLOSE);
+    main.endShape(main.CLOSE);
   }
+};
+
+
+
+// let drawCanvas = function (draw) {
+//     draw.setup = function () {
+//         let canvas = draw.createCanvas(200, 200);
+//         canvas.parent(itemDiv);
+//     };
+
+//     draw.draw = function () {
+//         draw.background(124, 98, 60);
+//         draw.ellipse(100, 100, 80, 80);
+//     };
+// };
+
+new p5(mainCanvas);
+// new p5(drawCanvas);
+
+
   

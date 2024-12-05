@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://use.typekit.net/qtf0wdw.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
 
 
 </head>
@@ -26,7 +27,6 @@
 
     <!-- <div id="add">Add Your Wish Items</div> -->
 
-    <div id="b1"></div>
 
     <a href="index.html"><div id="back">
         Back
@@ -39,6 +39,8 @@
     <div id="about">
         About
     </div>
+
+    <div id="b1">
 
 
     <div id="data">
@@ -83,7 +85,13 @@
     <br>
     <!-- <input id="des-data" type="text" size="26"><br><br> -->
 
+    <!-- <label for="img-data"></label>
+    <input id="img-data" type="file" class="inputFile" onchange="getFile(event)" accept="image/png, image/jpeg" lang="en">
+    <button id="img-button">Upload Image</button>
+    <br> -->
+
     <button id="push-data">Save</button>
+</div>
 </div>
 
 
@@ -94,6 +102,6 @@
 </body>
 
 <script src="data.js"></script>
-<script src="sketch.js"></script>
+<!-- <script src="sketch.js"></script> -->
 <script src="stars.js"></script>
 </html>

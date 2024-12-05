@@ -93,7 +93,77 @@ ref.on("value", (snapshot) => {
 
         itemGrid.appendChild(itemDiv);
 
+
         changeGrid();
+
+        //study from https://editor.p5js.org/sobers/sketches/hrMPPNoC5
+
+        let count = 0;
+        let wiggle;
+
+        let textWiggle = itemData.itemName;
+
+        let font;
+
+
+        let drawCanvas = function (draw) {
+
+            draw.preload = function(){
+                font = draw.loadFont('assets/Rafaella.ttf');
+            }
+
+
+            draw.setup = function () {
+                let canvas = draw.createCanvas(240, 290);
+                canvas.parent(itemDiv);
+
+                draw.textSize(50);
+                draw.textAlign(draw.LEFT, draw.TOP);
+                draw.textFont(font);
+                draw.textWrap(draw.WORD);
+                
+            };
+    
+            draw.draw = function () {
+        // Clear the canvas completely
+        draw.clear();
+        draw.background(124, 98, 60, 0);
+        // draw.background(0, 10, 60);
+
+        count++;
+
+        draw.fill(255);
+
+
+        let totalTextWidth = draw.textWidth(textWiggle);
+        let startX = draw.width / 2 - totalTextWidth / 2;
+
+        
+        for (let i = 0; i < textWiggle.length; i++) {
+            let char = textWiggle[i];
+
+            // Unique wiggle offset for each letter
+            let frequencyOffset = i * 10; // Adjust for variation
+            let wiggle = draw.map(
+                draw.sin(draw.radians(count * 2 + frequencyOffset)),
+                -1,
+                1,
+                -5,
+                5
+            );
+
+            // Calculate individual letter position
+            let charX = startX + draw.textWidth(textWiggle.substring(0, i));
+            let charY = draw.height / 2 + wiggle;
+
+            // Draw each character
+            draw.text(char, charX, charY);
+        }
+    };
+        };
+    
+        new p5(drawCanvas);
+    
     }
 });
 
@@ -130,5 +200,3 @@ function changeGrid() {
 }
 
 }
-
-
