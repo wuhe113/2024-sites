@@ -4,6 +4,8 @@ body{
     /* background-color: white; */
     animation: show 2s forwards;
     overflow: hidden;
+    font-family: "aglet-mono-variable", sans-serif;
+    font-variation-settings: "wght" 300;
 }
 
 @keyframes show {

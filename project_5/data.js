@@ -105,8 +105,10 @@ ref.on("value", (snapshot) => {
 
         let font;
 
-        let w = 250;
-        let y = 290;
+        let starsWiggle = [];
+        let numStars = 100;
+
+        let baseTextSize = 5;
 
 
         let drawCanvas = function (draw) {
@@ -117,13 +119,26 @@ ref.on("value", (snapshot) => {
 
 
             draw.setup = function () {
-                let canvas = draw.createCanvas(w, y);
+                let canvas = draw.createCanvas(draw.windowWidth / 4.02, draw.windowWidth / 3.35);
                 canvas.parent(itemDiv);
 
                 draw.textSize(50);
-                draw.textAlign(draw.LEFT, draw.TOP);
-                draw.textFont(font);
+                draw.textAlign(draw.LEFT, draw.CENTER);
+                // draw.textFont(font);
                 draw.textWrap(draw.WORD);
+
+                for(let i = 0; i < numStars; i++){
+                    starsWiggle.push({
+                        x: draw.random(draw.width),
+                        y: draw.random(draw.height),
+                        size1: draw.random(1,6),
+                        size2: draw.random(0,2),
+                        points: draw.floor(draw.random(3,10)),
+                        // alpha: draw.random(10, 255),
+                        wiggleFre: draw.random(1,5),
+                        baseY: 0
+                    });
+                }
                 
             };
     
@@ -137,11 +152,26 @@ ref.on("value", (snapshot) => {
 
         draw.fill(255);
 
+        let dynamicTextSize = draw.map(draw.width, 300, 1920, baseTextSize, baseTextSize * 2);
         if (textWiggle.length > 6) {
-            draw.textSize(30);
+            draw.textSize(dynamicTextSize);
         } else {
-            draw.textSize(50);
+            draw.textSize(dynamicTextSize * 1.5);
         }
+
+
+        draw.push();
+
+        for(let starWiggle of starsWiggle){
+            draw.fill(255, 255, 255, draw.random(10, 255));
+            draw.noStroke();
+            let wiggle2 = draw.sin(draw.radians(count * starWiggle.wiggleFre)) * 10;
+            draw.star(starWiggle.x  + wiggle2 / 2, starWiggle.y  + wiggle2, starWiggle.size1, starWiggle.size2, starWiggle.points);
+        }
+
+        draw.pop();
+
+
 
 
 
@@ -171,10 +201,27 @@ ref.on("value", (snapshot) => {
         }
     };
 
-    // draw.windowResized = function () {
-    //     draw.resizeCanvas(draw.windowWidth, draw.windowHeight);
-    // };
+    draw.star = function(x, y, radius1, radius2, npoints) {
+        let angle = draw.TWO_PI / npoints;
+        let halfAngle = angle / 2.0;
+        draw.beginShape();
+        for (let a = 0; a < draw.TWO_PI; a += angle) {
+          let sx = x + draw.cos(a) * radius2;
+          let sy = y + draw.sin(a) * radius2;
+          draw.vertex(sx, sy);
+          sx = x + draw.cos(a + halfAngle) * radius1;
+          sy = y + draw.sin(a + halfAngle) * radius1;
+          draw.vertex(sx, sy);
+        }
+        draw.endShape(draw.CLOSE);
+      }
+
+    draw.windowResized = function () {
+        draw.resizeCanvas(draw.windowWidth / 4.02, draw.windowWidth / 3.35);
+
+    };
         };
+
     
         new p5(drawCanvas);
     
