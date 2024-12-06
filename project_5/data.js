@@ -87,6 +87,10 @@ ref.on("value", (snapshot) => {
         priceDiv.setAttribute("id", "price");
         priceDiv.textContent = `$${itemData.price}`;
 
+        // const desDiv = document.createElement("div");
+        // desDiv.setAttribute("id", "description");
+        
+
         itemDiv.appendChild(nameDiv);
         itemDiv.appendChild(priceDiv);
 
@@ -101,7 +105,8 @@ ref.on("value", (snapshot) => {
         let count = 0;
         let wiggle;
 
-        let textWiggle = itemData.itemName;
+        // let textWiggle = itemData.itemName;
+        let textWiggle = itemData.description;
 
         let font;
 
@@ -124,8 +129,9 @@ ref.on("value", (snapshot) => {
 
                 draw.textSize(50);
                 draw.textAlign(draw.LEFT, draw.CENTER);
-                // draw.textFont(font);
+                draw.textFont("aglet-mono-variable");
                 draw.textWrap(draw.WORD);
+                // draw.text(textWiggle, 100, 100, 100, 100);
 
                 for(let i = 0; i < numStars; i++){
                     starsWiggle.push({
@@ -152,9 +158,17 @@ ref.on("value", (snapshot) => {
 
         draw.fill(255);
 
+        // let textBoxWidth = draw.width * 0.8;
+        // let textBoxHeight = draw.height * 0.5;
+        // let textX = draw.width * 0.1;
+        // let textY = draw.height * 0.1;
+    
+        // draw.textSize(draw.map(draw.width, 300, 1920, baseTextSize, baseTextSize * 2));
+        // draw.text(textWiggle, textX, textY, textBoxWidth, textBoxHeight);
+
         let dynamicTextSize = draw.map(draw.width, 300, 1920, baseTextSize, baseTextSize * 2);
         if (textWiggle.length > 6) {
-            draw.textSize(dynamicTextSize);
+            draw.textSize(dynamicTextSize * 1.5);
         } else {
             draw.textSize(dynamicTextSize * 1.5);
         }
@@ -170,6 +184,24 @@ ref.on("value", (snapshot) => {
         }
 
         draw.pop();
+
+        let textBoxWidth = draw.width * 0.8;
+        let textBoxHeight = draw.height * 0.8;
+        let textX = draw.width * 0.1;
+        let textY = draw.height * 0.1;
+    
+        let lines = draw.splitLines(textWiggle, textBoxWidth);
+    
+        // Apply per-character wiggle effect to wrapped lines
+        let lineHeight = dynamicTextSize * 1.2; // Adjust line height
+        for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
+            let line = lines[lineIndex];
+            let lineStartY = textY + lineHeight * lineIndex;
+    
+            // Center align line horizontally
+            let totalLineWidth = draw.textWidth(line);
+            let lineStartX = textX;
+        }
 
 
 
@@ -199,6 +231,28 @@ ref.on("value", (snapshot) => {
             // Draw each character
             draw.text(char, charX, charY);
         }
+    };
+
+    draw.splitLines = function (text, maxWidth) {
+        let words = text.split(' ');
+        let lines = [];
+        let currentLine = '';
+    
+        for (let word of words) {
+            let testLine = currentLine + (currentLine === '' ? '' : ' ') + word;
+            if (draw.textWidth(testLine) > maxWidth) {
+                lines.push(currentLine);
+                currentLine = word;
+            } else {
+                currentLine = testLine;
+            }
+        }
+    
+        if (currentLine !== '') {
+            lines.push(currentLine);
+        }
+    
+        return lines;
     };
 
     draw.star = function(x, y, radius1, radius2, npoints) {
