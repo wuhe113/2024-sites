@@ -105,6 +105,9 @@ ref.on("value", (snapshot) => {
 
         let font;
 
+        let w = 250;
+        let y = 290;
+
 
         let drawCanvas = function (draw) {
 
@@ -114,7 +117,7 @@ ref.on("value", (snapshot) => {
 
 
             draw.setup = function () {
-                let canvas = draw.createCanvas(240, 290);
+                let canvas = draw.createCanvas(w, y);
                 canvas.parent(itemDiv);
 
                 draw.textSize(50);
@@ -133,6 +136,13 @@ ref.on("value", (snapshot) => {
         count++;
 
         draw.fill(255);
+
+        if (textWiggle.length > 6) {
+            draw.textSize(30);
+        } else {
+            draw.textSize(50);
+        }
+
 
 
         let totalTextWidth = draw.textWidth(textWiggle);
@@ -160,6 +170,10 @@ ref.on("value", (snapshot) => {
             draw.text(char, charX, charY);
         }
     };
+
+    // draw.windowResized = function () {
+    //     draw.resizeCanvas(draw.windowWidth, draw.windowHeight);
+    // };
         };
     
         new p5(drawCanvas);
