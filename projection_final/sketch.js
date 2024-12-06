@@ -109,7 +109,7 @@ function draw() {
       const avg = (r + g + b) / 3;
 
       const len = density.length;
-      const charIndex = floor(map(avg, 0, 220, len, 0));
+      const charIndex = floor(map(avg, 0, 255, 0, len));
 
       const c = density.charAt(charIndex);
       asciiImage += c === ' ' ? '&nbsp;' : c;
