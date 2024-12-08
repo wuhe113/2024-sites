@@ -53,7 +53,7 @@ font-style: normal;
     left: 50%;
     transform: translate(-50%);
     top: 10px;
-    z-index: 10;
+    z-index: 11;
 }
 
 #cate{
@@ -69,7 +69,7 @@ font-style: normal;
     padding-top: 2px;
     padding-bottom: 2px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 11;
 }
 
 #cate-content{
@@ -116,7 +116,7 @@ font-style: normal;
     padding-top: 2px;
     padding-bottom: 2px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 11;
 }
 
 #addItem{
@@ -132,7 +132,7 @@ font-style: normal;
     padding-top: 2px;
     padding-bottom: 2px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 11;
 }
 
 #about{
@@ -148,7 +148,7 @@ font-style: normal;
     padding-top: 2px;
     padding-bottom: 2px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 11;
 }
 
 #itemGrid{
@@ -160,7 +160,7 @@ font-style: normal;
     width: 85vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3.5vw;
+    gap: 5vw;
     /* background-color: black; */
     box-sizing: border-box;
     padding-left: 5px;
@@ -198,6 +198,22 @@ font-style: normal;
     z-index: -1;
 }
 
+#add-to-cart{
+    position: absolute;
+    padding: 5px;
+    bottom:-40px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+    border: 1px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+
 #name{
     position: absolute;
     padding: 5px;
@@ -206,6 +222,8 @@ font-style: normal;
     transform: translate(-50%);
     line-height: 15px;
     z-index: 10;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .itemCate{
@@ -222,7 +240,7 @@ font-style: normal;
 #price{
     position: absolute;
     padding: 5px;
-    bottom:0;
+    top: 20px;
     left: 50%;
     transform: translate(-50%);
     z-index: 10;

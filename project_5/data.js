@@ -79,13 +79,20 @@ ref.on("value", (snapshot) => {
         const itemDiv = document.createElement("div");
         itemDiv.setAttribute("class", "item");
 
-        const itemShadow = data[key];
+        // const itemShadow = data[key];
         const shadowDiv = document.createElement("div");
         shadowDiv.setAttribute("id", "itemShadow");
 
         const nameDiv = document.createElement("div");
         nameDiv.setAttribute("id", "name");
         nameDiv.textContent = itemData.itemName;
+        nameDiv.addEventListener('click', () => {
+            window.location.href = `${data[key].link}`;
+        });
+
+        const add = document.createElement("div");
+        add.setAttribute("id", "add-to-cart");
+        add.textContent = "Add to cart";
 
         const cateDiv = document.createElement("div");
         cateDiv.setAttribute("class", "itemCate");
@@ -99,6 +106,7 @@ ref.on("value", (snapshot) => {
         // desDiv.setAttribute("id", "description");
 
         itemDiv.appendChild(shadowDiv);
+        itemDiv.appendChild(add);
         itemDiv.appendChild(nameDiv);
         itemDiv.appendChild(cateDiv);
         itemDiv.appendChild(priceDiv);
