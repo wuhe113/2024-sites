@@ -20,8 +20,15 @@ function changeColor(){
     const code = document.getElementById("top");
 
     color2.onclick = function(e){
-        // document.body.style.backgroundColor = "black";
-        document.body.style.setProperty('background-color', 'black', 'important');
+        localStorage.setItem("backgroundColor", "black");
+        localStorage.setItem("backgroundColor2", "rgb(15, 15, 15)");
+        localStorage.setItem("boxShadow", "3px 3px 5px 0px rgb(50, 50, 50)");
+        localStorage.setItem("filter", "grayscale(100%)");
+
+
+
+        document.body.style.backgroundColor = "black";
+
 
         b1.style.backgroundColor = "black";
         b2.style.backgroundColor = "black";
@@ -60,6 +67,16 @@ function changeColor(){
 };
 
 console.log("common.js is loaded");
+
+document.addEventListener("DOMContentLoaded", changeColor);
+
+
+// if (document.body) {
+//     console.log("Body exists, changing background color...");
+//     document.body.style.backgroundColor = "blue";
+// } else {
+//     console.error("No body found on this page.");
+// }
 
 // if (document.body.id === "aboutPage") {
 //     changeColor();

@@ -1,3 +1,10 @@
+// window.addEventListener("load", () => {
+//     localStorage.clear();
+//     sessionStorage.clear(); 
+//     console.log("localStorage has been cleared.");
+// });
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyCqP6qxH7PjGVCLMJBTFPGBNcFARqDxd6U",
     authDomain: "next-level-coding-e3baa.firebaseapp.com",
@@ -117,6 +124,7 @@ ref.on("value", (snapshot) => {
         dropdown();
         filter();
         changeColor();
+        applyStoredBackgroundColor();
         // changeGrid();
 
         //study from https://editor.p5js.org/sobers/sketches/hrMPPNoC5
@@ -320,11 +328,6 @@ ref.on("value", (snapshot) => {
     
     }
 });
-}else{
-    if (document.body.id === "aboutPage") {
-    changeColor();
-}
-
 }
 
 function dropdown(){
@@ -522,6 +525,122 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
+
+
+  function applyStoredBackgroundColor() {
+    const color1 = document.getElementById("m3");
+    const color2 = document.getElementById("m2");
+    const color3 = document.getElementById("m1");
+
+    const b1 = document.getElementById("cate");
+    const b2 = document.getElementById("home");
+    const b3 = document.getElementById("addItem");
+    const b4 = document.getElementById("about");
+    const b5 = document.getElementById("cart");
+    const b6 = document.getElementById("mode");
+    const b7 = document.getElementById("scroll-to-top");
+
+    const itemBack1 = document.querySelectorAll(".item");
+    const itemBack2 = document.querySelectorAll(".itemShadow");
+
+    const image = document.getElementById("tree");
+    const imageBack = document.getElementById("layer");
+
+    const code = document.getElementById("top");
+    
+    const storedGrayscale = localStorage.getItem("filter");
+    const storedColor = localStorage.getItem("backgroundColor");
+    const storedShadow = localStorage.getItem("boxShadow");
+    const storedColor2 = localStorage.getItem("backgroundColor2");
+
+    if (storedShadow){
+
+
+        for(let itemBack1each of itemBack1){
+            itemBack1each.style.boxShadow = storedShadow;
+        }
+
+    // localStorage.removeItem("boxShadow");
+    }
+
+    if(storedColor2){
+
+        for(let itemBack1each of itemBack1){
+            itemBack1each.style.backgroundColor = storedColor2;
+        }
+
+        for(let itemBack2each of itemBack2){
+            itemBack2each.style.backgroundColor = storedColor2;
+        }
+    }
+
+    if (storedGrayscale){
+        
+        image.style.filter = storedGrayscale;
+    }
+
+    console.log("Stored shadow:", storedShadow);
+
+    // if (color2) {
+    //     color2.onclick = function () {
+    //         const newShadow = "3px 3px 5px 0px rgb(50, 50, 50)";
+    //         localStorage.setItem("boxShadow", newShadow);
+
+    //         const storedColor2 = "rgb(15, 15, 15)";
+    //         localStorage.setItem("backgroundColor", storedColor2);
+            
+
+    //         itemBack1.forEach(itemBack1each => {
+    //             itemBack1each.style.backgroundColor = storedColor2;
+    //             itemBack1each.style.boxShadow = newShadow;
+    //         });
+    //     };
+    // }
+
+    if (storedColor) {
+        document.body.style.backgroundColor = storedColor;
+        b1.style.backgroundColor = storedColor;
+        b2.style.backgroundColor = storedColor;
+        b3.style.backgroundColor = storedColor;
+        b4.style.backgroundColor = storedColor;
+        b5.style.backgroundColor = storedColor;
+        b6.style.backgroundColor = storedColor;
+        b7.style.backgroundColor = storedColor;
+        code.style.backgroundColor = storedColor;
+
+        // image.style.filter = `grayscale${storedGrayscale}`;
+        imageBack.style.backgroundColor = storedColor;
+
+        // for(let itemBack1each of itemBack1){
+        //     itemBack1each.style.backgroundColor = storedColor2;
+        //     itemBack1each.style.boxShadow = storedShadow;
+        // }
+
+
+        // for(let itemBack2each of itemBack2){
+        //     itemBack2each.style.backgroundColor = storedColor;
+        // }
+
+        color2.style.border = "1px solid white";
+        color2.style.width = "15px";
+        color2.style.height = "15px";
+
+        color1.style.border = "0px solid rgb(81, 64, 39)";
+        color1.style.width = "10px";
+        color1.style.height = "10px";
+
+        color3.style.border = "0px solid white";
+        color3.style.width = "10px";
+        color3.style.height = "10px";
+
+        // localStorage.removeItem("backgroundColor");
+    } else {
+        console.log("No background color found in storage.");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", applyStoredBackgroundColor);
+
 
 
 
