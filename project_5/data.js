@@ -81,7 +81,7 @@ ref.on("value", (snapshot) => {
 
         // const itemShadow = data[key];
         const shadowDiv = document.createElement("div");
-        shadowDiv.setAttribute("id", "itemShadow");
+        shadowDiv.setAttribute("class", "itemShadow");
 
         const nameDiv = document.createElement("div");
         nameDiv.setAttribute("id", "name");
@@ -116,6 +116,7 @@ ref.on("value", (snapshot) => {
 
         dropdown();
         filter();
+        changeColor();
         // changeGrid();
 
         //study from https://editor.p5js.org/sobers/sketches/hrMPPNoC5
@@ -319,6 +320,12 @@ ref.on("value", (snapshot) => {
     
     }
 });
+}else{
+    if (document.body.id === "aboutPage") {
+    changeColor();
+}
+
+}
 
 function dropdown(){
     const cateButton = document.getElementById("cate");
@@ -499,6 +506,23 @@ isToggled = !isToggled;
 
 };
 
+let topButton = document.getElementById("scroll-to-top");
+
+window.onscroll = function(){scroll()};
+
+function scroll(){
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+        topButton.style.display = "block";
+    }else{
+        topButton.style.display = "none";
+    }
+};
+
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
 
 
 function changeGrid() {
@@ -530,6 +554,4 @@ function changeGrid() {
             item.style.height = "30vw";
         });
     };
-}
-
 }
