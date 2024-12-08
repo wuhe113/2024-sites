@@ -77,11 +77,19 @@ ref.on("value", (snapshot) => {
 
         const itemData = data[key];
         const itemDiv = document.createElement("div");
-        itemDiv.setAttribute("id", "item");
+        itemDiv.setAttribute("class", "item");
+
+        const itemShadow = data[key];
+        const shadowDiv = document.createElement("div");
+        shadowDiv.setAttribute("id", "itemShadow");
 
         const nameDiv = document.createElement("div");
         nameDiv.setAttribute("id", "name");
         nameDiv.textContent = itemData.itemName;
+
+        const cateDiv = document.createElement("div");
+        cateDiv.setAttribute("class", "itemCate");
+        cateDiv.textContent = itemData.category;
 
         const priceDiv = document.createElement("div");
         priceDiv.setAttribute("id", "price");
@@ -89,16 +97,18 @@ ref.on("value", (snapshot) => {
 
         // const desDiv = document.createElement("div");
         // desDiv.setAttribute("id", "description");
-        
 
+        itemDiv.appendChild(shadowDiv);
         itemDiv.appendChild(nameDiv);
+        itemDiv.appendChild(cateDiv);
         itemDiv.appendChild(priceDiv);
 
 
         itemGrid.appendChild(itemDiv);
 
-
-        changeGrid();
+        dropdown();
+        filter();
+        // changeGrid();
 
         //study from https://editor.p5js.org/sobers/sketches/hrMPPNoC5
 
@@ -114,6 +124,7 @@ ref.on("value", (snapshot) => {
         let numStars = 100;
 
         let baseTextSize = 5;
+        
 
 
         let drawCanvas = function (draw) {
@@ -124,11 +135,12 @@ ref.on("value", (snapshot) => {
 
 
             draw.setup = function () {
-                let canvas = draw.createCanvas(draw.windowWidth / 4.02, draw.windowWidth / 3.35);
+                let canvas = draw.createCanvas(draw.windowWidth / 4.35, draw.windowWidth / 3.33);
                 canvas.parent(itemDiv);
+                canvas.position(0,0);
 
                 draw.textSize(50);
-                draw.textAlign(draw.LEFT, draw.CENTER);
+                draw.textAlign(draw.CENTER, draw.CENTER);
                 draw.textFont("aglet-mono-variable");
                 draw.textWrap(draw.WORD);
                 // draw.text(textWiggle, 100, 100, 100, 100);
@@ -158,20 +170,47 @@ ref.on("value", (snapshot) => {
 
         draw.fill(255);
 
-        // let textBoxWidth = draw.width * 0.8;
-        // let textBoxHeight = draw.height * 0.5;
-        // let textX = draw.width * 0.1;
-        // let textY = draw.height * 0.1;
-    
-        // draw.textSize(draw.map(draw.width, 300, 1920, baseTextSize, baseTextSize * 2));
-        // draw.text(textWiggle, textX, textY, textBoxWidth, textBoxHeight);
+        
 
         let dynamicTextSize = draw.map(draw.width, 300, 1920, baseTextSize, baseTextSize * 2);
         if (textWiggle.length > 6) {
-            draw.textSize(dynamicTextSize * 1.5);
+            draw.textSize(dynamicTextSize * 2);
         } else {
-            draw.textSize(dynamicTextSize * 1.5);
+            draw.textSize(dynamicTextSize * 2);
         }
+
+
+        let wrapWidth = draw.width * 0.8; // 80% of canvas width
+
+        // Wiggle effect for each line of text
+        let lines = [];
+        let currentLine = "";
+        let words = textWiggle.split(/\s+/); // Split text into words
+    
+        words.forEach((word) => {
+            let testLine = currentLine + word + " ";
+            if (draw.textWidth(testLine) > wrapWidth) {
+                lines.push(currentLine.trim());
+                currentLine = word + " ";
+            } else {
+                currentLine = testLine;
+            }
+        });
+        if (currentLine) lines.push(currentLine.trim()); // Add the last line
+    
+        // Calculate total text height
+        let totalTextHeight = lines.length * dynamicTextSize * 3; // Line spacing
+    
+        // Start vertically centering
+        let yOffset = (draw.height - totalTextHeight) / 2 + dynamicTextSize; // Start position for text
+    
+        // Draw each line with wiggle effect
+        lines.forEach((line, index) => {
+            drawWiggledText(line, wrapWidth, yOffset + index * dynamicTextSize * 3); // Line spacing
+        });
+    
+
+
 
 
         draw.push();
@@ -185,75 +224,66 @@ ref.on("value", (snapshot) => {
 
         draw.pop();
 
-        let textBoxWidth = draw.width * 0.8;
-        let textBoxHeight = draw.height * 0.8;
-        let textX = draw.width * 0.1;
-        let textY = draw.height * 0.1;
-    
-        let lines = draw.splitLines(textWiggle, textBoxWidth);
-    
-        // Apply per-character wiggle effect to wrapped lines
-        let lineHeight = dynamicTextSize * 1.2; // Adjust line height
-        for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
-            let line = lines[lineIndex];
-            let lineStartY = textY + lineHeight * lineIndex;
-    
-            // Center align line horizontally
-            let totalLineWidth = draw.textWidth(line);
-            let lineStartX = textX;
-        }
+            };
+
+
+
+            function drawWiggledText(line, wrapWidth, yOffset) {
+                // Calculate the starting X position to center the line
+                let totalTextWidth = draw.textWidth(line);
+                let startX = (draw.width - totalTextWidth) / 2; // Center horizontally
+            
+                for (let i = 0; i < line.length; i++) {
+                    let char = line[i];
+            
+                    // Unique wiggle offset for each letter
+                    let frequencyOffset = i * 5; // Adjust for variation
+                    let wiggle = draw.map(
+                        draw.sin(draw.radians(count * 2 + frequencyOffset)),
+                        -1,
+                        1,
+                        -5,
+                        5
+                    );
+            
+                    // Calculate individual letter position
+                    let charX = startX + draw.textWidth(line.substring(0, i));
+                    let charY = yOffset + wiggle;
+            
+                    // Draw each character
+                    draw.text(char, charX, charY);
+                }
+            }
 
 
 
 
 
-        let totalTextWidth = draw.textWidth(textWiggle);
-        let startX = draw.width / 2 - totalTextWidth / 2;
+    //     let totalTextWidth = draw.textWidth(textWiggle);
+    //     let startX = draw.width / 2 - totalTextWidth / 2;
 
         
-        for (let i = 0; i < textWiggle.length; i++) {
-            let char = textWiggle[i];
+    //     for (let i = 0; i < textWiggle.length; i++) {
+    //         let char = textWiggle[i];
 
-            // Unique wiggle offset for each letter
-            let frequencyOffset = i * 10; // Adjust for variation
-            let wiggle = draw.map(
-                draw.sin(draw.radians(count * 2 + frequencyOffset)),
-                -1,
-                1,
-                -5,
-                5
-            );
+    //         // Unique wiggle offset for each letter
+    //         let frequencyOffset = i * 10; // Adjust for variation
+    //         let wiggle = draw.map(
+    //             draw.sin(draw.radians(count * 2 + frequencyOffset)),
+    //             -1,
+    //             1,
+    //             -5,
+    //             5
+    //         );
 
-            // Calculate individual letter position
-            let charX = startX + draw.textWidth(textWiggle.substring(0, i));
-            let charY = draw.height / 2 + wiggle;
+    //         // Calculate individual letter position
+    //         let charX = startX + draw.textWidth(textWiggle.substring(0, i));
+    //         let charY = draw.height / 2 + wiggle;
 
-            // Draw each character
-            draw.text(char, charX, charY);
-        }
-    };
-
-    draw.splitLines = function (text, maxWidth) {
-        let words = text.split(' ');
-        let lines = [];
-        let currentLine = '';
-    
-        for (let word of words) {
-            let testLine = currentLine + (currentLine === '' ? '' : ' ') + word;
-            if (draw.textWidth(testLine) > maxWidth) {
-                lines.push(currentLine);
-                currentLine = word;
-            } else {
-                currentLine = testLine;
-            }
-        }
-    
-        if (currentLine !== '') {
-            lines.push(currentLine);
-        }
-    
-        return lines;
-    };
+    //         // Draw each character
+    //         draw.text(char, charX, charY);
+    //     }
+    // };
 
     draw.star = function(x, y, radius1, radius2, npoints) {
         let angle = draw.TWO_PI / npoints;
@@ -271,7 +301,7 @@ ref.on("value", (snapshot) => {
       }
 
     draw.windowResized = function () {
-        draw.resizeCanvas(draw.windowWidth / 4.02, draw.windowWidth / 3.35);
+        draw.resizeCanvas(draw.windowWidth / 4.35, draw.windowWidth / 3.33);
 
     };
         };
@@ -281,6 +311,186 @@ ref.on("value", (snapshot) => {
     
     }
 });
+
+function dropdown(){
+    const cateButton = document.getElementById("cate");
+    const cateOptions = document.getElementById("cate-content");
+
+    let isToggled = true;
+
+    cateButton.onclick = function (e) {
+        if (isToggled) {
+        cateOptions.style.visibility = "visible";
+    }else{
+        cateOptions.style.visibility = "hidden";
+    }
+    isToggled = !isToggled;
+
+    };
+};
+
+function filter(){
+    const fashion = document.getElementById("c1");
+    const music = document.getElementById("c2");
+    const entertainment = document.getElementById("c3");
+    const food = document.getElementById("c4");
+    const sport = document.getElementById("c5");
+    const technology = document.getElementById("c6");
+    const others = document.getElementById("c7");
+
+    const itemsFilter = document.querySelectorAll('.item');
+
+
+    // let categoryContainer = document.getElementById("itemCate");
+
+    // let category = categoryContainer.textContent;
+
+    let isToggled = true;
+
+    fashion.onclick = function (e){
+
+        for(let itemFilter of itemsFilter){
+            const categoryText = itemFilter.querySelector('.itemCate').textContent;
+
+        if (isToggled) {
+            fashion.style.backgroundColor = "rgb(81, 64, 39)";
+            if (categoryText.includes('Fashion')) {
+                itemFilter.style.display = "block";
+              } else {
+                itemFilter.style.display = "none";
+              }
+        }else{
+            fashion.style.backgroundColor = "rgb(124, 98, 60)";
+            itemFilter.style.display = "block";
+        }
+    };
+    isToggled = !isToggled;
+};
+
+music.onclick = function (e){
+
+    for(let itemFilter of itemsFilter){
+        const categoryText = itemFilter.querySelector('.itemCate').textContent;
+
+    if (isToggled) {
+        music.style.backgroundColor = "rgb(81, 64, 39)";
+        if (categoryText.includes('Music')) {
+            itemFilter.style.display = "block";
+          } else {
+            itemFilter.style.display = "none";
+          }
+    }else{
+        music.style.backgroundColor = "rgb(124, 98, 60)";
+        itemFilter.style.display = "block";
+    }
+};
+isToggled = !isToggled;
+};
+
+entertainment.onclick = function (e){
+
+    for(let itemFilter of itemsFilter){
+        const categoryText = itemFilter.querySelector('.itemCate').textContent;
+
+    if (isToggled) {
+        entertainment.style.backgroundColor = "rgb(81, 64, 39)";
+        if (categoryText.includes('Entertainment')) {
+            itemFilter.style.display = "block";
+          } else {
+            itemFilter.style.display = "none";
+          }
+    }else{
+        entertainment.style.backgroundColor = "rgb(124, 98, 60)";
+        itemFilter.style.display = "block";
+    }
+};
+isToggled = !isToggled;
+};
+
+food.onclick = function (e){
+
+    for(let itemFilter of itemsFilter){
+        const categoryText = itemFilter.querySelector('.itemCate').textContent;
+
+    if (isToggled) {
+        food.style.backgroundColor = "rgb(81, 64, 39)";
+        if (categoryText.includes('Food')) {
+            itemFilter.style.display = "block";
+          } else {
+            itemFilter.style.display = "none";
+          }
+    }else{
+        food.style.backgroundColor = "rgb(124, 98, 60)";
+        itemFilter.style.display = "block";
+    }
+};
+isToggled = !isToggled;
+};
+
+sport.onclick = function (e){
+
+    for(let itemFilter of itemsFilter){
+        const categoryText = itemFilter.querySelector('.itemCate').textContent;
+
+    if (isToggled) {
+        sport.style.backgroundColor = "rgb(81, 64, 39)";
+        if (categoryText.includes('Sport')) {
+            itemFilter.style.display = "block";
+          } else {
+            itemFilter.style.display = "none";
+          }
+    }else{
+        sport.style.backgroundColor = "rgb(124, 98, 60)";
+        itemFilter.style.display = "block";
+    }
+};
+isToggled = !isToggled;
+};
+
+technology.onclick = function (e){
+
+    for(let itemFilter of itemsFilter){
+        const categoryText = itemFilter.querySelector('.itemCate').textContent;
+
+    if (isToggled) {
+        technology.style.backgroundColor = "rgb(81, 64, 39)";
+        if (categoryText.includes('Technology')) {
+            itemFilter.style.display = "block";
+          } else {
+            itemFilter.style.display = "none";
+          }
+    }else{
+        technology.style.backgroundColor = "rgb(124, 98, 60)";
+        itemFilter.style.display = "block";
+    }
+};
+isToggled = !isToggled;
+};
+
+    others.onclick = function (e){
+
+
+        for(let itemFilter of itemsFilter){
+            const categoryText = itemFilter.querySelector('.itemCate').textContent;
+
+        if (isToggled) {
+            others.style.backgroundColor = "rgb(81, 64, 39)";
+            if (categoryText.includes('Others')) {
+                itemFilter.style.display = "block";
+              } else {
+                itemFilter.style.display = "none";
+              }
+        }else{
+            others.style.backgroundColor = "rgb(124, 98, 60)";
+            itemFilter.style.display = "block";
+        }
+};
+
+isToggled = !isToggled;
+};
+
+};
+
 
 
 function changeGrid() {
