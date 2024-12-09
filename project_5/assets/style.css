@@ -199,7 +199,7 @@ font-style: normal;
     z-index: -1;
 }
 
-#add-to-cart{
+.add-to-cart{
     position: absolute;
     padding: 5px;
     bottom:-40px;
@@ -226,6 +226,7 @@ font-style: normal;
     text-decoration: underline;
     cursor: pointer;
     text-wrap: nowrap;
+    color:white !important;
 }
 
 .itemCate{
@@ -246,6 +247,7 @@ font-style: normal;
     left: 50%;
     transform: translate(-50%);
     z-index: 10;
+    color:white !important;
 }
 
 #box{

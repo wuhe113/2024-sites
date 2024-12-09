@@ -98,7 +98,7 @@ ref.on("value", (snapshot) => {
         });
 
         const add = document.createElement("div");
-        add.setAttribute("id", "add-to-cart");
+        add.setAttribute("class", "add-to-cart");
         add.textContent = "Add to cart";
 
         const cateDiv = document.createElement("div");
@@ -529,7 +529,7 @@ function topFunction() {
 
   function applyStoredBackgroundColor() {
     const color1 = document.getElementById("m3");
-    const color2 = document.getElementById("m2");
+    // const color2 = document.getElementById("m2");
     const color3 = document.getElementById("m1");
 
     const b1 = document.getElementById("cate");
@@ -547,39 +547,153 @@ function topFunction() {
     const imageBack = document.getElementById("layer");
 
     const code = document.getElementById("top");
+
+    const box = document.getElementById("box");
+
+    const itemCart = document.querySelectorAll(".add-to-cart");
     
     const storedGrayscale = localStorage.getItem("filter");
     const storedColor = localStorage.getItem("backgroundColor");
     const storedShadow = localStorage.getItem("boxShadow");
     const storedColor2 = localStorage.getItem("backgroundColor2");
+    const storedBorder = localStorage.getItem("border");
+    const storedBorder2 = localStorage.getItem("border2");
+    const storedBorder3 = localStorage.getItem("border3");
+    const storedWidth = localStorage.getItem("width");
+    const storedWidth2 = localStorage.getItem("width2");
+    const storedHeight = localStorage.getItem("height");
+    const storedHeight2 = localStorage.getItem("height2");
+    const storedColor3 = localStorage.getItem("color2");
+    const storedColor4 = localStorage.getItem("color");
 
-    if (storedShadow){
+
+    
+
+    
 
 
-        for(let itemBack1each of itemBack1){
-            itemBack1each.style.boxShadow = storedShadow;
-        }
+    if (color1) {
+    color1.style.border = storedBorder;
+    color1.style.width = storedWidth;
+    color1.style.height = storedHeight;
 
-    // localStorage.removeItem("boxShadow");
+
+    color3.style.border = storedBorder2;
+    color3.style.width = storedWidth2;
+    color3.style.height =  storedHeight2;
+
+
+    document.body.style.color = localStorage.getItem("color");
+
+    b1.style.border = storedBorder;
+
+    b2.style.border = storedBorder;
+    b3.style.border = storedBorder;
+    b4.style.border = storedBorder;
+    b5.style.border = storedBorder;
+    b6.style.border = storedBorder;
+    b7.style.border = storedBorder;
+    code.style.borderBottom = storedBorder;
+
+    for(let cart of itemCart){
+         cart.style.border = storedBorder;
     }
 
-    if(storedColor2){
 
-        for(let itemBack1each of itemBack1){
-            itemBack1each.style.backgroundColor = storedColor2;
-        }
+}
 
-        for(let itemBack2each of itemBack2){
-            itemBack2each.style.backgroundColor = storedColor2;
-        }
+    // if (color2) {
+    //     color2.style.border = storedBorder;
+    //     color2.style.width = storedWidth;
+    //     color2.style.height = storedHeight;
+
+    //     color1.style.border = storedBorder2;
+    //     color1.style.width = storedWidth2;
+    //     color1.style.height =  storedHeight2;
+
+    //     color3.style.border = storedBorder2;
+    //     color3.style.width = storedWidth2;
+    //     color3.style.height =  storedHeight2;
+
+
+    //     document.body.style.color = storedColor4;
+
+    // b1.style.border = storedBorder;
+
+    // b2.style.border = storedBorder;
+    // b3.style.border = storedBorder;
+    // b4.style.border = storedBorder;
+    // b5.style.border = storedBorder;
+    // b6.style.border = storedBorder;
+    // b7.style.border = storedBorder;
+    // code.style.borderBottom = storedBorder;
+
+    // for(let cart of itemCart){
+    //      cart.style.border = storedBorder;
+    // }
+
+    // box.style.backgroundColor = storedColor4;
+    // }
+
+
+    if (color3) {
+    color3.style.border = storedBorder3;
+    color3.style.width = storedWidth;
+    color3.style.height = storedHeight;
+
+    // color2.style.border = storedBorder2;
+    // color2.style.width = storedWidth2;
+    // color2.style.height =  storedHeight2;
+
+    color1.style.border = storedBorder2;
+    color1.style.width = storedWidth2;
+    color1.style.height =  storedHeight2;
+
+    document.body.style.color = storedColor3;
+
+    b1.style.border = storedBorder3;
+
+    b2.style.border = storedBorder3;
+    b3.style.border = storedBorder3;
+    b4.style.border = storedBorder3;
+    b5.style.border = storedBorder3;
+    b6.style.border = storedBorder3;
+    b7.style.border = storedBorder3;
+    code.style.borderBottom = storedBorder3;
+
+    for(let cart of itemCart){
+         cart.style.border = storedBorder3;
     }
 
-    if (storedGrayscale){
+
+}
+
+    // if (storedShadow){
+
+
+    //     for(let itemBack1each of itemBack1){
+    //         itemBack1each.style.boxShadow = storedShadow;
+    //     }
+    // }
+
+    // if(storedColor2){
+
+    //     for(let itemBack1each of itemBack1){
+    //         itemBack1each.style.backgroundColor = storedColor2;
+    //     }
+
+    //     for(let itemBack2each of itemBack2){
+    //         itemBack2each.style.backgroundColor = storedColor2;
+    //     }
+    // }
+
+    // if (storedGrayscale){
         
-        image.style.filter = storedGrayscale;
-    }
+    //     image.style.filter = storedGrayscale;
+    // }
 
-    console.log("Stored shadow:", storedShadow);
+    // console.log("Stored shadow:", storedShadow);
+    console.log("Stored background color:", storedColor4);
 
     // if (color2) {
     //     color2.onclick = function () {
@@ -609,7 +723,7 @@ function topFunction() {
         code.style.backgroundColor = storedColor;
 
         // image.style.filter = `grayscale${storedGrayscale}`;
-        imageBack.style.backgroundColor = storedColor;
+        // imageBack.style.backgroundColor = storedColor;
 
         // for(let itemBack1each of itemBack1){
         //     itemBack1each.style.backgroundColor = storedColor2;
@@ -621,18 +735,6 @@ function topFunction() {
         //     itemBack2each.style.backgroundColor = storedColor;
         // }
 
-        color2.style.border = "1px solid white";
-        color2.style.width = "15px";
-        color2.style.height = "15px";
-
-        color1.style.border = "0px solid rgb(81, 64, 39)";
-        color1.style.width = "10px";
-        color1.style.height = "10px";
-
-        color3.style.border = "0px solid white";
-        color3.style.width = "10px";
-        color3.style.height = "10px";
-
         // localStorage.removeItem("backgroundColor");
     } else {
         console.log("No background color found in storage.");
@@ -641,36 +743,105 @@ function topFunction() {
 
 document.addEventListener("DOMContentLoaded", applyStoredBackgroundColor);
 
+// function applyStoredBackgroundColor() {
+//     const color1 = document.getElementById("m3");
+//     const color2 = document.getElementById("m2");
+//     const color3 = document.getElementById("m1");
+
+//     const b1 = document.getElementById("cate");
+//     const b2 = document.getElementById("home");
+//     const b3 = document.getElementById("addItem");
+//     const b4 = document.getElementById("about");
+//     const b5 = document.getElementById("cart");
+//     const b6 = document.getElementById("mode");
+//     const b7 = document.getElementById("scroll-to-top");
+
+//     const itemCart = document.querySelectorAll(".add-to-cart");
+
+//     const storedBackgroundColor = localStorage.getItem("backgroundColor");
+//     const storedBorder = localStorage.getItem("border");
+//     const storedColor = localStorage.getItem("color");
+
+//     if (storedBackgroundColor && storedBorder && storedColor) {
+//         // Apply background and text color
+//         document.body.style.backgroundColor = storedBackgroundColor;
+//         document.body.style.color = storedColor;
+
+//         // Set border and background for navigation buttons
+//         const buttons = [b1, b2, b3, b4, b5, b6, b7];
+//         buttons.forEach((btn) => {
+//             if (btn) {
+//                 btn.style.backgroundColor = storedBackgroundColor;
+//                 btn.style.border = storedBorder;
+//             }
+//         });
+
+//         // Ensure "scroll-to-top" has correct styles
+//         if (b7) {
+//             b7.style.backgroundColor = storedBackgroundColor;
+//             b7.style.borderBottom = storedBorder;
+//         }
+
+//         // Update cart item borders
+//         itemCart.forEach((cart) => {
+//             if (cart) {
+//                 cart.style.border = storedBorder;
+//             }
+//         });
+
+//         // Update styles for color buttons
+//         if (color1 && storedBackgroundColor === "rgb(124, 98, 60)") {
+//             color1.style.border = storedBorder;
+//             color1.style.width = localStorage.getItem("width");
+//             color1.style.height = localStorage.getItem("height");
+//         } else if (color2 && storedBackgroundColor === "white") {
+//             color2.style.border = storedBorder;
+//             color2.style.width = localStorage.getItem("width2");
+//             color2.style.height = localStorage.getItem("height2");
+//         }
+
+//         console.log("Styles applied: Matched to stored background and text color.");
+//     } else {
+//         console.log("Stored styles are missing or incomplete.");
+//     }
+// }
+
+// document.addEventListener("DOMContentLoaded", applyStoredBackgroundColor);
 
 
 
-function changeGrid() {
-    const gridSmall = document.getElementById("g1");
-    const gridLarge = document.getElementById("g2");
 
-    gridSmall.onclick = function (e) {
-        itemGrid.style.gridTemplateColumns = "repeat(4, 1fr)";
-        itemGrid.style.paddingLeft = "0px";
-        itemGrid.style.paddingRight = "10px";
+
+
+
+
+// function changeGrid() {
+//     const gridSmall = document.getElementById("g1");
+//     const gridLarge = document.getElementById("g2");
+
+//     gridSmall.onclick = function (e) {
+//         itemGrid.style.gridTemplateColumns = "repeat(4, 1fr)";
+//         itemGrid.style.paddingLeft = "0px";
+//         itemGrid.style.paddingRight = "10px";
 
         
-        const gridItems = document.querySelectorAll("#itemGrid #item");
+//         const gridItems = document.querySelectorAll("#itemGrid #item");
 
-        gridItems.forEach((item) => {
-            item.style.width = "18.3vw";
-            item.style.height = "23.3vw";
-        });
-    };
+//         gridItems.forEach((item) => {
+//             item.style.width = "18.3vw";
+//             item.style.height = "23.3vw";
+//         });
+//     };
 
-    gridLarge.onclick = function (e) {
+//     gridLarge.onclick = function (e) {
 
-        itemGrid.style.gridTemplateColumns = "repeat(3, 1fr)";
+//         itemGrid.style.gridTemplateColumns = "repeat(3, 1fr)";
 
-        const gridItems = document.querySelectorAll("#itemGrid #item");
+//         const gridItems = document.querySelectorAll("#itemGrid #item");
 
-        gridItems.forEach((item) => {
-            item.style.width = "25vw";
-            item.style.height = "30vw";
-        });
-    };
-}
+//         gridItems.forEach((item) => {
+//             item.style.width = "25vw";
+//             item.style.height = "30vw";
+//         });
+//     };
+// }
