@@ -224,10 +224,11 @@ font-style: normal;
     line-height: 15px;
     z-index: 10;
     text-decoration: underline;
-    cursor: pointer;
-    text-wrap: wrap;
-    width: 300px;
+    text-wrap: stable;
+    /* inline-size: 300px; */
+    /* width: 300px; */
     color:white !important;
+    cursor: pointer;
 }
 
 .itemCate{
