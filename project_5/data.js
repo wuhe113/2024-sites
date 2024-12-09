@@ -90,6 +90,9 @@ ref.on("value", (snapshot) => {
         const shadowDiv = document.createElement("div");
         shadowDiv.setAttribute("class", "itemShadow");
 
+        // const namePriceDiv = document.createElement("div");
+        // namePriceDiv.setAttribute("id", "namePrice");
+
         const nameDiv = document.createElement("div");
         nameDiv.setAttribute("id", "name");
         nameDiv.textContent = itemData.itemName;
@@ -129,6 +132,9 @@ ref.on("value", (snapshot) => {
 
 
         itemGrid.appendChild(itemDiv);
+        // itemDiv.appendChild(namePriceDiv);
+        // namePriceDiv.appendChild(nameDiv);
+        // namePriceDiv.appendChild(priceDiv);
 
         dropdown();
         filter();
@@ -398,14 +404,14 @@ function filter(){
             const categoryText = itemFilter.querySelector('.itemCate').textContent;
 
         if (isToggled) {
-            fashion.style.backgroundColor = "rgb(81, 64, 39)";
+            // fashion.style.backgroundColor = "rgb(81, 64, 39)";
             if (categoryText.includes('Fashion')) {
                 itemFilter.style.display = "block";
               } else {
                 itemFilter.style.display = "none";
               }
         }else{
-            fashion.style.backgroundColor = "rgb(124, 98, 60)";
+            // fashion.style.backgroundColor = "rgb(124, 98, 60)";
             itemFilter.style.display = "block";
         }
     };
@@ -418,14 +424,14 @@ music.onclick = function (e){
         const categoryText = itemFilter.querySelector('.itemCate').textContent;
 
     if (isToggled) {
-        music.style.backgroundColor = "rgb(81, 64, 39)";
+        // music.style.backgroundColor = "rgb(81, 64, 39)";
         if (categoryText.includes('Music')) {
             itemFilter.style.display = "block";
           } else {
             itemFilter.style.display = "none";
           }
     }else{
-        music.style.backgroundColor = "rgb(124, 98, 60)";
+        // music.style.backgroundColor = "rgb(124, 98, 60)";
         itemFilter.style.display = "block";
     }
 };
@@ -438,14 +444,14 @@ entertainment.onclick = function (e){
         const categoryText = itemFilter.querySelector('.itemCate').textContent;
 
     if (isToggled) {
-        entertainment.style.backgroundColor = "rgb(81, 64, 39)";
+        // entertainment.style.backgroundColor = "rgb(81, 64, 39)";
         if (categoryText.includes('Entertainment')) {
             itemFilter.style.display = "block";
           } else {
             itemFilter.style.display = "none";
           }
     }else{
-        entertainment.style.backgroundColor = "rgb(124, 98, 60)";
+        // entertainment.style.backgroundColor = "rgb(124, 98, 60)";
         itemFilter.style.display = "block";
     }
 };
@@ -458,14 +464,14 @@ food.onclick = function (e){
         const categoryText = itemFilter.querySelector('.itemCate').textContent;
 
     if (isToggled) {
-        food.style.backgroundColor = "rgb(81, 64, 39)";
+        // food.style.backgroundColor = "rgb(81, 64, 39)";
         if (categoryText.includes('Food')) {
             itemFilter.style.display = "block";
           } else {
             itemFilter.style.display = "none";
           }
     }else{
-        food.style.backgroundColor = "rgb(124, 98, 60)";
+        // food.style.backgroundColor = "rgb(124, 98, 60)";
         itemFilter.style.display = "block";
     }
 };
@@ -478,14 +484,14 @@ sport.onclick = function (e){
         const categoryText = itemFilter.querySelector('.itemCate').textContent;
 
     if (isToggled) {
-        sport.style.backgroundColor = "rgb(81, 64, 39)";
+        // sport.style.backgroundColor = "rgb(81, 64, 39)";
         if (categoryText.includes('Sport')) {
             itemFilter.style.display = "block";
           } else {
             itemFilter.style.display = "none";
           }
     }else{
-        sport.style.backgroundColor = "rgb(124, 98, 60)";
+        // sport.style.backgroundColor = "rgb(124, 98, 60)";
         itemFilter.style.display = "block";
     }
 };
@@ -498,14 +504,14 @@ technology.onclick = function (e){
         const categoryText = itemFilter.querySelector('.itemCate').textContent;
 
     if (isToggled) {
-        technology.style.backgroundColor = "rgb(81, 64, 39)";
+        // technology.style.backgroundColor = "rgb(81, 64, 39)";
         if (categoryText.includes('Technology')) {
             itemFilter.style.display = "block";
           } else {
             itemFilter.style.display = "none";
           }
     }else{
-        technology.style.backgroundColor = "rgb(124, 98, 60)";
+        // technology.style.backgroundColor = "rgb(124, 98, 60)";
         itemFilter.style.display = "block";
     }
 };
@@ -519,14 +525,14 @@ isToggled = !isToggled;
             const categoryText = itemFilter.querySelector('.itemCate').textContent;
 
         if (isToggled) {
-            others.style.backgroundColor = "rgb(81, 64, 39)";
+            // others.style.backgroundColor = "rgb(81, 64, 39)";
             if (categoryText.includes('Others')) {
                 itemFilter.style.display = "block";
               } else {
                 itemFilter.style.display = "none";
               }
         }else{
-            others.style.backgroundColor = "rgb(124, 98, 60)";
+            // others.style.backgroundColor = "rgb(124, 98, 60)";
             itemFilter.style.display = "block";
         }
 };

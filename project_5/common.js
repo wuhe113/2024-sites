@@ -70,6 +70,30 @@ function changeColor(){
             itemBack2each.style.backgroundColor = "rgb(81, 64, 39)";
         }
 
+        for(let cart of itemCart){
+            cart.style.border = "1px solid white";
+       }
+
+       cartBox.style.backgroundColor = "rgb(124, 98, 60)";
+       cartBox.style.border = "1px solid white";
+
+    //    cartLine.style.borderBottom = "1px solid white";
+
+
+       cartClear.style.border = "1px solid white";
+
+
+       cateContent.style.backgroundColor = "rgb(124, 98, 60)";
+       cartClear.style.border = "1px solid white";
+
+
+       for(let option of contentOptions){
+        option.style.border = "1px solid white";
+        option.style.backgroundColor = "rgb(124, 98, 60)";
+   }
+
+
+
         // color2.style.border = "0px solid white";
         // color2.style.width = "10px";
         // color2.style.height = "10px";

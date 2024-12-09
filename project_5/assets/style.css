@@ -225,7 +225,8 @@ font-style: normal;
     z-index: 10;
     text-decoration: underline;
     cursor: pointer;
-    text-wrap: nowrap;
+    text-wrap: wrap;
+    width: 300px;
     color:white !important;
 }
 
@@ -243,12 +244,16 @@ font-style: normal;
 #price{
     position: absolute;
     padding: 5px;
-    top: 20px;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%);
     z-index: 10;
     color:white !important;
 }
+
+/* #namePrice{
+
+} */
 
 #box{
     position: fixed;
