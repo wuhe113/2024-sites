@@ -98,8 +98,17 @@ ref.on("value", (snapshot) => {
         });
 
         const add = document.createElement("div");
-        add.setAttribute("class", "add-to-cart");
+        add.classList.add("add-to-cart");
+        add.onclick = function() {
+            addToCart(data[key].itemName, data[key].price);
+        };        
         add.textContent = "Add to cart";
+
+        // document.querySelectorAll('.add-to-cart').forEach(div => {
+        //     div.onclick = () => {
+        //         alert('Div clicked!');
+        //     };
+        // });
 
         const cateDiv = document.createElement("div");
         cateDiv.setAttribute("class", "itemCate");
@@ -125,6 +134,7 @@ ref.on("value", (snapshot) => {
         filter();
         changeColor();
         applyStoredBackgroundColor();
+        shoppingCart();
         // changeGrid();
 
         //study from https://editor.p5js.org/sobers/sketches/hrMPPNoC5
@@ -347,6 +357,23 @@ function dropdown(){
     };
 };
 
+function shoppingCart(){
+    const cartButton = document.getElementById("cart");
+    const cartBox = document.getElementById("cart-box");
+
+    let isToggled = true;
+
+    cartButton.onclick = function (e) {
+        if (isToggled) {
+        cartBox.style.visibility = "visible";
+    }else{
+        cartBox.style.visibility = "hidden";
+    }
+    isToggled = !isToggled;
+
+    };
+};
+
 function filter(){
     const fashion = document.getElementById("c1");
     const music = document.getElementById("c2");
@@ -551,6 +578,14 @@ function topFunction() {
     const box = document.getElementById("box");
 
     const itemCart = document.querySelectorAll(".add-to-cart");
+
+    const cateContent = document.getElementById("cate-content");
+    const contentOptions = document.querySelectorAll(".content-options");
+
+    const cartBox = document.getElementById("cart-box");
+    const cartLine = document.getElementById("cart-menu");
+    const cartClear = document.getElementById("clear");
+
     
     const storedGrayscale = localStorage.getItem("filter");
     const storedColor = localStorage.getItem("backgroundColor");
@@ -572,7 +607,7 @@ function topFunction() {
     
 
 
-    if (color1) {
+    if (storedColor == "rgb(124, 98, 60)") {
     color1.style.border = storedBorder;
     color1.style.width = storedWidth;
     color1.style.height = storedHeight;
@@ -636,7 +671,7 @@ function topFunction() {
     // }
 
 
-    if (color3) {
+    if (storedColor == "white") {
     color3.style.border = storedBorder3;
     color3.style.width = storedWidth;
     color3.style.height = storedHeight;
@@ -659,11 +694,33 @@ function topFunction() {
     b5.style.border = storedBorder3;
     b6.style.border = storedBorder3;
     b7.style.border = storedBorder3;
+
+    cateContent.style.backgroundColor = storedColor;
+    cateContent.style.border = storedBorder3;
+
+    cartBox.style.backgroundColor = storedColor;
+    cartBox.style.border = storedBorder3;
+
+    cartLine.style.borderBottom = storedBorder3;
+
+    cartClear.style.backgroundColor = storedColor;
+    cartClear.style.border = storedBorder3;
+
     code.style.borderBottom = storedBorder3;
+
 
     for(let cart of itemCart){
          cart.style.border = storedBorder3;
     }
+
+
+    for(let option of contentOptions){
+        option.style.border = storedBorder3;
+   }
+
+
+
+
 
 
 }

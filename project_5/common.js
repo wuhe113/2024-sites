@@ -24,6 +24,13 @@ function changeColor(){
 
     const itemCart = document.querySelectorAll(".add-to-cart");
 
+    const cateContent = document.getElementById("cate-content");
+    const contentOptions = document.querySelectorAll(".content-options");
+
+    const cartBox = document.getElementById("cart-box");
+    const cartLine = document.getElementById("cart-menu");
+    const cartClear = document.getElementById("clear");
+
 
     color1.onclick = function(e){
         localStorage.setItem("backgroundColor", "rgb(124, 98, 60)");
@@ -166,7 +173,7 @@ function changeColor(){
         document.body.style.color = "rgb(124, 98, 60)";
 
 
-        const elements = [b1, b2, b3, b4, b5, b6, b7];
+        const elements = [b1, b2, b3, b4, b5, b6, b7, cateContent];
         elements.forEach((el) => {
             el.style.backgroundColor = "white";
             el.style.border = "1px solid rgb(124, 98, 60)";
@@ -178,6 +185,18 @@ function changeColor(){
         for(let cart of itemCart){
              cart.style.border = "1px solid rgb(124, 98, 60)";
         }
+
+        for(let option of contentOptions){
+            option.style.border = "1px solid rgb(124, 98, 60)";
+       }
+
+       cartBox.style.backgroundColor = "white";
+       cartBox.style.border = "1px solid rgb(124, 98, 60)";
+
+       cartLine.style.borderBottom = "1px solid rgb(124, 98, 60)";
+
+
+       cartClear.style.border = "1px solid rgb(124, 98, 60)";
 
 
 

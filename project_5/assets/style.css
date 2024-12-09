@@ -429,3 +429,42 @@ font-style: normal;
     padding-right: 2px;
     cursor: pointer;
 }
+
+#cart-box{
+    position: fixed;
+    left: 10px;
+    bottom: 32px;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(124, 98, 60);
+    border: 1px solid rgb(255, 255, 255);
+    overflow: auto;
+    z-index: 13;
+    padding: 10px;
+    visibility: hidden;
+}
+
+#cart-menu{
+    font-size: 12px;
+    display: grid;
+    gap: 10px;
+    text-align: center;
+}
+
+#cart-menu > *{
+    border-bottom: 1px solid white;
+}
+
+#clear{
+    position: fixed;
+    bottom: 45px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(124, 98, 60);
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 15px;
+    cursor: pointer;
+}
