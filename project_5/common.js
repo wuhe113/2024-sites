@@ -31,6 +31,8 @@ function changeColor(){
     const cartLine = document.getElementById("cart-menu");
     const cartClear = document.getElementById("clear");
 
+    const total = document.getElementById("total");
+
 
     color1.onclick = function(e){
         localStorage.setItem("backgroundColor", "rgb(124, 98, 60)");
@@ -81,6 +83,7 @@ function changeColor(){
 
 
        cartClear.style.border = "1px solid white";
+       cartClear.style.backgroundColor = "rgb(124, 98, 60)";
 
 
        cateContent.style.backgroundColor = "rgb(124, 98, 60)";
@@ -221,6 +224,7 @@ function changeColor(){
 
 
        cartClear.style.border = "1px solid rgb(124, 98, 60)";
+       cartClear.style.backgroundColor = "white";
 
 
 

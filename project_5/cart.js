@@ -21,12 +21,19 @@ function addToCart(productName, price) {
     saveCart(cart);
     displayCart();
     updateCartCount();
+    updateTotalPrice();
 }
 
 function updateCartCount() {
     const cart = getCart();
     const cartCount = cart.reduce((count, item) => count + item.quantity, 0);
     document.getElementById("cart").textContent = `Cart(${cartCount})`;
+}
+
+function updateTotalPrice() {
+    const cart = getCart();
+    const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    document.getElementById("total").textContent = `Total: $${totalPrice.toFixed(2)}`;
 }
 
 function displayCart() {
@@ -49,6 +56,8 @@ function displayCart() {
 function clearCart() {
     localStorage.removeItem('cart');
     displayCart();
+    updateCartCount(); 
+    updateTotalPrice();
 }
 
 // Initialize the cart display on page load
