@@ -37,6 +37,7 @@ if (document.body.id === "storePage") {
     const description = document.getElementById("des-data");
     const sendButton = document.getElementById("push-data");
     const StarFall = document.getElementById("stars");
+    const submit = document.getElementById("submit");
     
     sendButton.onclick = function(event){
 
@@ -61,6 +62,12 @@ if (document.body.id === "storePage") {
     description.value = "";
 
     ref.push(text);
+
+    submit.style.display = "block";
+
+    setTimeout(function () {
+        submit.style.display = "none";
+    }, 3000);
 };
 
 }else if (document.body.id === "displayPage") {
@@ -379,6 +386,20 @@ function shoppingCart(){
 
     };
 };
+
+// function submitWindow(){
+//     const submit = document.getElementById("submit");
+//     const save = document.getElementById("push-data")
+
+//     save.onclick = function (e) {
+//         submit.style.display = "block";
+
+//         setTimeout(function () {
+//             submit.style.display = "none";
+//         }, 2000);
+//     };
+
+// };
 
 function filter(){
     const fashion = document.getElementById("c1");
