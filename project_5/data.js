@@ -148,6 +148,7 @@ ref.on("value", (snapshot) => {
         changeColor();
         applyStoredBackgroundColor();
         shoppingCart();
+        // styleTextBasedOnWordCount();
         // changeGrid();
 
         //study from https://editor.p5js.org/sobers/sketches/hrMPPNoC5
@@ -386,6 +387,19 @@ function shoppingCart(){
 
     };
 };
+
+// function styleTextBasedOnWordCount() {
+//     const nameText = document.getElementById("name");
+//     const text = nameText.textContent || nameText.innerText;
+//     const wordCount = text.split(/\s+/).filter(word => word.length > 0).length;
+
+//     if (wordCount > 4) {
+//         nameText.style.inlineSize = "300px";
+//     } else {
+//         nameText.style.inlineSize = "";
+//     }
+// }
+
 
 // function submitWindow(){
 //     const submit = document.getElementById("submit");
