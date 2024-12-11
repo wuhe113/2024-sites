@@ -191,7 +191,7 @@ strong{
     right: 450px;
     bottom: 30px;
     width: 130px;
-    height: 250px;
+    height: 200px;
     border: 10px solid rgb(37, 37, 37);
     transform: skew(0deg, -10deg);
 }
@@ -203,7 +203,7 @@ strong{
     right: 460px;
     bottom: 40px;
     width: 110px;
-    height: 230px;
+    height: 180px;
     background-color: rgb(37, 37, 37);
     /* border: 10px solid rgb(37, 37, 37); */
     transform: skew(0deg, -10deg);
