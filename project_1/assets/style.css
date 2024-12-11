@@ -367,7 +367,7 @@ p{
 
 }
 
-#a5{
+/* #a5{
     position: fixed;
     bottom: 250px;
     right: 360px;
@@ -375,7 +375,7 @@ p{
     line-height: 0.7;
     color: rgb(37, 37, 37);
     transform: scaleX(-1) skew(10deg, 40deg);
-}
+} */
 
 #sticker1{
     position: fixed;
@@ -462,7 +462,8 @@ p{
     cursor: pointer;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
-    gap: 10px;
+    gap: 9px;
+    /* gap: 10px; full screen big*/
     grid-auto-columns: min-content;
     grid-auto-rows: min-content;
     position: fixed;
@@ -470,7 +471,8 @@ p{
     top: 150px;
     /* bottom: 50px; */
     width: 800px;
-    height: 550px;
+    height: 465px;
+    /* height: 550px; full screen big*/
     overflow: hidden;
     border: 3px solid rgb(37, 37, 37);
     /* animation: wiggle2 0.1s infinite; */
@@ -511,13 +513,12 @@ p{
     color: rgb(37, 37, 37);
 }
 
-#arrowBig{
+/* #arrowBig{
         font-family: balboa-plus-fill, sans-serif;
         font-weight: 400;
         font-style: normal;
         font-size: 100px;
         letter-spacing: -10px;
-        /* transform: skew(-10deg, -10deg); */
         transform: skew(-30deg, -10deg) rotate(-10deg);
         position: fixed;
         right: 420px;
@@ -546,14 +547,9 @@ p{
     position: fixed;
     right: 263px;
     bottom: 228px;
-    /* height: 60px;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(37, 37, 37); */
     color: rgb(255, 251, 0);
     padding-left: 5px;
     padding-right: 10px;
-    /* -webkit-text-stroke: 3px rgb(37, 37, 37); */
 }
 
 #musicBorder{
@@ -573,7 +569,6 @@ p{
     font-size: 76px;
     line-height: 60px;
     letter-spacing: -10px;
-    /* transform: scale(1.5, 2); */
     position: fixed;
     right: 80px;
     bottom: 169px;
@@ -584,8 +579,7 @@ p{
     transform: skew(-10deg, 0deg) scale(1.8,0.4);
     padding-left: 5px;
     padding-right: 10px;
-    /* -webkit-text-stroke: 3px rgb(37, 37, 37); */
-}
+} */
 
 
 
