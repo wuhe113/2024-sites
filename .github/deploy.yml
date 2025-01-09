@@ -1,0 +1,40 @@
+name: Deploy to Main Project
+
+on:
+  push:
+    branches:
+      - main  # 当推送到 main 分支时触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout 子项目代码
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Clone 主项目仓库
+      - name: Clone Main Project Repository
+        run: |
+          git clone --depth 1 https://github.com/wuhe113/wuhe113.github.io.git main-project
+          cd main-project
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+      # Step 3: 替换子路径内容
+      - name: Copy files to Main Project
+        run: |
+          rm -rf main-project/2024-sites
+          mkdir -p main-project/2024-sites
+          cp -r ./* main-project/2024-sites/
+
+      # Step 4: 推送更新到主项目
+      - name: Commit and Push Changes
+        run: |
+          cd main-project
+          git add .
+          git commit -m "Update project1"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
