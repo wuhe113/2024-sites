@@ -61,8 +61,7 @@ function setup(){
     change4 = document.getElementById("r1")
     change5 = document.getElementById("s2")
 
-    mic = new p5.AudioIn(); // Do not start it here
-    // mic.start(); ❌ removed
+    mic = new p5.AudioIn();
 }
 
 function draw(){
@@ -98,7 +97,7 @@ function draw(){
     }
 }
 
-// Start mic only after user clicks
+
 function mousePressed() {
     if (!micStarted) {
         mic.start();
