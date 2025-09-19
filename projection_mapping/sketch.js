@@ -1,15 +1,18 @@
 var mic;
-let change1 = document.getElementById("c1");
-let change2 = document.getElementById("s1")
-let change3 = document.getElementById("c2")
-let change4 = document.getElementById("r1")
-let change5 = document.getElementById("s2")
+let change1, change2, change3, change4, change5;
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
     mic = new p5.AudioIn();
     mic.start();
+
+    change1 = document.getElementById("c1");
+    change2 = document.getElementById("s1")
+    change3 = document.getElementById("c2")
+    change4 = document.getElementById("r1")
+    change5 = document.getElementById("s2")
 }
+
 
 function draw(){
     background(0);
